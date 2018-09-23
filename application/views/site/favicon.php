@@ -1,0 +1,1 @@
+ <link rel="icon" href="<?=base_url('assets/icon/favicon.ico');?>"/>

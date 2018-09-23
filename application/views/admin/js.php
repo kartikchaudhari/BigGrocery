@@ -1,0 +1,1 @@
+<script type="text/javascript" src="<?=base_url(BOOTFLAT_DIST_JS_FILE);?>"></script>
