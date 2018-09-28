@@ -92,6 +92,12 @@ class Test extends My_Controller {
 		echo "</table>";
 	}
 
+	public function countRow(){
+		$this->load->model('OrderModel');
+		echo "<pre>";
+		print_r($this->OrderModel->countTotalOrderRows(5,0,5));
+	}
+
 	
 
 }

@@ -16,7 +16,13 @@ class Admin extends My_Controller {
 	}
 
 	public function dashboard(){
-		$this->load->view('admin/dashboard');
+		if ($this->session->userdata('bg_sys_ss_admin_id')) {
+			$this->load->view('admin/dashboard',['data'=>$this->AdminModel->getAdminInfo($this->session->userdata('bg_sys_ss_admin_id'))]);
+		}
+		else{
+			return redirect('admin');
+		}
+
 	}
 
 	public function dashboard_content(){
@@ -30,14 +36,25 @@ class Admin extends My_Controller {
 	public function do_login(){
 		$userName=$this->input->post('uname');
 		$passWord=md5($this->input->post('pass'));
+
 		$AdminId=$this->AdminModel->getAdminLoginData($userName,$passWord);
 		if($AdminId>0 AND $AdminId!=null){
 			$array = array('bg_sys_ss_admin_id' => $AdminId);
-			
 			$this->session->set_userdata($array);
-			return redirect('admin/dashboard');
+			return redirect('admin/dashboard',$data);
+		}
+		else{
+			return redirect('admin');
 		}
 
+	}
+
+	/*
+		User logout
+	 */
+	public function logout(){
+		$this->session->sess_destroy();
+		return redirect('home');
 	}
 
 }

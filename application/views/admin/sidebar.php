@@ -1,6 +1,6 @@
 <div class="col-xs-6 col-sm-3 sidebar-offcanvas" role="navigation">
     <ul class="list-group panel panel-info">
-        <li class="list-group-item panel-heading"><i class="glyphicon glyphicon-align-justify"></i> <b>KARTIK CHAUDHARI</b></li>
+        <li class="list-group-item panel-heading"><i class="glyphicon glyphicon-align-justify"></i> <b><?=strtoupper($admin_name);?></b></li>
         <li class="list-group-item"><input type="text" class="form-control search-query" placeholder="Search Something" onkeydown="javascript:alert('searching...');" onkeyup="javascript:alert('searching...');"></li>
         
         <li><a class="list-group-item"  href="<?=base_url('admin/dashboard_content');?>" target="DashboardFrame"><i class="glyphicon glyphicon-home"></i>Dashboard </a></li>

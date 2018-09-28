@@ -1,9 +1,3 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,6 +21,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <!---->
 <!--login-->
 	<div class="login">
+		<div class="row">
+			<?php
+				if ($this->session->flashdata('bg_sys_msg')) {
+					echo "<div class='col-md-4 col-md-offset-4'>".$this->session->flashdata('bg_sys_msg')."</div>";
+				}
+			?>
+		</div>
 		<div class="main-agileits">
 				<div class="form-w3agile">
 					<h3>Login</h3>

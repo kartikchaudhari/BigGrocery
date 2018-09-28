@@ -7,8 +7,6 @@
 <body>
 	<h1 align="center">Order History</h1>
 	<hr width="90%" align="center"><br>
-	<div style="width: 90%;text-align: center;"><?=$pagination;?></div>
-	<hr width="90%" align="center">
 	<table border="1" align="center" width="80%">
 		<tr>
 			<th>Sr. No</th>

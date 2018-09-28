@@ -20,21 +20,18 @@ class User extends My_Controller {
 
 	public function order_history(){
 		if ($this->session->userdata('bg_sys_ss_user_id')) {
-			$this->load->library('pagination');
-			
-			$config['base_url'] = base_url('user/order_history');
-			$config['per_page'] = 10;
-			$page=$this->uri->segment(3,0);
-			$config['total_rows'] = 100;
-			
-			$config['uri_segment'] = 3;
-			  
-			
-			$this->pagination->initialize($config);
-			
-			//echo $this->pagination->create_links();
 
-			$this->load->view('order/list',['order_history_data'=>$this->getUserOrderList($this->session->userdata('bg_sys_ss_user_id'),$config['per_page'],$page),'pagination'=>$this->pagination->create_links()]);	
+			//$this->load->library('pagination');
+			//$config['base_url'] = base_url('user/order_history');
+			//$config['per_page'] = ;
+			//$config['total_rows'] =$this->OrderModel->countTotalOrderRows();
+			
+
+//$this->pagination->initialize($config);
+
+//echo $this->pagination->create_links();
+
+			$this->load->view('order/list',['order_history_data'=>$this->getUserOrderList($this->session->userdata('bg_sys_ss_user_id'))]);	
 		}
 		else{
 			return redirect('user/login');
@@ -66,9 +63,9 @@ class User extends My_Controller {
 
 	}
 
-	public function getUserOrderList($UserId,$limit,$start){
+	public function getUserOrderList($UserId){
 		$this->load->model('OrderModel');
-		return $this->OrderModel->getOrderListByUserId($UserId,$limit,$start);
+		return $this->OrderModel->getOrderListByUserId($UserId);
 	}
 
 
@@ -105,6 +102,9 @@ class User extends My_Controller {
 			return redirect('user/wishlist/'.$this->session->userdata('bg_sys_ss_user_id'));
 		}
 		else{
+			$this->session->set_flashdata('bg_sys_msg','<div class="alert alert-danger" role="alert">
+					<strong>Invalid username or password, please retry below.</strong> 
+				</div>');
 			return redirect('user/login');
 		}
 

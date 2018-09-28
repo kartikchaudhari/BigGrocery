@@ -24,14 +24,19 @@ class OrderModel extends My_Model {
 		
 	}
 
-	public function getOrderListByUserId($UserId,$limit,$start){
-		$query=$this->db->query("SELECT cart.`cart_conetents`,cart.`total_qty`,cart.`total_price`,orders.`order_date`,orders.`payment_status` FROM orders,cart WHERE orders.`cart_id`=cart.`cart_id` AND cart.`user_id`=".$UserId." LIMIT ".$limit.",".$start);
+	public function getOrderListByUserId($UserId){
+		$query=$this->db->query("SELECT cart.`cart_conetents`,cart.`total_qty`,cart.`total_price`,orders.`order_date`,orders.`payment_status` FROM orders,cart WHERE orders.`cart_id`=cart.`cart_id` AND cart.`user_id`=".$UserId);
 		return $query->result_array();
 	}
 
-	public function countTotalOrderRows($UserId,$limit,$start){
+	/*public function getOrderListByUserId($UserId,$limit,$start){
 		$query=$this->db->query("SELECT cart.`cart_conetents`,cart.`total_qty`,cart.`total_price`,orders.`order_date`,orders.`payment_status` FROM orders,cart WHERE orders.`cart_id`=cart.`cart_id` AND cart.`user_id`=".$UserId." LIMIT ".$limit.",".$start);
-		return count($query->result_array());
+		return $query->result_array();
+	}*/
+
+	public function countTotalOrderRows($UserId,$limit,$start){
+		$query=$this->db->query("SELECT COUNT(orders.order_id)  AS total_orders FROM orders,cart WHERE orders.`cart_id`=cart.`cart_id` AND cart.`user_id`=".$UserId." LIMIT ".$limit.",".$start);
+		return $query->row()->total_orders;
 	}
 }
 

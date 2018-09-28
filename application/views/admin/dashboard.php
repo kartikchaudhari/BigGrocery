@@ -7,7 +7,7 @@
   <body>
     <!--nav-->
     <nav role="navigation" class="navbar navbar-custom">
-        <?php $this->load->view('admin/nav'); ?>    
+        <?php $this->load->view('admin/nav',['admin_data'=>$data[0]]); ?>    
     </nav>
     <!--/nav -->
     
@@ -15,7 +15,7 @@
     <div class="container-fluid">
         <div class="row row-offcanvas row-offcanvas-left">
             <!-- page sidebar -->
-            <?php $this->load->view('admin/sidebar');?>
+            <?php $this->load->view('admin/sidebar',['admin_name'=>$data[0]['username']]);?>
             <!-- page sidebar -->
                
             <!-- page body -->
