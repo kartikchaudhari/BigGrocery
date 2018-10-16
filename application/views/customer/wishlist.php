@@ -6,8 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:title" content="Vide" />
-<meta name="keywords" content="Big store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<meta name="keywords" content="" />
 
 <!-- site css and js header -->
 	<?php $this->load->view('customer/head'); ?>
@@ -57,8 +56,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<th class="t-head">Price</th>
 				<th class="t-head">Quantity</th>
 				<th class="t-head">Actions</th>
-			</tr>
-			<?php for($i=1;$i<count($wishlist_products);$i++){ ?>
+			</tr>		
+			<?php if(count($wishlist_products)>0){ for($i=1;$i<count($wishlist_products);$i++){ ?>
 			<tr class="cross<?=$wishlist_products[$i]['product_id'];?>">
 				<td class="ring-in t-data">
 					<a href="<?=base_url('products/product_info/'.$wishlist_products[$i]['product_id'])?>" class="at-in">
@@ -85,7 +84,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<button class="btn btn-danger" title="Remove from Wishlists" onclick="removeFromWishList(<?=$wishlist_products[$i]['product_id'];?>);">Remove from Wishlist</button>
 				</td>
 			</tr>
-			<?php }?>
+			<?php 
+					} 
+				}
+			 	else{
+			 ?>
+			 <tr>
+			 	<td colspan="4" align="center"><span style="font-size: 16px;">You have not added any product to your wishlist..</span></td>
+			 </tr>
+			 <?php 
+			 	}
+			?>
 		</table>
 	</div>
 </div>
@@ -139,15 +148,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- smooth scrolling -->
 	<script type="text/javascript">
 		$(document).ready(function() {
-		/*
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-		*/								
-		$().UItoTop({ easingType: 'easeOutQuart' });
+			$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>

@@ -7,6 +7,31 @@ class User extends My_Controller {
 		$this->load->model(['UsersModel','ProductsModel','OrderModel']);
 	}
 
+	public function index(){
+		if ($this->session->userdata('bg_sys_ss_user_id')) {
+			return redirect('user/dashboard');	
+		}
+		else{
+			$this->session->set_flashdata('bg_sys_msg','<div class="alert alert-danger" role="alert">
+					<strong>Sorry the session has expired, please re-login below.</strong> 
+				</div>');
+			return redirect('user/login');
+		}
+	}
+
+	public function dashboard(){
+		if ($this->session->userdata('bg_sys_ss_user_id')) {
+			$this->load->view('customer/dashboard');	
+		}
+		else{
+			$this->session->set_flashdata('bg_sys_msg','<div class="alert alert-danger" role="alert">
+					<strong>Sorry the session has expired, please re-login below.</strong> 
+				</div>');
+			return redirect('user/login');
+		}
+	}
+
+
 	/*
 		View Loading methods
 	 */
@@ -20,17 +45,6 @@ class User extends My_Controller {
 
 	public function order_history(){
 		if ($this->session->userdata('bg_sys_ss_user_id')) {
-
-			//$this->load->library('pagination');
-			//$config['base_url'] = base_url('user/order_history');
-			//$config['per_page'] = ;
-			//$config['total_rows'] =$this->OrderModel->countTotalOrderRows();
-			
-
-//$this->pagination->initialize($config);
-
-//echo $this->pagination->create_links();
-
 			$this->load->view('order/list',['order_history_data'=>$this->getUserOrderList($this->session->userdata('bg_sys_ss_user_id'))]);	
 		}
 		else{
@@ -99,7 +113,7 @@ class User extends My_Controller {
 
 		if ($user_id) {
 			$this->session->set_userdata('bg_sys_ss_user_id',$user_id);
-			return redirect('user/wishlist/'.$this->session->userdata('bg_sys_ss_user_id'));
+			return redirect('user');
 		}
 		else{
 			$this->session->set_flashdata('bg_sys_msg','<div class="alert alert-danger" role="alert">

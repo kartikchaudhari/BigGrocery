@@ -11,8 +11,9 @@ class Admin extends My_Controller {
 
 	public function index()
 	{
-		$this->load->view('admin/login');
-
+		if ($this->is_admin_logged_in()) {
+			$this->dashboard();
+		}
 	}
 
 	public function dashboard(){
@@ -20,9 +21,13 @@ class Admin extends My_Controller {
 			$this->load->view('admin/dashboard',['data'=>$this->AdminModel->getAdminInfo($this->session->userdata('bg_sys_ss_admin_id'))]);
 		}
 		else{
-			return redirect('admin');
+			return redirect('admin/login');
 		}
 
+	}
+
+	public function login(){
+		$this->load->view('admin/login');
 	}
 
 	public function dashboard_content(){
@@ -47,6 +52,15 @@ class Admin extends My_Controller {
 			return redirect('admin');
 		}
 
+	}
+
+	public function is_admin_logged_in(){
+		if ($this->session->userdata('bg_sys_ss_admin_id')) {
+			return true;
+		}
+		else{
+			return redirect('admin/login');
+		}
 	}
 
 	/*

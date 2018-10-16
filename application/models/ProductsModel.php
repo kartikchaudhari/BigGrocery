@@ -3,6 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class ProductsModel extends My_Model {
 
+	public function addNewProduct($ProductInfo){
+		$insert_string=$this->db->insert_string('products',$ProductInfo);
+		if ($this->db->query($insert_string)) {
+			return true;
+		}else{
+			return false;
+		}
+	}
+
 	public function getAllProductsBySubCategory($SubCatId){
 		$query=$this->db->query("SELECT * FROM products WHERE sub_cat_id=".$SubCatId."");
 		return $query->result_array();
@@ -34,6 +43,8 @@ class ProductsModel extends My_Model {
 		$query=$this->db->query("SELECT * FROM products,wishlist WHERE products.product_id=wishlist.product_id AND wishlist.user_id=".$UserId."");
 		return $query->result_array();
 	}
+
+
 
 }
 

@@ -34,12 +34,12 @@
 					<form action="<?=base_url('user/login_user')?>" method="post">
 						<div class="key">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
-							<input  type="text" placeholder="Enter email or phone " name="uname" required="">
+							<input id="email"  type="text" placeholder="Enter email or phone " name="uname" required="">
 							<div class="clearfix"></div>
 						</div>
 						<div class="key">
 							<i class="fa fa-lock" aria-hidden="true"></i>
-							<input  type="password" name="password" required="">
+							<input id="pass"  type="password" name="password" required="">
 							<div class="clearfix"></div>
 						</div>
 						<input type="submit" value="Login">
@@ -117,6 +117,5 @@
 
   });
   </script>
-
 </body>
 </html>

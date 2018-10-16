@@ -56,6 +56,12 @@ class Sub_categories extends My_Controller {
 		return $this->SubCatModel->FetchAllSubCat();
 	}
 
+	public function getAllSubCatByCatId(){
+		if($this->input->post('cat_id')!=-1){
+			print_r($this->SubCatModel->fetchSubCatListByCatId($this->input->post('cat_id')));
+		}
+
+	}
 
 }
 

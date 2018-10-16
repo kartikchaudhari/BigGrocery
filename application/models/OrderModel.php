@@ -25,7 +25,7 @@ class OrderModel extends My_Model {
 	}
 
 	public function getOrderListByUserId($UserId){
-		$query=$this->db->query("SELECT cart.`cart_conetents`,cart.`total_qty`,cart.`total_price`,orders.`order_date`,orders.`payment_status` FROM orders,cart WHERE orders.`cart_id`=cart.`cart_id` AND cart.`user_id`=".$UserId);
+		$query=$this->db->query("SELECT cart.`cart_conetents`,cart.`total_qty`,cart.`total_price`,orders.`order_date`,orders.`payment_status` FROM orders,cart WHERE orders.`cart_id`=cart.`cart_id` AND cart.`user_id`=".$UserId." ORDER BY orders.`order_date` DESC");
 		return $query->result_array();
 	}
 
@@ -37,6 +37,15 @@ class OrderModel extends My_Model {
 	public function countTotalOrderRows($UserId,$limit,$start){
 		$query=$this->db->query("SELECT COUNT(orders.order_id)  AS total_orders FROM orders,cart WHERE orders.`cart_id`=cart.`cart_id` AND cart.`user_id`=".$UserId." LIMIT ".$limit.",".$start);
 		return $query->row()->total_orders;
+	}
+
+	public function getOrderConents($orderId){
+		$this->db->select('cart_conetents');
+		$this->db->where('cart_id',$orderId);
+		$this->db->from('cart');
+		$query=$this->db->get();
+		
+		return $query->result_array();
 	}
 }
 

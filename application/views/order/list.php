@@ -1,4 +1,4 @@
-<?php $this->load->helper('order'); ?>
+<?php $this->load->helper(array('order','date')); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,15 +25,19 @@
 					return $status;
 				}
 			}
-			for ($i=0,$j=1; $i <count($order_history_data); $i++,$j++) { 
-				echo "<tr>
-							<td align='center'>".$j."</td>
-							<td align='center'  style='padding:20px;'>".json_to_table_render($order_history_data[$i]['cart_conetents'])."</td>
-							<td align='center'>".$order_history_data[$i]['total_qty']."</td>
-							<td align='center'>".$order_history_data[$i]['total_price']."</td>
-							<td align='center'>".$order_history_data[$i]['order_date']."</td>
-							<td align='center'>".checkPaymentStatus($order_history_data[$i]['payment_status'])."</td>
-					  </tr>";
+			if(count($order_history_data)>0)
+				for ($i=0,$j=1; $i <count($order_history_data); $i++,$j++) { 
+					echo "<tr>
+								<td align='center'>".$j."</td>
+								<td align='center'  style='padding:20px;'>".json_to_table_render($order_history_data[$i]['cart_conetents'])."</td>
+								<td align='center'>".$order_history_data[$i]['total_qty']."</td>
+								<td align='center'>".$order_history_data[$i]['total_price']."</td>
+								<td align='center'>".nice_date($order_history_data[$i]['order_date'],'d-m-Y')."</td>
+								<td align='center'>".checkPaymentStatus($order_history_data[$i]['payment_status'])."</td>
+						  </tr>";
+				}
+			else{
+				echo "<tr><td style='padding:20px;' colspan='6' align='center'><strong>You have not ordered anything !!</strong></td></tr>";
 			}
 		?>
 	</table>

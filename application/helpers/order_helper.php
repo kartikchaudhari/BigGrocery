@@ -32,4 +32,23 @@
         return $table;
     }
 
+    function json_to_email_render($json_obj){
+        $json_decoded_array=json_decode($json_obj, $assoc_array = true);
+        $tr='';
+        $tr.='<table border="1"><tr>
+                <td>';
+                    for ($i=0; $i <count($json_decoded_array); $i++) { 
+                        $tr.='<li style="list-style: none;">'.$json_decoded_array[$i]['quantity'].' X '.$json_decoded_array[$i]['name'].'</li>';
+                    }
+                
+          $tr.='</td>';
+          $tr.='<td align="right">';
+                    for ($i=0; $i <count($json_decoded_array); $i++) { 
+                        $tr.='<li style="list-style:none;">'.$json_decoded_array[$i]['quantity']*$json_decoded_array[$i]['price'].'</li>';
+                    }
+            $tr.='</td>
+        </tr></table>';
+        return $tr;
+    }
+
 ?>

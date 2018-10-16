@@ -20,6 +20,16 @@ class SubCatModel extends My_Model {
 		return $this->db->query("DELETE FROM sub_categories WHERE sub_cat_id=".$SubCatId);
 
 	}
+
+	public function fetchSubCatListByCatId($CatId){
+		$this->db->where('cat_id',$CatId);
+		$query=$this->db->get('sub_categories');
+		$output='';
+		foreach($query->result() as $row){
+			$output.='<option value="'.$row->sub_cat_id.'">'.$row->sub_cat_name.'</option>';
+		}
+		return $output;
+	}
 }
 
 /* End of file SubCatModel.php */

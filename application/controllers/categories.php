@@ -8,6 +8,10 @@ class Categories extends CI_Controller {
 		$this->load->view('admin/categories');		
 	}
 
+	public function FethCategories(){
+		
+	}
+
 }
 
 /* End of file categories.php */

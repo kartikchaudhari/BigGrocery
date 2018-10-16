@@ -98,8 +98,13 @@ class Test extends My_Controller {
 		print_r($this->OrderModel->countTotalOrderRows(5,0,5));
 	}
 
-	
+	public function sm(){
+		$this->load->helper('mail');
 
+		$data='[{"id":2,"name":"Sunflower Oil","summary":"summary 2","price":"9.00","quantity":"2","image":"http://localhost/BigGrocery/assets/images/of1.png"},{"id":3,"name":"Kabuli Chana","summary":"summary 3","price":"2.00","quantity":"1","image":"http://localhost/BigGrocery/assets/images/of2.png"}]';
+
+		Send_Mail($data); 
+	}
 }
 
 /* End of file test.php */

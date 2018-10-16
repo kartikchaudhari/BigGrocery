@@ -6,6 +6,7 @@ class Order extends My_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model(['PaymentModel','OrderModel']);
+        $this->load->helper(['order','mail']);
 	}
 
 	public function addOrder(){
@@ -65,8 +66,11 @@ class Order extends My_Controller {
     		//update the order payment status
     		//if success == 1
     		$this->updatePaymentStatus($udf1,1);
+
+            //send the mail to client
+            Send_Mail($this->get_ordered_products($udf1));
         }
-        $this->load->view('payment/success',['data'=>$data]);
+        $this->load->view('payment/success',['data'=>$data,'post_data'=>$this->input->post()]);
 	}	
 
 	public function order_fail(){
@@ -130,6 +134,10 @@ class Order extends My_Controller {
 	public function updatePaymentStatus($CartId,$Status){
 		$this->OrderModel->updateOrderPaymentStatus($CartId,$Status);
 	}
+
+    public function get_ordered_products($order_id){
+       return $this->OrderModel->getOrderConents($order_id)[0]['cart_conetents'];
+    }
 
 }
 

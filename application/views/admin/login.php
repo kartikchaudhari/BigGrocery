@@ -17,6 +17,8 @@
     <div class="container">
       <form class="form-signin" role="form" method="post" action="<?=base_url('admin/do_login');?>">
         <h3 align="center" class="form-signin-heading">Login to System</h3><hr>
+        <div class="form-group"><strong>username:</strong> <span>Kartik_1003</span>&nbsp;&nbsp;&nbsp;&nbsp;<strong>password:</strong> <span>kartik</span></div>
+
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-addon">
@@ -25,8 +27,7 @@
             <input type="text" class="form-control" name="uname" id="username" placeholder="Username" autocomplete="off" />
           </div>
         </div>
-
-        <div class="form-group">
+                <div class="form-group">
           <div class="input-group">
             <div class="input-group-addon">
               <i class=" glyphicon glyphicon-lock "></i>
