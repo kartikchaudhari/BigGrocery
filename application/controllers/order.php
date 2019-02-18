@@ -5,7 +5,7 @@ class Order extends My_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model(['PaymentModel','OrderModel']);
+		$this->load->model(['UsersModel','PaymentModel','OrderModel']);
         $this->load->helper(['order','mail']);
 	}
 
@@ -43,10 +43,10 @@ class Order extends My_Controller {
 
         if ($this->input->post("additionalCharges")) {
             $additionalCharges = $this->input->post("additionalCharges");
-            $retHashSeq = $additionalCharges . '|' . $salt . '|' . $status . '||||||||||'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
+            $retHashSeq = $additionalCharges . '|' . $salt . '|' . $status . '|||||||||'.$udf2.'|'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
         } else {
 
-            $retHashSeq = $salt . '|' . $status . '||||||||||'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
+            $retHashSeq = $salt . '|' . $status . '|||||||||'.$udf2.'|'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
         }
         $hash = hash("sha512", $retHashSeq);
 
@@ -67,8 +67,20 @@ class Order extends My_Controller {
     		//if success == 1
     		$this->updatePaymentStatus($udf1,1);
 
+
+            $UserInfo=$this->CustomerDetailById($udf2);
+            $OrderInfo=$this->OrderModel->getOrderInfo($udf2);
+            $UserAndOrderInfo=array(
+                'name'=>$UserInfo['fname']." ".$UserInfo['lname'],
+                'address'=>$UserInfo['delivery_address'],
+                'phone'=>$UserInfo['contact'],
+                'order_id'=>$udf1,
+                'total_amount'=>$OrderInfo['total_amount'],
+                'order_date'=>$OrderInfo['order_date']
+            );
+
             //send the mail to client
-            Send_Mail($this->get_ordered_products($udf1));
+            Send_Mail($this->get_ordered_products($udf1),$UserAndOrderInfo);
         }
         $this->load->view('payment/success',['data'=>$data,'post_data'=>$this->input->post()]);
 	}	
@@ -126,7 +138,9 @@ class Order extends My_Controller {
 
 	}
 
-
+    public function CustomerDetailById($UserId){
+        return $this->UsersModel->FethcUserInfoForOrder($UserId);
+    }
 	public function InsertPaymentInfo($PaymentInfo){
 		$this->PaymentModel->insertPaymentInfo($PaymentInfo);
 	}
@@ -138,6 +152,7 @@ class Order extends My_Controller {
     public function get_ordered_products($order_id){
        return $this->OrderModel->getOrderConents($order_id)[0]['cart_conetents'];
     }
+
 
 }
 

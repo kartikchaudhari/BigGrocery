@@ -18,7 +18,9 @@ class Admin extends My_Controller {
 
 	public function dashboard(){
 		if ($this->session->userdata('bg_sys_ss_admin_id')) {
+			$this->load->view('admin/common/head',['data'=>array('title'=>'Dashboard')]);
 			$this->load->view('admin/dashboard',['data'=>$this->AdminModel->getAdminInfo($this->session->userdata('bg_sys_ss_admin_id'))]);
+			$this->load->view('admin/common/footer');
 		}
 		else{
 			return redirect('admin/login');
@@ -27,7 +29,9 @@ class Admin extends My_Controller {
 	}
 
 	public function login(){
+		$this->load->view('admin/common/head',['data'=>array('title'=>'Login :: Administrator Login')]);
 		$this->load->view('admin/login');
+		$this->load->view('admin/common/footer');
 	}
 
 	public function dashboard_content(){

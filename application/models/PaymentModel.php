@@ -5,6 +5,10 @@ class PaymentModel extends My_Model {
 	public function insertPaymentInfo($PaymentInfo){
 		return $this->db->insert('payments',$PaymentInfo);
 	}
+
+	public function countUserPaymentHistory($UserId){
+		//$this->db->where('')
+	}
 }
 
 /* End of file PaymentModel.php */

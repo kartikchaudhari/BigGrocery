@@ -83,7 +83,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</table>
 			<?php
 				//$hashSequence = "key|txnid|amount|productinfo|firstname|email|udf1|udf2|udf3|udf4|udf5|udf6|udf7|udf8|udf9|udf10";
-				$hash_string = MERCHANT_KEY."|".$PaymentInfo['txnid']."|".$OrderData[0]['total_price']."|".$productinfo."|".$UserInfo['fname']."|".$UserInfo['email']."|".$OrderId."||||||||||".SALT;
+				$hash_string = MERCHANT_KEY."|".$PaymentInfo['txnid']."|".$OrderData[0]['total_price']."|".$productinfo."|".$UserInfo['fname']."|".$UserInfo['email']."|".$OrderId."|".$UserId."|||||||||".SALT;
 				$hash= strtolower(hash('sha512', $hash_string));
 	 		?>
 	
@@ -93,6 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			    <input type="hidden" name="firstname" id="firstname" value="<?=$UserInfo['fname']?>">
 			    <input type="hidden" name="email" id="email" value="<?=$UserInfo['email']?>" />
 			    <input type="hidden" name="udf1" value="<?=$OrderId;?>">
+			    <input type="hidden" name="udf2" value="<?=$UserId;?>">
 			    <input type="hidden" name="phone" value="<?=$UserInfo['contact']?>" />
 			    <input type="hidden" name="productinfo" value="<?=$productinfo;?>">
 			    <input type="hidden" name="surl" value="<?php echo SUCCESS_URL; ?>" />
@@ -100,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			    <input type="hidden" name="service_provider" value="<?= SERVICE_PROVIDER;?>" >
 			    <input type='hidden' name='hash' value='<?=$hash;?>'>
 			<div class="row">
-				<div class="col-md-6 pull-right"><button type="button" onclick="createOrder();" class="btn btn-success pull-right">Make Payment <i class="fa fa-arrow-circle-o-right"></i></button></div>
+				<div class="col-md-6 pull-right"><button type="submit" onclick="createOrder();" class="btn btn-success pull-right">Make Payment <i class="fa fa-arrow-circle-o-right"></i></button></div>
 			</div>
 		</form>
 	</div>
@@ -132,7 +133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     	 $.ajax({
     	 	url: '<?=base_url('order/addOrder')?>',
     	 	type: 'POST',
-    	 	data: {cart_id: <?=$OrderId?>,total_amount:<?=$OrderData[0]['total_price'];?>,delivery_address:'<?=($UserInfo['address']==null)?"No address":$UserInfo['address'];?>',payment_status:'pending'},
+    	 	data: {cart_id: <?=$OrderId?>,total_amount:<?=$OrderData[0]['total_price'];?>,delivery_address:'<?=$UserInfo['address'];?>',payment_status:'pending'},
     	 })
     	 .done(function() {
     	 	console.log("success");

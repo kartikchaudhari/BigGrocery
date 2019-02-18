@@ -1,0 +1,52 @@
+INFO - 02-11-2018 11:45:16 --> Config Class Initialized
+INFO - 02-11-2018 11:45:16 --> Hooks Class Initialized
+DEBUG - 02-11-2018 11:45:17 --> UTF-8 Support Enabled
+INFO - 02-11-2018 11:45:17 --> Utf8 Class Initialized
+INFO - 02-11-2018 11:45:17 --> URI Class Initialized
+DEBUG - 02-11-2018 11:45:17 --> No URI present. Default controller set.
+INFO - 02-11-2018 11:45:17 --> Router Class Initialized
+INFO - 02-11-2018 11:45:17 --> Output Class Initialized
+INFO - 02-11-2018 11:45:17 --> Security Class Initialized
+DEBUG - 02-11-2018 11:45:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 02-11-2018 11:45:17 --> Input Class Initialized
+INFO - 02-11-2018 11:45:17 --> Language Class Initialized
+INFO - 02-11-2018 11:45:18 --> Loader Class Initialized
+INFO - 02-11-2018 11:45:18 --> Helper loaded: url_helper
+INFO - 02-11-2018 11:45:18 --> Helper loaded: form_helper
+DEBUG - 02-11-2018 11:45:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 02-11-2018 11:45:18 --> Session: Class initialized using 'files' driver.
+INFO - 02-11-2018 11:45:18 --> Controller Class Initialized
+INFO - 02-11-2018 11:45:18 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/favicon.php
+INFO - 02-11-2018 11:45:18 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 02-11-2018 11:45:18 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 02-11-2018 11:45:19 --> Helper loaded: site_helper
+INFO - 02-11-2018 11:45:19 --> Database Driver Class Initialized
+INFO - 02-11-2018 11:45:19 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 02-11-2018 11:45:19 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\cart/cart.php
+INFO - 02-11-2018 11:45:19 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\index.php
+INFO - 02-11-2018 11:45:20 --> Final output sent to browser
+DEBUG - 02-11-2018 11:45:20 --> Total execution time: 3.5145
+INFO - 02-11-2018 11:45:20 --> Config Class Initialized
+INFO - 02-11-2018 11:45:20 --> Hooks Class Initialized
+INFO - 02-11-2018 11:45:20 --> Config Class Initialized
+INFO - 02-11-2018 11:45:20 --> Hooks Class Initialized
+DEBUG - 02-11-2018 11:45:20 --> UTF-8 Support Enabled
+DEBUG - 02-11-2018 11:45:20 --> UTF-8 Support Enabled
+INFO - 02-11-2018 11:45:20 --> Utf8 Class Initialized
+INFO - 02-11-2018 11:45:21 --> URI Class Initialized
+INFO - 02-11-2018 11:45:21 --> Utf8 Class Initialized
+INFO - 02-11-2018 11:45:21 --> URI Class Initialized
+INFO - 02-11-2018 11:45:21 --> Router Class Initialized
+INFO - 02-11-2018 11:45:21 --> Router Class Initialized
+INFO - 02-11-2018 11:45:21 --> Output Class Initialized
+INFO - 02-11-2018 11:45:21 --> Output Class Initialized
+INFO - 02-11-2018 11:45:21 --> Security Class Initialized
+DEBUG - 02-11-2018 11:45:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 02-11-2018 11:45:21 --> Security Class Initialized
+INFO - 02-11-2018 11:45:21 --> Input Class Initialized
+INFO - 02-11-2018 11:45:21 --> Language Class Initialized
+DEBUG - 02-11-2018 11:45:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 02-11-2018 11:45:21 --> Input Class Initialized
+INFO - 02-11-2018 11:45:21 --> Language Class Initialized
+ERROR - 02-11-2018 11:45:21 --> 404 Page Not Found: Images/of.png
+ERROR - 02-11-2018 11:45:21 --> 404 Page Not Found: Images/of1.png

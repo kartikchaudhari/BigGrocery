@@ -36,6 +36,45 @@ class UsersModel extends My_Model {
 		return $query->row_array();
 	}
 
+	public function FethcUserInfoForOrder($UserId){
+		$query=$this->db->query("SELECT `fname`,`lname`,`email`,`contact`,`delivery_address` FROM `users` WHERE user_id=".$UserId);
+		return $query->row_array();
+	}
+
+	public function updateProfileInfo($data,$userId){
+		$data = array('fname' => trim($data['fname']),
+					  'lname' => trim($data['lname']),
+					  'email' => trim($data['email']),
+					  'contact' =>trim($data['contact']),
+					  'delivery_address' =>trim($data['daddress']),
+					  'address' =>trim($data['address'])
+					  );
+		$where = "user_id =".$userId;
+		$str=$this->db->update_string('users', $data, $where);
+		if ($this->db->query($str)) {
+			return  true;
+		}else{
+			return false;
+		}
+
+	}
+	public function checkAddressStatus($UserId){
+
+		$query=$this->db->query("SELECT address FROM users  WHERE address IS NULL AND user_id=".$UserId);
+		if (!empty($query->result())) {
+			return true;			
+		}
+		else{
+			return false;
+		}
+
+	}
+
+	public function WishListCount($UserId){
+		$query=$this->db->query("SELECT COUNT(products.product_id) FROM products,wishlist WHERE products.product_id=wishlist.product_id AND wishlist.user_id=".$UserId."");
+		return $query->row_array()['COUNT(products.product_id)'];
+	}
+
 }
 
 /* End of file UsersModel.php */

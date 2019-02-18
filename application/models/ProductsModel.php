@@ -12,11 +12,22 @@ class ProductsModel extends My_Model {
 		}
 	}
 
+	public function getAllProducts(){
+		$string="SELECT `product_id`, `cat_id`, `sub_cat_id`, `product_name`, `product_image`,`product_price`,`product_stock` FROM `products`";
+		$query=$this->db->query($string);
+		return $query->result_array();
+	}
+
 	public function getAllProductsBySubCategory($SubCatId){
 		$query=$this->db->query("SELECT * FROM products WHERE sub_cat_id=".$SubCatId."");
 		return $query->result_array();
 	}
 
+	public function returnCategoryName($CatId){
+		$query=$this->db->query("SELECT cat_name FROM categories WHERE cat_id=".$CatId."");
+		return $query->row_array();
+	}
+	
 	public function returnSubCategoryName($SubCatId){
 		$query=$this->db->query("SELECT sub_cat_name FROM sub_categories WHERE sub_cat_id=".$SubCatId."");
 		return $query->row_array();

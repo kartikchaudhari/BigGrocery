@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Dashboard</title>
-    <?php $this->load->view('admin/head'); ?>
-  </head>
-  <body style="background-color: #FFF;">
+    <?php $this->load->view('admin/common/head'); ?>
     <!--container-->
+    <style type="text/css">
+      body{
+        background-color: white;
+      }
+    </style>
     <div class="content-row" style="padding: 0px;">
       <div class="row">
           <div class="col-md-3">
@@ -189,8 +188,4 @@
       </div>
     </div>
     <!--/container-->
-
-    <!-- load the js -->
-    <?php $this->load->view('admin/js'); ?>
-  </body>
-</html>
+    <?php $this->load->view('admin/common/footer'); ?>

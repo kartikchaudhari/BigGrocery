@@ -10,18 +10,22 @@ class Sub_categories extends My_Controller {
 
 	public function index()
 	{	
-		$this->load->view('admin/subcat/view',['data'=>$this->getAllSubCat()]);		
+		$this->load->view('admin/common/head',['data'=>array('title'=>'Sub Categories')]);
+		$this->load->view('admin/subcat/view',['data'=>$this->getAllSubCat()]);
+		$this->load->view('admin/common/footer');		
 	}
 
 	public function add()
 	{
 		$data=array();
 		$data['cat']=$this->getCategoriesList();
+		$this->load->view('admin/common/head',['data'=>array('title'=>'Add Sub-Categories')]);
 		$this->load->view('admin/subcat/add',['data'=>$data]);		
 	}
 
 	public function remove()
 	{
+		$this->load->view('admin/common/head',['data'=>array('title'=>'Delete Sub-Categories')]);
 		$this->load->view('admin/subcat/remove',['data'=>$this->getAllSubCat()]);		
 	}
 

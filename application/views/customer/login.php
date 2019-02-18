@@ -31,15 +31,15 @@
 		<div class="main-agileits">
 				<div class="form-w3agile">
 					<h3>Login</h3>
-					<form action="<?=base_url('user/login_user')?>" method="post">
+					<form action="<?=base_url('user/login_user')?>" enctype="pplication/x-www-form-urlencoded" method="post">
 						<div class="key">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
-							<input id="email"  type="text" placeholder="Enter email or phone " name="uname" required="">
+							<input id="email"   placeholder="Enter email or phone" type="text" name="uname" required="">
 							<div class="clearfix"></div>
 						</div>
 						<div class="key">
 							<i class="fa fa-lock" aria-hidden="true"></i>
-							<input id="pass"  type="password" name="password" required="">
+							<input id="pass"  type="password" name="password" required="" placeholder="Password">
 							<div class="clearfix"></div>
 						</div>
 						<input type="submit" value="Login">

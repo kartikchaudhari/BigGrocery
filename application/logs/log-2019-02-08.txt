@@ -1,0 +1,561 @@
+INFO - 08-02-2019 18:14:08 --> Config Class Initialized
+INFO - 08-02-2019 18:14:08 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:14:09 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:14:09 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:14:09 --> URI Class Initialized
+DEBUG - 08-02-2019 18:14:09 --> No URI present. Default controller set.
+INFO - 08-02-2019 18:14:09 --> Router Class Initialized
+INFO - 08-02-2019 18:14:09 --> Output Class Initialized
+INFO - 08-02-2019 18:14:09 --> Security Class Initialized
+DEBUG - 08-02-2019 18:14:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:14:10 --> Input Class Initialized
+INFO - 08-02-2019 18:14:10 --> Language Class Initialized
+INFO - 08-02-2019 18:14:10 --> Loader Class Initialized
+INFO - 08-02-2019 18:14:10 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:14:10 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:14:11 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:14:11 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:14:11 --> Controller Class Initialized
+INFO - 08-02-2019 18:14:11 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/favicon.php
+INFO - 08-02-2019 18:14:11 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 08-02-2019 18:14:11 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 08-02-2019 18:14:12 --> Helper loaded: site_helper
+INFO - 08-02-2019 18:14:12 --> Database Driver Class Initialized
+ERROR - 08-02-2019 18:14:14 --> Severity: Warning --> mysqli::real_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+ C:\xampp\htdocs\BigGrocery\system\database\drivers\mysqli\mysqli_driver.php 201
+ERROR - 08-02-2019 18:14:15 --> Unable to connect to the database
+INFO - 08-02-2019 18:14:15 --> Language file loaded: language/english/db_lang.php
+INFO - 08-02-2019 18:16:12 --> Config Class Initialized
+INFO - 08-02-2019 18:16:12 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:16:12 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:16:12 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:12 --> URI Class Initialized
+DEBUG - 08-02-2019 18:16:12 --> No URI present. Default controller set.
+INFO - 08-02-2019 18:16:12 --> Router Class Initialized
+INFO - 08-02-2019 18:16:12 --> Output Class Initialized
+INFO - 08-02-2019 18:16:12 --> Security Class Initialized
+DEBUG - 08-02-2019 18:16:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:16:12 --> Input Class Initialized
+INFO - 08-02-2019 18:16:12 --> Language Class Initialized
+INFO - 08-02-2019 18:16:12 --> Loader Class Initialized
+INFO - 08-02-2019 18:16:12 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:16:12 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:16:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:16:12 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:16:12 --> Controller Class Initialized
+INFO - 08-02-2019 18:16:12 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/favicon.php
+INFO - 08-02-2019 18:16:12 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 08-02-2019 18:16:12 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 08-02-2019 18:16:12 --> Helper loaded: site_helper
+INFO - 08-02-2019 18:16:12 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:16:13 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 08-02-2019 18:16:13 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\cart/cart.php
+INFO - 08-02-2019 18:16:13 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\index.php
+INFO - 08-02-2019 18:16:13 --> Final output sent to browser
+DEBUG - 08-02-2019 18:16:13 --> Total execution time: 1.4105
+INFO - 08-02-2019 18:16:17 --> Config Class Initialized
+INFO - 08-02-2019 18:16:17 --> Hooks Class Initialized
+INFO - 08-02-2019 18:16:17 --> Config Class Initialized
+INFO - 08-02-2019 18:16:17 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:16:17 --> UTF-8 Support Enabled
+DEBUG - 08-02-2019 18:16:17 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:16:17 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:17 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:17 --> URI Class Initialized
+INFO - 08-02-2019 18:16:17 --> URI Class Initialized
+INFO - 08-02-2019 18:16:17 --> Router Class Initialized
+INFO - 08-02-2019 18:16:17 --> Router Class Initialized
+INFO - 08-02-2019 18:16:17 --> Output Class Initialized
+INFO - 08-02-2019 18:16:17 --> Output Class Initialized
+INFO - 08-02-2019 18:16:17 --> Security Class Initialized
+INFO - 08-02-2019 18:16:17 --> Security Class Initialized
+DEBUG - 08-02-2019 18:16:17 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 08-02-2019 18:16:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:16:17 --> Input Class Initialized
+INFO - 08-02-2019 18:16:17 --> Input Class Initialized
+INFO - 08-02-2019 18:16:17 --> Language Class Initialized
+INFO - 08-02-2019 18:16:17 --> Language Class Initialized
+ERROR - 08-02-2019 18:16:18 --> 404 Page Not Found: Images/of.png
+ERROR - 08-02-2019 18:16:18 --> 404 Page Not Found: Images/of1.png
+INFO - 08-02-2019 18:16:25 --> Config Class Initialized
+INFO - 08-02-2019 18:16:25 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:16:25 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:16:25 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:25 --> URI Class Initialized
+INFO - 08-02-2019 18:16:25 --> Router Class Initialized
+INFO - 08-02-2019 18:16:25 --> Output Class Initialized
+INFO - 08-02-2019 18:16:25 --> Security Class Initialized
+DEBUG - 08-02-2019 18:16:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:16:25 --> Input Class Initialized
+INFO - 08-02-2019 18:16:25 --> Language Class Initialized
+INFO - 08-02-2019 18:16:25 --> Loader Class Initialized
+INFO - 08-02-2019 18:16:25 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:16:25 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:16:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:16:25 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:16:25 --> Controller Class Initialized
+INFO - 08-02-2019 18:16:26 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:16:26 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/head.php
+INFO - 08-02-2019 18:16:26 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 08-02-2019 18:16:26 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 08-02-2019 18:16:26 --> Helper loaded: site_helper
+INFO - 08-02-2019 18:16:26 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 08-02-2019 18:16:26 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_footer.php
+INFO - 08-02-2019 18:16:26 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/login.php
+INFO - 08-02-2019 18:16:26 --> Final output sent to browser
+DEBUG - 08-02-2019 18:16:26 --> Total execution time: 1.2863
+INFO - 08-02-2019 18:16:27 --> Config Class Initialized
+INFO - 08-02-2019 18:16:27 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:16:27 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:16:27 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:27 --> URI Class Initialized
+INFO - 08-02-2019 18:16:27 --> Router Class Initialized
+INFO - 08-02-2019 18:16:27 --> Output Class Initialized
+INFO - 08-02-2019 18:16:27 --> Security Class Initialized
+DEBUG - 08-02-2019 18:16:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:16:27 --> Input Class Initialized
+INFO - 08-02-2019 18:16:27 --> Language Class Initialized
+ERROR - 08-02-2019 18:16:27 --> 404 Page Not Found: User/images
+INFO - 08-02-2019 18:16:39 --> Config Class Initialized
+INFO - 08-02-2019 18:16:39 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:16:39 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:16:39 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:39 --> URI Class Initialized
+INFO - 08-02-2019 18:16:39 --> Router Class Initialized
+INFO - 08-02-2019 18:16:39 --> Output Class Initialized
+INFO - 08-02-2019 18:16:39 --> Security Class Initialized
+DEBUG - 08-02-2019 18:16:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:16:39 --> Input Class Initialized
+INFO - 08-02-2019 18:16:39 --> Language Class Initialized
+INFO - 08-02-2019 18:16:39 --> Loader Class Initialized
+INFO - 08-02-2019 18:16:39 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:16:39 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:16:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:16:39 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:16:39 --> Controller Class Initialized
+INFO - 08-02-2019 18:16:39 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:16:39 --> Config Class Initialized
+INFO - 08-02-2019 18:16:39 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:16:39 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:16:39 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:39 --> URI Class Initialized
+INFO - 08-02-2019 18:16:39 --> Router Class Initialized
+INFO - 08-02-2019 18:16:39 --> Output Class Initialized
+INFO - 08-02-2019 18:16:39 --> Security Class Initialized
+DEBUG - 08-02-2019 18:16:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:16:39 --> Input Class Initialized
+INFO - 08-02-2019 18:16:39 --> Language Class Initialized
+INFO - 08-02-2019 18:16:39 --> Loader Class Initialized
+INFO - 08-02-2019 18:16:39 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:16:39 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:16:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:16:39 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:16:39 --> Controller Class Initialized
+INFO - 08-02-2019 18:16:39 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:16:40 --> Config Class Initialized
+INFO - 08-02-2019 18:16:40 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:16:40 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:16:40 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:40 --> URI Class Initialized
+INFO - 08-02-2019 18:16:40 --> Router Class Initialized
+INFO - 08-02-2019 18:16:40 --> Output Class Initialized
+INFO - 08-02-2019 18:16:40 --> Security Class Initialized
+DEBUG - 08-02-2019 18:16:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:16:40 --> Input Class Initialized
+INFO - 08-02-2019 18:16:40 --> Language Class Initialized
+INFO - 08-02-2019 18:16:40 --> Loader Class Initialized
+INFO - 08-02-2019 18:16:40 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:16:40 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:16:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:16:40 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:16:40 --> Controller Class Initialized
+INFO - 08-02-2019 18:16:40 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:16:40 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/head.php
+INFO - 08-02-2019 18:16:40 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 08-02-2019 18:16:40 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 08-02-2019 18:16:40 --> Helper loaded: site_helper
+INFO - 08-02-2019 18:16:40 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 08-02-2019 18:16:40 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_footer.php
+INFO - 08-02-2019 18:16:40 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\cart/cart.php
+INFO - 08-02-2019 18:16:40 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/dashboard.php
+INFO - 08-02-2019 18:16:40 --> Final output sent to browser
+DEBUG - 08-02-2019 18:16:40 --> Total execution time: 0.6911
+INFO - 08-02-2019 18:16:49 --> Config Class Initialized
+INFO - 08-02-2019 18:16:49 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:16:49 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:16:49 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:49 --> URI Class Initialized
+INFO - 08-02-2019 18:16:49 --> Router Class Initialized
+INFO - 08-02-2019 18:16:49 --> Output Class Initialized
+INFO - 08-02-2019 18:16:49 --> Security Class Initialized
+DEBUG - 08-02-2019 18:16:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:16:50 --> Input Class Initialized
+INFO - 08-02-2019 18:16:50 --> Language Class Initialized
+INFO - 08-02-2019 18:16:50 --> Loader Class Initialized
+INFO - 08-02-2019 18:16:50 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:16:50 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:16:50 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:16:50 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:16:50 --> Controller Class Initialized
+INFO - 08-02-2019 18:16:50 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:16:50 --> Helper loaded: product_helper
+INFO - 08-02-2019 18:16:50 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/head.php
+INFO - 08-02-2019 18:16:50 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 08-02-2019 18:16:50 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 08-02-2019 18:16:50 --> Helper loaded: site_helper
+INFO - 08-02-2019 18:16:51 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 08-02-2019 18:16:51 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_footer.php
+INFO - 08-02-2019 18:16:51 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\cart/cart.php
+INFO - 08-02-2019 18:16:51 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\products.php
+INFO - 08-02-2019 18:16:51 --> Final output sent to browser
+DEBUG - 08-02-2019 18:16:51 --> Total execution time: 1.2986
+INFO - 08-02-2019 18:16:51 --> Config Class Initialized
+INFO - 08-02-2019 18:16:51 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:16:51 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:16:51 --> Config Class Initialized
+INFO - 08-02-2019 18:16:51 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:51 --> Hooks Class Initialized
+INFO - 08-02-2019 18:16:51 --> URI Class Initialized
+INFO - 08-02-2019 18:16:51 --> Router Class Initialized
+DEBUG - 08-02-2019 18:16:51 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:16:51 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:51 --> Output Class Initialized
+INFO - 08-02-2019 18:16:51 --> URI Class Initialized
+INFO - 08-02-2019 18:16:51 --> Security Class Initialized
+INFO - 08-02-2019 18:16:51 --> Router Class Initialized
+DEBUG - 08-02-2019 18:16:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:16:51 --> Output Class Initialized
+INFO - 08-02-2019 18:16:51 --> Input Class Initialized
+INFO - 08-02-2019 18:16:52 --> Security Class Initialized
+INFO - 08-02-2019 18:16:52 --> Language Class Initialized
+DEBUG - 08-02-2019 18:16:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:16:52 --> Loader Class Initialized
+INFO - 08-02-2019 18:16:52 --> Input Class Initialized
+INFO - 08-02-2019 18:16:52 --> Language Class Initialized
+INFO - 08-02-2019 18:16:52 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:16:52 --> Loader Class Initialized
+INFO - 08-02-2019 18:16:52 --> Helper loaded: form_helper
+INFO - 08-02-2019 18:16:52 --> Helper loaded: url_helper
+DEBUG - 08-02-2019 18:16:52 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:16:52 --> Helper loaded: form_helper
+INFO - 08-02-2019 18:16:52 --> Session: Class initialized using 'files' driver.
+DEBUG - 08-02-2019 18:16:52 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:16:52 --> Controller Class Initialized
+INFO - 08-02-2019 18:16:52 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:16:52 --> Helper loaded: product_helper
+ERROR - 08-02-2019 18:16:52 --> Query error: Unknown column 'images' in 'where clause' - Invalid query: SELECT sub_cat_name FROM sub_categories WHERE sub_cat_id=images
+INFO - 08-02-2019 18:16:52 --> Language file loaded: language/english/db_lang.php
+INFO - 08-02-2019 18:16:52 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:16:52 --> Controller Class Initialized
+INFO - 08-02-2019 18:16:52 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:16:52 --> Helper loaded: product_helper
+ERROR - 08-02-2019 18:16:52 --> Query error: Unknown column 'images' in 'where clause' - Invalid query: SELECT sub_cat_name FROM sub_categories WHERE sub_cat_id=images
+INFO - 08-02-2019 18:16:52 --> Language file loaded: language/english/db_lang.php
+INFO - 08-02-2019 18:16:55 --> Config Class Initialized
+INFO - 08-02-2019 18:16:55 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:16:55 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:16:55 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:55 --> URI Class Initialized
+INFO - 08-02-2019 18:16:55 --> Router Class Initialized
+INFO - 08-02-2019 18:16:55 --> Output Class Initialized
+INFO - 08-02-2019 18:16:55 --> Security Class Initialized
+DEBUG - 08-02-2019 18:16:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:16:56 --> Input Class Initialized
+INFO - 08-02-2019 18:16:56 --> Language Class Initialized
+INFO - 08-02-2019 18:16:56 --> Loader Class Initialized
+INFO - 08-02-2019 18:16:56 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:16:56 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:16:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:16:56 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:16:56 --> Controller Class Initialized
+INFO - 08-02-2019 18:16:56 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/favicon.php
+INFO - 08-02-2019 18:16:56 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 08-02-2019 18:16:56 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 08-02-2019 18:16:56 --> Helper loaded: site_helper
+INFO - 08-02-2019 18:16:56 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:16:56 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 08-02-2019 18:16:56 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\cart/cart.php
+INFO - 08-02-2019 18:16:56 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\index.php
+INFO - 08-02-2019 18:16:56 --> Final output sent to browser
+DEBUG - 08-02-2019 18:16:56 --> Total execution time: 0.6666
+INFO - 08-02-2019 18:16:56 --> Config Class Initialized
+INFO - 08-02-2019 18:16:56 --> Hooks Class Initialized
+INFO - 08-02-2019 18:16:57 --> Config Class Initialized
+INFO - 08-02-2019 18:16:57 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:16:57 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:16:57 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:57 --> URI Class Initialized
+INFO - 08-02-2019 18:16:57 --> Router Class Initialized
+INFO - 08-02-2019 18:16:57 --> Output Class Initialized
+INFO - 08-02-2019 18:16:57 --> Security Class Initialized
+DEBUG - 08-02-2019 18:16:57 --> UTF-8 Support Enabled
+DEBUG - 08-02-2019 18:16:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:16:57 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:57 --> Input Class Initialized
+INFO - 08-02-2019 18:16:57 --> Language Class Initialized
+INFO - 08-02-2019 18:16:57 --> URI Class Initialized
+ERROR - 08-02-2019 18:16:57 --> 404 Page Not Found: Images/of1.png
+INFO - 08-02-2019 18:16:57 --> Router Class Initialized
+INFO - 08-02-2019 18:16:58 --> Output Class Initialized
+INFO - 08-02-2019 18:16:58 --> Security Class Initialized
+DEBUG - 08-02-2019 18:16:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:16:58 --> Input Class Initialized
+INFO - 08-02-2019 18:16:58 --> Language Class Initialized
+ERROR - 08-02-2019 18:16:58 --> 404 Page Not Found: Images/of.png
+INFO - 08-02-2019 18:16:59 --> Config Class Initialized
+INFO - 08-02-2019 18:16:59 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:16:59 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:16:59 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:16:59 --> URI Class Initialized
+INFO - 08-02-2019 18:17:00 --> Router Class Initialized
+INFO - 08-02-2019 18:17:00 --> Output Class Initialized
+INFO - 08-02-2019 18:17:00 --> Security Class Initialized
+DEBUG - 08-02-2019 18:17:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:17:00 --> Input Class Initialized
+INFO - 08-02-2019 18:17:00 --> Language Class Initialized
+INFO - 08-02-2019 18:17:00 --> Loader Class Initialized
+INFO - 08-02-2019 18:17:00 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:17:00 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:17:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:17:00 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:17:00 --> Controller Class Initialized
+INFO - 08-02-2019 18:17:00 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:17:00 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/head.php
+INFO - 08-02-2019 18:17:00 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 08-02-2019 18:17:00 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 08-02-2019 18:17:00 --> Helper loaded: site_helper
+INFO - 08-02-2019 18:17:00 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 08-02-2019 18:17:00 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_footer.php
+INFO - 08-02-2019 18:17:00 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\cart/cart.php
+INFO - 08-02-2019 18:17:00 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/dashboard.php
+INFO - 08-02-2019 18:17:00 --> Final output sent to browser
+DEBUG - 08-02-2019 18:17:00 --> Total execution time: 0.5362
+INFO - 08-02-2019 18:17:02 --> Config Class Initialized
+INFO - 08-02-2019 18:17:02 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:17:02 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:17:02 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:17:02 --> URI Class Initialized
+INFO - 08-02-2019 18:17:03 --> Router Class Initialized
+INFO - 08-02-2019 18:17:03 --> Output Class Initialized
+INFO - 08-02-2019 18:17:03 --> Security Class Initialized
+DEBUG - 08-02-2019 18:17:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:17:03 --> Input Class Initialized
+INFO - 08-02-2019 18:17:03 --> Language Class Initialized
+INFO - 08-02-2019 18:17:03 --> Loader Class Initialized
+INFO - 08-02-2019 18:17:03 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:17:03 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:17:03 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:17:03 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:17:03 --> Controller Class Initialized
+INFO - 08-02-2019 18:17:03 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:17:03 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/head.php
+INFO - 08-02-2019 18:17:03 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 08-02-2019 18:17:03 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 08-02-2019 18:17:03 --> Helper loaded: site_helper
+INFO - 08-02-2019 18:17:03 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 08-02-2019 18:17:03 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_footer.php
+INFO - 08-02-2019 18:17:03 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\cart/cart.php
+INFO - 08-02-2019 18:17:03 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/profile.php
+INFO - 08-02-2019 18:17:03 --> Final output sent to browser
+DEBUG - 08-02-2019 18:17:03 --> Total execution time: 0.6445
+INFO - 08-02-2019 18:17:08 --> Config Class Initialized
+INFO - 08-02-2019 18:17:08 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:17:08 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:17:08 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:17:08 --> URI Class Initialized
+INFO - 08-02-2019 18:17:08 --> Router Class Initialized
+INFO - 08-02-2019 18:17:09 --> Output Class Initialized
+INFO - 08-02-2019 18:17:09 --> Security Class Initialized
+DEBUG - 08-02-2019 18:17:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:17:09 --> Input Class Initialized
+INFO - 08-02-2019 18:17:09 --> Language Class Initialized
+INFO - 08-02-2019 18:17:09 --> Loader Class Initialized
+INFO - 08-02-2019 18:17:09 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:17:09 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:17:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:17:09 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:17:09 --> Controller Class Initialized
+INFO - 08-02-2019 18:17:09 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:17:09 --> Helper loaded: order_helper
+INFO - 08-02-2019 18:17:09 --> Helper loaded: date_helper
+INFO - 08-02-2019 18:17:09 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\order/list.php
+INFO - 08-02-2019 18:17:09 --> Final output sent to browser
+DEBUG - 08-02-2019 18:17:09 --> Total execution time: 0.9883
+INFO - 08-02-2019 18:17:14 --> Config Class Initialized
+INFO - 08-02-2019 18:17:14 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:17:14 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:17:14 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:17:15 --> URI Class Initialized
+INFO - 08-02-2019 18:17:15 --> Router Class Initialized
+INFO - 08-02-2019 18:17:15 --> Output Class Initialized
+INFO - 08-02-2019 18:17:15 --> Security Class Initialized
+DEBUG - 08-02-2019 18:17:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:17:15 --> Input Class Initialized
+INFO - 08-02-2019 18:17:15 --> Language Class Initialized
+INFO - 08-02-2019 18:17:15 --> Loader Class Initialized
+INFO - 08-02-2019 18:17:15 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:17:15 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:17:15 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:17:15 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:17:15 --> Controller Class Initialized
+INFO - 08-02-2019 18:17:15 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:17:15 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/head.php
+INFO - 08-02-2019 18:17:15 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 08-02-2019 18:17:15 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 08-02-2019 18:17:15 --> Helper loaded: site_helper
+INFO - 08-02-2019 18:17:15 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 08-02-2019 18:17:15 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_footer.php
+INFO - 08-02-2019 18:17:15 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\cart/cart.php
+INFO - 08-02-2019 18:17:15 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/profile.php
+INFO - 08-02-2019 18:17:15 --> Final output sent to browser
+DEBUG - 08-02-2019 18:17:15 --> Total execution time: 0.5125
+INFO - 08-02-2019 18:17:21 --> Config Class Initialized
+INFO - 08-02-2019 18:17:21 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:17:21 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:17:21 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:17:21 --> URI Class Initialized
+INFO - 08-02-2019 18:17:21 --> Router Class Initialized
+INFO - 08-02-2019 18:17:21 --> Output Class Initialized
+INFO - 08-02-2019 18:17:21 --> Security Class Initialized
+DEBUG - 08-02-2019 18:17:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:17:21 --> Input Class Initialized
+INFO - 08-02-2019 18:17:21 --> Language Class Initialized
+INFO - 08-02-2019 18:17:21 --> Loader Class Initialized
+INFO - 08-02-2019 18:17:21 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:17:21 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:17:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:17:21 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:17:21 --> Controller Class Initialized
+INFO - 08-02-2019 18:17:21 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:17:21 --> Helper loaded: product_helper
+INFO - 08-02-2019 18:17:21 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/head.php
+INFO - 08-02-2019 18:17:21 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 08-02-2019 18:17:21 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 08-02-2019 18:17:21 --> Helper loaded: site_helper
+INFO - 08-02-2019 18:17:21 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 08-02-2019 18:17:21 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_footer.php
+INFO - 08-02-2019 18:17:21 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\cart/cart.php
+INFO - 08-02-2019 18:17:21 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\products.php
+INFO - 08-02-2019 18:17:21 --> Final output sent to browser
+DEBUG - 08-02-2019 18:17:21 --> Total execution time: 0.5755
+INFO - 08-02-2019 18:17:21 --> Config Class Initialized
+INFO - 08-02-2019 18:17:21 --> Config Class Initialized
+INFO - 08-02-2019 18:17:21 --> Hooks Class Initialized
+INFO - 08-02-2019 18:17:21 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:17:21 --> UTF-8 Support Enabled
+DEBUG - 08-02-2019 18:17:21 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:17:22 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:17:22 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:17:22 --> URI Class Initialized
+INFO - 08-02-2019 18:17:22 --> URI Class Initialized
+INFO - 08-02-2019 18:17:22 --> Router Class Initialized
+INFO - 08-02-2019 18:17:22 --> Router Class Initialized
+INFO - 08-02-2019 18:17:22 --> Output Class Initialized
+INFO - 08-02-2019 18:17:22 --> Output Class Initialized
+INFO - 08-02-2019 18:17:22 --> Security Class Initialized
+INFO - 08-02-2019 18:17:22 --> Security Class Initialized
+DEBUG - 08-02-2019 18:17:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 08-02-2019 18:17:22 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:17:22 --> Input Class Initialized
+INFO - 08-02-2019 18:17:22 --> Input Class Initialized
+INFO - 08-02-2019 18:17:22 --> Language Class Initialized
+INFO - 08-02-2019 18:17:22 --> Language Class Initialized
+INFO - 08-02-2019 18:17:22 --> Loader Class Initialized
+INFO - 08-02-2019 18:17:22 --> Loader Class Initialized
+INFO - 08-02-2019 18:17:22 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:17:22 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:17:22 --> Helper loaded: form_helper
+INFO - 08-02-2019 18:17:22 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:17:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 08-02-2019 18:17:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:17:22 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:17:22 --> Controller Class Initialized
+INFO - 08-02-2019 18:17:22 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:17:22 --> Helper loaded: product_helper
+ERROR - 08-02-2019 18:17:22 --> Query error: Unknown column 'images' in 'where clause' - Invalid query: SELECT sub_cat_name FROM sub_categories WHERE sub_cat_id=images
+INFO - 08-02-2019 18:17:22 --> Language file loaded: language/english/db_lang.php
+INFO - 08-02-2019 18:17:22 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:17:22 --> Controller Class Initialized
+INFO - 08-02-2019 18:17:22 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:17:22 --> Helper loaded: product_helper
+ERROR - 08-02-2019 18:17:22 --> Query error: Unknown column 'images' in 'where clause' - Invalid query: SELECT sub_cat_name FROM sub_categories WHERE sub_cat_id=images
+INFO - 08-02-2019 18:17:22 --> Language file loaded: language/english/db_lang.php
+INFO - 08-02-2019 18:19:10 --> Config Class Initialized
+INFO - 08-02-2019 18:19:10 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:19:10 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:19:10 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:19:10 --> URI Class Initialized
+INFO - 08-02-2019 18:19:10 --> Router Class Initialized
+INFO - 08-02-2019 18:19:10 --> Output Class Initialized
+INFO - 08-02-2019 18:19:11 --> Security Class Initialized
+DEBUG - 08-02-2019 18:19:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:19:11 --> Input Class Initialized
+INFO - 08-02-2019 18:19:11 --> Language Class Initialized
+INFO - 08-02-2019 18:19:11 --> Loader Class Initialized
+INFO - 08-02-2019 18:19:11 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:19:11 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:19:11 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:19:11 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:19:11 --> Controller Class Initialized
+INFO - 08-02-2019 18:19:11 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:19:11 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/head.php
+INFO - 08-02-2019 18:19:11 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 08-02-2019 18:19:11 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 08-02-2019 18:19:11 --> Helper loaded: site_helper
+INFO - 08-02-2019 18:19:11 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 08-02-2019 18:19:11 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_footer.php
+INFO - 08-02-2019 18:19:11 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\cart/cart.php
+INFO - 08-02-2019 18:19:11 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/profile.php
+INFO - 08-02-2019 18:19:11 --> Final output sent to browser
+DEBUG - 08-02-2019 18:19:11 --> Total execution time: 0.6077
+INFO - 08-02-2019 18:19:20 --> Config Class Initialized
+INFO - 08-02-2019 18:19:20 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:19:20 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:19:20 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:19:20 --> URI Class Initialized
+INFO - 08-02-2019 18:19:20 --> Router Class Initialized
+INFO - 08-02-2019 18:19:20 --> Output Class Initialized
+INFO - 08-02-2019 18:19:20 --> Security Class Initialized
+DEBUG - 08-02-2019 18:19:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:19:20 --> Input Class Initialized
+INFO - 08-02-2019 18:19:20 --> Language Class Initialized
+INFO - 08-02-2019 18:19:20 --> Loader Class Initialized
+INFO - 08-02-2019 18:19:20 --> Helper loaded: url_helper
+INFO - 08-02-2019 18:19:20 --> Helper loaded: form_helper
+DEBUG - 08-02-2019 18:19:20 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 08-02-2019 18:19:20 --> Session: Class initialized using 'files' driver.
+INFO - 08-02-2019 18:19:20 --> Controller Class Initialized
+INFO - 08-02-2019 18:19:20 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/favicon.php
+INFO - 08-02-2019 18:19:20 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 08-02-2019 18:19:20 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 08-02-2019 18:19:20 --> Helper loaded: site_helper
+INFO - 08-02-2019 18:19:20 --> Database Driver Class Initialized
+INFO - 08-02-2019 18:19:20 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 08-02-2019 18:19:20 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\cart/cart.php
+INFO - 08-02-2019 18:19:20 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\index.php
+INFO - 08-02-2019 18:19:20 --> Final output sent to browser
+DEBUG - 08-02-2019 18:19:20 --> Total execution time: 0.5315
+INFO - 08-02-2019 18:19:21 --> Config Class Initialized
+INFO - 08-02-2019 18:19:21 --> Config Class Initialized
+INFO - 08-02-2019 18:19:21 --> Hooks Class Initialized
+INFO - 08-02-2019 18:19:21 --> Hooks Class Initialized
+DEBUG - 08-02-2019 18:19:21 --> UTF-8 Support Enabled
+DEBUG - 08-02-2019 18:19:21 --> UTF-8 Support Enabled
+INFO - 08-02-2019 18:19:21 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:19:21 --> Utf8 Class Initialized
+INFO - 08-02-2019 18:19:21 --> URI Class Initialized
+INFO - 08-02-2019 18:19:21 --> URI Class Initialized
+INFO - 08-02-2019 18:19:21 --> Router Class Initialized
+INFO - 08-02-2019 18:19:21 --> Router Class Initialized
+INFO - 08-02-2019 18:19:21 --> Output Class Initialized
+INFO - 08-02-2019 18:19:21 --> Security Class Initialized
+DEBUG - 08-02-2019 18:19:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 08-02-2019 18:19:21 --> Input Class Initialized
+INFO - 08-02-2019 18:19:21 --> Language Class Initialized
+INFO - 08-02-2019 18:19:21 --> Output Class Initialized
+INFO - 08-02-2019 18:19:21 --> Security Class Initialized
+DEBUG - 08-02-2019 18:19:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 08-02-2019 18:19:21 --> 404 Page Not Found: Images/of1.png
+INFO - 08-02-2019 18:19:21 --> Input Class Initialized
+INFO - 08-02-2019 18:19:22 --> Language Class Initialized
+ERROR - 08-02-2019 18:19:22 --> 404 Page Not Found: Images/of.png

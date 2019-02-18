@@ -15,7 +15,7 @@
 <body>
 <!-- offer -->
 <a href="offer.html"><img src="<?=base_url('assets/images/download.png');?>" class="img-head" alt=""></a>
-<div class="header">
+<div class="header">	
 	<div class="container">
 		<div class="logo">
 			<?php $this->load->view('site/site_logo_tagline'); ?>
@@ -50,14 +50,14 @@
 			});
 	    </script>
 			
-		<table class="table">
-		 	<tr>
-				<th class="t-head head-it ">Products</th>
-				<th class="t-head">Price</th>
-				<th class="t-head">Quantity</th>
-				<th class="t-head">Actions</th>
+		<table class="table table-bordered">
+		 	<tr class="active">
+				<th>Products</th>
+				<th>Price</th>
+				<th>Quantity</th>
+				<th>Actions</th>
 			</tr>		
-			<?php if(count($wishlist_products)>0){ for($i=1;$i<count($wishlist_products);$i++){ ?>
+			<?php if(count($wishlist_products)>0){ for($i=0;$i<count($wishlist_products);$i++){ ?>
 			<tr class="cross<?=$wishlist_products[$i]['product_id'];?>">
 				<td class="ring-in t-data">
 					<a href="<?=base_url('products/product_info/'.$wishlist_products[$i]['product_id'])?>" class="at-in">

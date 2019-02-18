@@ -84,6 +84,8 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
+
+define('SITE_HOST','localhost');
 /*
 * constants for payyoumoney payment gate way
  */
@@ -93,8 +95,8 @@ define('MERCHANT_KEY', 'gEdmunJx');
 define('SALT', 'D7xcqpaZuV');
 //define('PAYU_BASE_URL', 'https://test.payu.in');    //Testing url
 define('PAYU_BASE_URL', ' https://sandboxsecure.payu.in');  //actual URL
-define('SUCCESS_URL', 'http://localhost/BigGrocery/order/order_success');  
-define('FAIL_URL', 'http://localhost/BigGrocery/order/order_fail');
+define('SUCCESS_URL', 'http://'.SITE_HOST.'/BigGrocery/order/order_success');  
+define('FAIL_URL', 'http://'.SITE_HOST.'/BigGrocery/order/order_fail');
 define('SERVICE_PROVIDER','payu_paisa');  
 
 

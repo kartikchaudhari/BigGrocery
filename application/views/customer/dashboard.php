@@ -15,8 +15,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--//site css and js header -->
 </head>
 <body>
-<!-- offer -->
-<a href="offer.html"><img src="<?=base_url('assets/images/download.png');?>" class="img-head" alt=""></a>
 <div class="header">
 	<div class="container">
 		<div class="logo">
@@ -34,6 +32,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- content -->
 <div class="check-out">	 
 	<div class="container" style="margin-top: -5%;padding-left: 25px;padding-right: 25px;">
+        <div class="row">
+        <?php if($data['hasNullAddress']){?>
+            <div class="col-12" style="margin-bottom: 1%;padding-left: 20px;padding-right: 20px;">
+                <div style="margin-bottom: 0px;" class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h4>Provide your address before placing order, your address required for home delivery facility. [ <a href="<?=base_url('user/profile');?>" style="color: blue;">Click here to add address</a> ]</h4>
+                </div>
+            </div>
+        <?php } ?>
+        </div>
 		<div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="panel panel-primary">
@@ -43,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <i class="fa fa-heart fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
+                                    <div class="huge"><?=$data['usr_wish_list_count'];?></div>
                                     <div>Wishlist Items</div>
                                 </div>
                             </div>
@@ -87,7 +95,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <i class="fa fa-shopping-cart fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
+                                    <div class="huge"><?=$data['usr_order_history_count'];?></div>
                                     <div>Orders History</div>
                                 </div>
                             </div>
@@ -124,7 +132,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </div>
         </div>
-
 	</div>
 </div>
 <!--footer-->

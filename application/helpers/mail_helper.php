@@ -1,9 +1,10 @@
  <?php
 	
 	// Send Gmail to another user
-	function Send_Mail($data) {
+	function Send_Mail($data,$UserAndOrderInfo) {
 		$ci=&get_instance();
 		$ci->load->helper('order');
+		//$ci->load->library('Dom_pdf');
 		$config = Array(
 		    'protocol' => 'smtp',
 		    'smtp_host' => 'ssl://smtp.googlemail.com',
@@ -35,13 +36,13 @@
 		</tr>
 		<tr >
 			<td colspan="2" align="center" style="padding: 10px;border-bottom:1px solid grey;">
-				<h3 style="margin-top: 2px;margin-bottom: 2px;">BigGrocery Order: 1319817322</h3><br>
+				<h3 style="margin-top: 2px;margin-bottom: 2px;">BigGrocery Order: '.$UserAndOrderInfo['order_id'].'</h3><br>
 				<span>Ahemdabad-Gujarat</span>
 			</td>
 		</tr>
 		<tr>
 			<td colspan="2" align="center" style="border-bottom:1px solid grey;">
-				<span> 2018-09-14 at 20:37:28 </span>
+				<span> '.$UserAndOrderInfo['order_date'].' </span>
 			</td>
 		</tr>
 		<tr>
@@ -52,9 +53,9 @@
 		</tr>
 		<tr>
 			<td colspan="2" style="border-bottom:1px solid grey;padding: 4px;">
-				<strong>Name:&nbsp;&nbsp;</strong><span>Ashish Kokani</span><br>
-				<strong>Address:&nbsp;&nbsp;</strong><span>Room No.-1105, VGEC Boys Hostel - 1, Chandkheda</span><br>
-				<strong>Phone:&nbsp;&nbsp;</strong><span>8153976277</span>
+				<strong>Name:&nbsp;&nbsp;</strong><span>'.$UserAndOrderInfo['name'].'</span><br>
+				<strong>Address:&nbsp;&nbsp;</strong><span>'.$UserAndOrderInfo['address'].'</span><br>
+				<strong>Phone:&nbsp;&nbsp;</strong><span>'.$UserAndOrderInfo['phone'].'</span>
 			</td>
 		</tr>
 		<tr>
@@ -67,11 +68,11 @@
 		$message.=
 		'<tr>
 			<td style="border-top:1px solid grey;"><strong>Sub total :</strong></td>
-			<td align="right" style="border-top:1px solid grey;">520</td>
+			<td align="right" style="border-top:1px solid grey;">'.$UserAndOrderInfo['total_amount'].'</td>
 		</tr>
 		<tr>
 			<td style="font-size: 20px;"><strong>Grand total :</strong></td>
-			<td style="font-size: 20px;" align="right"><strong>520</strong></td>
+			<td style="font-size: 20px;" align="right"><strong>'.$UserAndOrderInfo['total_amount'].'</strong></td>
 		</tr>
 		<tr><td colspan="2" style="border-top:1px solid black"><h4 align="center">Thank You</h4></td></tr>
 	</table>
@@ -92,7 +93,9 @@
 
 
 		if($ci->email->send()){
-		   //Success email Sent
+			//genrate pdf
+			//$ci->Dom_pdf->load_view($message);
+		   
 		   //echo $ci->email->print_debugger();
 		}else{
 		   //Email Failed To Send

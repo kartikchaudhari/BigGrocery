@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Login :: Administrator Login</title>
-    <?php $this->load->view('admin/head');?>
+
     <style>
       body {
         padding-top: 40px;
@@ -12,8 +7,6 @@
         color: #C1C3C6
       }
     </style>
-  </head>
-  <body>
     <div class="container">
       <form class="form-signin" role="form" method="post" action="<?=base_url('admin/do_login');?>">
         <h3 align="center" class="form-signin-heading">Login to System</h3><hr>
@@ -45,6 +38,4 @@
     </div>
     <div class="clearfix"></div>
     <br><br>
-    <?php $this->load->view('admin/js'); ?>
-  </body>
-</html>
+    

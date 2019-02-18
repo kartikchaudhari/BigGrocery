@@ -1,16 +1,27 @@
 <?php 
 	defined('BASEPATH') OR exit('No direct script access allowed');
 	
-	function getSubCatNameBySubCatId($SubCatId){
+	function getCatNameByCatId($CatId){
+        $ci=&get_instance();
+        $ci->load->model('ProductsModel');
+        
+        $data=$ci->ProductsModel->returnCategoryName($CatId);
+        
+        if($data){
+            return $data['cat_name'];
+        }
+        else{
+            return " ";
+        }
+    }
+
+    function getSubCatNameBySubCatId($SubCatId){
 		$ci=&get_instance();
         $ci->load->model('ProductsModel');
         
         $data=$ci->ProductsModel->returnSubCategoryName($SubCatId);
         
         if($data){
-
-            //return the value from $data array
-            //which have key 'sub_cat_name'
             return $data['sub_cat_name'];
         }
         else{

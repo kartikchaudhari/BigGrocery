@@ -5,7 +5,9 @@ class Categories extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('admin/categories');		
+	   $this->load->view('admin/common/head',['data'=>array('title'=>'Categories')]);
+	   $this->load->view('admin/categories');
+	   $this->load->view('admin/common/footer');		
 	}
 
 	public function FethCategories(){

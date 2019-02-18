@@ -84,7 +84,7 @@ class mail extends MY_Controller {
 </body>
 </html>
 ';
-				// Sender email address
+		// Sender email address
 		$this->email->from($config['smtp_user'], $username);
 
 		// Receiver email address

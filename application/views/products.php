@@ -54,7 +54,7 @@
 							</div>
 						</div>
 						<div class="mid-2">
-							<p><strong>Price:</strong> <em class="item_price"><span>&#8377;</span><?=$data['products'][$i]['product_price']?></em>&nbsp;&nbsp;<strong>&middot;</strong>&nbsp;&nbsp;<?=isAvailableInStock($data['products'][$i]['product_status']);?>&nbsp;&nbsp;<strong>&middot;</strong>&nbsp;&nbsp;<strong>Stock:</strong> <?=$data['products'][$i]['product_stock'];?></p>
+							<p><strong>Price:</strong> <em class="item_price"><span>&#8377;</span><?=$data['products'][$i]['product_price']?></em>&nbsp;&nbsp;<strong>&middot;</strong>&nbsp;&nbsp;<?=isAvailableInStock($data['products'][$i]['product_status']);?>&nbsp;&nbsp;<strong>&middot;</strong></p>
 							<div class="block">
 								<div class="starbox small ghosting">
 									<div class="positioner">

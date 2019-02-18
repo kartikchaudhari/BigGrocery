@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Remove Sub Categories</title>
-    <?php $this->load->view('admin/head'); ?>
-  </head>
-  <body style="background-color: #FFF;">
-    <!--container-->
+ <!--container-->
     <div class="content-row" style="padding: 0px;">
         <div class="row">
             <div class="panel panel-danger">
@@ -45,7 +38,6 @@
     <!--/container-->
 
     <!-- load the js -->
-    <?php $this->load->view('admin/js'); ?>
     <script type="text/javascript">
         function viewSubCatInfo(SubCatId){
             alert(SubCatId);

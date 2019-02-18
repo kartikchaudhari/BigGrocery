@@ -18,7 +18,7 @@
 	
 
 	<?php if ($this->session->userdata('bg_sys_ss_user_id')): ?>
-		<li>[<a href="<?=base_url('user/shipping');?>" title="Shippping Information">+ Kartik Chaudhari</a>]</li>
+		<li>[<a href="<?=base_url('user/profile');?>" title="Your Profile">+ Kartik Chaudhari</a>]</li>
 		<li>[<a href="<?=base_url('user/logout');?>" title="Log out">Logout</a>]</li>	
 	<?php endif ?>
 	

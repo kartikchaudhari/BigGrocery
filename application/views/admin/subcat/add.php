@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Add Sub Categories</title>
-    <?php $this->load->view('admin/head'); ?>
-  </head>
-  <body style="background-color: #FFF;">
+<style type="text/css">
+    body{
+        background-color:white;
+    }
+</style>
     <!--container-->
     <div class="content-row" style="padding: 0px;">
         <div class="content-row"><br><br>
-            <div class="panel panel-default">
+            <div class="panel panel-info" style="border:1px solid grey;">
                 <?php 
                     if ($this->session->flashdata('bg_sys_msg')) {
                         echo $this->session->flashdata('bg_sys_msg');
@@ -40,8 +38,3 @@
         </div>                 
     </div>
     <!--/container-->
-
-    <!-- load the js -->
-    <?php $this->load->view('admin/js'); ?>
-  </body>
-</html>

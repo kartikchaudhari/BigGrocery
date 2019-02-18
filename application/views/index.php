@@ -12,18 +12,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="<?=base_url('assets/css/bootstrap.css');?>" rel='stylesheet' type='text/css' />
+<link href="<?=site_url('assets/css/bootstrap.css');?>" rel='stylesheet' type='text/css' />
 
 <!-- Custom Theme files -->
-<link href="<?=base_url('assets/css/style.css');?>" rel='stylesheet' type='text/css' />
+<link href="<?=site_url('assets/css/style.css');?>" rel='stylesheet' type='text/css' />
 
 <!-- js -->
-   <script src="<?=base_url('assets/js/jquery-1.11.1.min.js');?>"></script>
+   <script src="<?=site_url('assets/js/jquery-1.11.1.min.js');?>"></script>
 <!-- //js -->
 
 <!-- start-smoth-scrolling -->
-<script type="text/javascript" src="<?=base_url('assets/js/move-top.js');?>"></script>
-<script type="text/javascript" src="<?=base_url('assets/js/easing.js');?>"></script>
+<script type="text/javascript" src="<?=site_url('assets/js/move-top.js');?>"></script>
+<script type="text/javascript" src="<?=site_url('assets/js/easing.js');?>"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
@@ -34,11 +34,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 </script>
 <!-- start-smoth-scrolling -->
 
-<link href="<?=base_url('assets/css/font-awesome.css');?>" rel="stylesheet">
+<link href="<?=site_url('assets/css/font-awesome.css');?>" rel="stylesheet">
 
 </head>
 <body>
-<a href="offer.html"><img src="<?=base_url('assets/images/download.png');?>" class="img-head"></a>
+<a href="offer.html"><img src="<?=site_url('assets/images/download.png');?>" class="img-head"></a>
 <div class="header">
 	<div class="container">
 		<div class="logo">
@@ -69,15 +69,15 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	      </ol>
 	      <div class="carousel-inner" role="listbox">
 	        <div class="item active">
-	         <a href="kitchen.html"> <img class="first-slide" src="<?=base_url('assets/images/ba.jpg');?>" alt="First slide"></a>
+	         <a href="kitchen.html"> <img class="first-slide" src="<?=site_url('assets/images/ba.jpg');?>" alt="First slide"></a>
 	       
 	        </div>
 	        <div class="item">
-	         <a href="care.html"> <img class="second-slide " src="<?=base_url('assets/images/ba1.jpg');?>" alt="Second slide"></a>
+	         <a href="care.html"> <img class="second-slide " src="<?=site_url('assets/images/ba1.jpg');?>" alt="Second slide"></a>
 	         
 	        </div>
 	        <div class="item">
-	          <a href="hold.html"><img class="third-slide " src="<?=base_url('assets/images/ba2.jpg');?>" alt="Third slide"></a>
+	          <a href="hold.html"><img class="third-slide " src="<?=site_url('assets/images/ba2.jpg');?>" alt="Third slide"></a>
 	        </div>
 	      </div>
 	    </div>
@@ -106,7 +106,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">								
 									<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
-										<img src="<?=base_url('assets/images/of.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -121,7 +121,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 										<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b " data-id="1" data-name="Moong" data-summary="summary 1" data-price="1.50" data-quantity="1" data-image="<?=base_url('assets/images/of.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b " data-id="1" data-name="Moong" data-summary="summary 1" data-price="1.50" data-quantity="1" data-image="<?=site_url('assets/images/of.png');?>">Add to Cart</button>
 										</div>
 										
 									</div>
@@ -130,7 +130,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal2" class="offer-img">
-										<img src="<?=base_url('assets/images/of1.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of1.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -145,7 +145,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 												<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="2" data-name="Sunflower Oil" data-summary="summary 2" data-price="9.00" data-quantity="1" data-image="<?=base_url('assets/images/of1.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="2" data-name="Sunflower Oil" data-summary="summary 2" data-price="9.00" data-quantity="1" data-image="<?=site_url('assets/images/of1.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -153,7 +153,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal3" class="offer-img">
-										<img src="<?=base_url('assets/images/of2.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of2.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -168,7 +168,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="<?=base_url('assets/images/of2.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="<?=site_url('assets/images/of2.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -176,7 +176,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal4" class="offer-img">
-										<img src="<?=base_url('assets/images/of3.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of3.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -191,7 +191,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="4" data-name="Soya Chunks" data-summary="summary 4" data-price="3.50" data-quantity="1" data-image="<?=base_url('assets/images/of3.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="4" data-name="Soya Chunks" data-summary="summary 4" data-price="3.50" data-quantity="1" data-image="<?=site_url('assets/images/of3.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -204,7 +204,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal5" class="offer-img">
-										<img src="<?=base_url('assets/images/of4.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of4.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -219,7 +219,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="5" data-name="Lays" data-summary="summary 5" data-price="0.70" data-quantity="1" data-image="<?=base_url('assets/images/of4.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="5" data-name="Lays" data-summary="summary 5" data-price="0.70" data-quantity="1" data-image="<?=site_url('assets/images/of4.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -227,7 +227,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal6" class="offer-img">
-										<img src="<?=base_url('assets/images/of5.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of5.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -242,7 +242,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="6" data-name="Kurkure" data-summary="summary 6" data-price="0.70" data-quantity="1" data-image="<?=base_url('assets/images/of5.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="6" data-name="Kurkure" data-summary="summary 6" data-price="0.70" data-quantity="1" data-image="<?=site_url('assets/images/of5.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -250,7 +250,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal7" class="offer-img">
-										<img src="<?=base_url('assets/images/of6.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of6.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -265,7 +265,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="7" data-name="Popcorn" data-summary="summary 7" data-price="1.00" data-quantity="1" data-image="<?=base_url('assets/images/of6.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="7" data-name="Popcorn" data-summary="summary 7" data-price="1.00" data-quantity="1" data-image="<?=site_url('assets/images/of6.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -273,7 +273,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal8" class="offer-img">
-										<img src="<?=base_url('assets/images/of7.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of7.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -288,7 +288,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="8" data-name="Nuts" data-summary="summary 8" data-price="3.50" data-quantity="1" data-image="<?=base_url('assets/images/of7.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="8" data-name="Nuts" data-summary="summary 8" data-price="3.50" data-quantity="1" data-image="<?=site_url('assets/images/of7.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -301,7 +301,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 								<a href="#" data-toggle="modal" data-target="#myModal9" class="offer-img">
-										<img src="<?=base_url('assets/images/of8.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of8.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -316,7 +316,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="9" data-name="Banana" data-summary="summary 9" data-price="1.50" data-quantity="1" data-image="<?=base_url('assets/images/of8.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="9" data-name="Banana" data-summary="summary 9" data-price="1.50" data-quantity="1" data-image="<?=site_url('assets/images/of8.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -324,7 +324,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal10" class="offer-img">
-										<img src="<?=base_url('assets/images/of9.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of9.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -339,7 +339,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="10" data-name="Onion" data-summary="summary 10" data-price="0.70" data-quantity="1" data-image="<?=base_url('assets/images/of9.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="10" data-name="Onion" data-summary="summary 10" data-price="0.70" data-quantity="1" data-image="<?=site_url('assets/images/of9.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -347,7 +347,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal11" class="offer-img">
-										<img src="<?=base_url('assets/images/of10.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of10.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -362,7 +362,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="11" data-name="Bitter Gourd" data-summary="summary 11" data-price="1.00" data-quantity="1" data-image="<?=base_url('assets/images/of10.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="11" data-name="Bitter Gourd" data-summary="summary 11" data-price="1.00" data-quantity="1" data-image="<?=site_url('assets/images/of10.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -370,7 +370,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal12" class="offer-img">
-										<img src="<?=base_url('assets/images/of11.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of11.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -385,7 +385,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="12" data-name="Apples" data-summary="summary 12" data-price="3.50" data-quantity="1" data-image="<?=base_url('assets/images/of11.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="12" data-name="Apples" data-summary="summary 12" data-price="3.50" data-quantity="1" data-image="<?=site_url('assets/images/of11.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -398,7 +398,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 								<a href="#" data-toggle="modal" data-target="#myModal13" class="offer-img">
-										<img src="<?=base_url('assets/images/of12.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of12.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -413,7 +413,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="13" data-name="Honey" data-summary="summary 13" data-price="6.00" data-quantity="1" data-image="<?=base_url('assets/images/of12.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="13" data-name="Honey" data-summary="summary 13" data-price="6.00" data-quantity="1" data-image="<?=site_url('assets/images/of12.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -421,7 +421,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m ">
 									<a href="#" data-toggle="modal" data-target="#myModal14" class="offer-img">
-										<img src="<?=base_url('assets/images/of13.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of13.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -436,7 +436,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="14" data-name="Chocos" data-summary="summary 14" data-price="4.50" data-quantity="1" data-image="<?=base_url('assets/images/of13.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="14" data-name="Chocos" data-summary="summary 14" data-price="4.50" data-quantity="1" data-image="<?=site_url('assets/images/of13.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -444,7 +444,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m ">
 									<a href="#" data-toggle="modal" data-target="#myModal15" class="offer-img">
-										<img src="<?=base_url('assets/images/of14.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of14.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -459,7 +459,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="15" data-name="Oats" data-summary="summary 15" data-price="3.50" data-quantity="1" data-image="<?=base_url('assets/images/of14.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="15" data-name="Oats" data-summary="summary 15" data-price="3.50" data-quantity="1" data-image="<?=site_url('assets/images/of14.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -467,7 +467,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal16" class="offer-img">
-										<img src="<?=base_url('assets/images/of15.png');?>" class="img-responsive" alt="">
+										<img src="<?=site_url('assets/images/of15.png');?>" class="img-responsive" alt="">
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -482,7 +482,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<div class="clearfix"></div>
 										</div>
 											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="16" data-name="Bread" data-summary="summary 16" data-price="0.80" data-quantity="1" data-image="<?=base_url('assets/images/of15.png');?>">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="16" data-name="Bread" data-summary="summary 16" data-price="0.80" data-quantity="1" data-image="<?=site_url('assets/images/of15.png');?>">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -504,7 +504,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="col-md-4 m-w3ls">
 			<div class="col-md1 ">
 				<a href="kitchen.html">
-					<img src="<?=base_url('assets/images/co1.jpg');?>" class="img-responsive img" alt="">
+					<img src="<?=site_url('assets/images/co1.jpg');?>" class="img-responsive img" alt="">
 					<div class="big-sa">
 						<h6>New Collections</h6>
 						<h3>Season<span>ing </span></h3>
@@ -516,7 +516,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="col-md-4 m-w3ls1">
 			<div class="col-md ">
 				<a href="hold.html">
-					<img src="<?=base_url('assets/images/co.jpg');?>" class="img-responsive img" alt="">
+					<img src="<?=site_url('assets/images/co.jpg');?>" class="img-responsive img" alt="">
 					<div class="big-sale">
 						<div class="big-sale1">
 							<h3>Big <span>Sale</span></h3>
@@ -529,7 +529,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="col-md-4 m-w3ls">
 			<div class="col-md2 ">
 				<a href="kitchen.html">
-					<img src="<?=base_url('assets/images/co2.jpg');?>" class="img-responsive img1" alt="">
+					<img src="<?=site_url('assets/images/co2.jpg');?>" class="img-responsive img1" alt="">
 					<div class="big-sale2">
 						<h3>Cooking <span>Oil</span></h3>
 						<p>It is a long established fact that a reader </p>		
@@ -538,7 +538,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 			<div class="col-md3 ">
 				<a href="hold.html">
-					<img src="<?=base_url('assets/images/co3.jpg');?>" class="img-responsive img1" alt="">
+					<img src="<?=site_url('assets/images/co3.jpg');?>" class="img-responsive img1" alt="">
 					<div class="big-sale3">
 						<h3>Vegeta<span>bles</span></h3>
 						<p>It is a long established fact that a reader </p>
@@ -639,7 +639,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- //smooth scrolling -->
 <!-- for bootstrap working -->
-		<script src="<?=base_url('assets/js/bootstrap.js');?>"></script>
+		<script src="<?=site_url('assets/js/bootstrap.js');?>"></script>
 <!-- //for bootstrap working -->
 
 <!-- cart function -->

@@ -32,8 +32,11 @@ class Products extends My_Controller {
 
 	//For Admin Section:
 	//List all the products to the dashboard
-	public function viewProducts(){
-		$this->load->view('admin/products/view');
+	public function manage_products(){
+		$AllProduct=$this->ProductsModel->getAllProducts();
+		$this->load->view('admin/head');
+		$this->load->view('admin/products/view',['data'=>$AllProduct]);
+		$this->load->view('admin/js');
 	}
 
 	
@@ -42,12 +45,9 @@ class Products extends My_Controller {
 	public function add_product(){
 		$this->load->model(['SubCatModel','ProductCatModel']);
 		$this->load->view('admin/products/add',['product_cat'=>$this->ProductCatModel->FetchAllCat()]);	
-	
-		//'product_sub_cat'=>$this->SubCatModel->FetchAllSubCat(),
 	}
 
 	public function doAddProduct(){
-		
 		
 		$FullImage=$this->doUploadFullImage();
 
@@ -66,7 +66,8 @@ class Products extends My_Controller {
 										'product_image_full'=>substr($FullImage['full_file_path'],2),
 										'product_weight'=>$this->input->post('product_weight')." ".$this->input->post('weight_unit'),
 										'veg_nonveg'=>$isProductEdible,
-										'product_desc'=>$this->input->post('product_desc'),
+										'product_desc'=>htmlspecialchars($this->input->post('product_desc')),
+										'product_discount'=>$this->input->post('product_discount'),
 										'product_price'=>$this->input->post('product_price'),
 										'old_price'=>0,
 										'has_offers'=>$this->input->post('has_offers'),

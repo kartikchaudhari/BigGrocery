@@ -21,10 +21,8 @@
 
 <!-- flas message --> 
 <div class="row" style="margin-top: 2%;margin-bottom: -5%;padding: 0px;">
-	<div class="col-md-4 col-md-offset-4" style="border:1px solid red;">
-        <div class="alert alert-success alert-dismissable" style="margin:0px;">
-         	<?php if($this->session->flashdata('bg_sys_msg')){echo $this->session->flashdata('bg_sys_msg');} ?>
-     	</div>
+	<div class="col-md-4 col-md-offset-4">
+ 		<?php if($this->session->flashdata('bg_sys_msg')){echo $this->session->flashdata('bg_sys_msg');} ?>
 	</div>
 </div>  
 <!--login-->

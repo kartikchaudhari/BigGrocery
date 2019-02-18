@@ -109,9 +109,12 @@
 									</div>	
 								</ul>
 							</li>
-							
-							<li><a href="codes.html" class="hyper"> <span>Codes</span></a></li>
 							<li><a href="<?=base_url('contact');?>" class="hyper"><span>Contact Us</span></a></li>
+							<?php 
+								if ($this->session->userdata('bg_sys_ss_user_id')) {
+									echo "<li><a href=".base_url('user/dashboard')." class='hyper'><i class='fa fa-dashboard'></i>&nbsp;&nbsp;<span>Dashboard</span></a></li>";
+								}
+							?>
 						</ul>
 					</div>
 					</nav>

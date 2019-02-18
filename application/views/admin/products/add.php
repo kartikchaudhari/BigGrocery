@@ -11,8 +11,12 @@
 			display: block;
 		}
 	</style>
+	<script src="<?=base_url('assets/ckeditor/ckeditor.js')?>"></script>
+	<script src="<?=base_url('assets/ckeditor/samples/js/sample.js')?>"></script>
+	<link rel="stylesheet" href="<?=base_url('assets/ckeditor/js/samples/css/samples.css')?>">
+	<link rel="stylesheet" href="<?=base_url('assets/ckeditor/js/samples/toolbarconfigurator/lib/codemirror/neo.css')?>">
 </head>
-<body>
+<body id="main">
 	<h1 align="center">Add new Product</h1><br>
 	<?php 
 		if ($this->session->flashdata('bg_sys_msg')) {
@@ -21,9 +25,9 @@
 	?>
 	<hr>
 	<?=form_open_multipart(base_url('products/doAddProduct'));?>
-	<table border="1" align="center" width="72%;">
+	<table border="1" align="center" width="92%;">
 		<tr>
-			<td align="right"><?=form_label('Product Category :', 'pro_cat');?></td>
+			<td width="200" align="right"><?=form_label('Product Category :', 'pro_cat');?></td>
 			<td>
 				<select id="product_cat" name="product_cat">
 					<option value="-1" selected="selected">--- Select Product Category ---</option>
@@ -46,14 +50,18 @@
 		<tr>
 			<td align="right"><?=form_label('Product Name :');?></td>
 			<td><?php 
-					$attr=array('name'=>'product_name');
+					$attr=array('name'=>'product_name','value'=>set_value('product_name'));
 					echo form_input($attr);
 				?>
 			</td>
 		</tr>
 		<tr>
 			<td align="right"><?=form_label('Product Company :');?></td>
-			<td><?=form_input('product_company', '');?></td>
+			<td><?php
+					$attr=array('name'=>'product_company', 'value'=>set_value('product_company'));
+					echo form_input($attr);
+				?>
+			</td>
 		</tr>
 		<tr>
 			<td align="right"><?=form_label('Product thumbnail :');?></td>
@@ -88,7 +96,7 @@
 		</tr>
 		<tr>
 			<td align="right"><?=form_label('Product Description :');?></td>
-			<td><?=form_textarea(array('name'=>'product_desc','rows'=>2,'cols'=>59,'style'=>'overflow-y:scroll;'));?></td>
+			<td><?=form_textarea(array('id'=>'editor-remove-me','name'=>'product_desc','rows'=>6,'cols'=>60,'style'=>'overflow-y:scroll;','value'=>'<h1>Some Text</h1>'));?></td>
 		</tr>
 		<tr>
 			<td align="right"><?=form_label('Product Weight :');?></td>
@@ -98,12 +106,12 @@
 				<?php  
 					$options = array(
 						'-- Select Unit --'=>'-- Select Unit --',
-			        	'g'=> 'Gram (g)',
+			        	'gm'=> 'Gram (gm)',
 			        	'kg'=> 'Kilogram (kg)',
 			        	'ml'=> 'Mililiter (ml)',
 			        	'ltr'=> 'Liter (ltr)',
+			        	'pcs'=>'Pices (pcs)'	
 					);
-
 				echo form_dropdown('weight_unit', $options);
 				?>
 			</td>
@@ -126,7 +134,8 @@
 		</tr>
 		<tr>
 			<td align="right"><?=form_input(array('type'=>'submit','value'=>'Add Product'));?></td>
-			<td><?=form_input(array('type'=>'reset','value'=>'Reset'));?></td>
+			<td><?=form_input(array('type'=>'reset','value'=>'Reset'));?>
+			</td>
 		</tr>
 	</table>
 	<?=form_close();?>
@@ -162,6 +171,9 @@
 			});
 	
 		});
+	</script>
+	<script>
+		initSample();
 	</script>
 </body>
 </html>

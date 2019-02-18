@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Dashboard</title>
-    <?php $this->load->view('admin/head'); ?>
-  </head>
-  <body>
+
     <!--nav-->
     <nav role="navigation" class="navbar navbar-custom">
         <?php $this->load->view('admin/nav',['admin_data'=>$data[0]]); ?>    
@@ -26,7 +20,7 @@
               </div>
               <div class="panel-body" style="padding-left: 5px;">
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <iframe name="DashboardFrame" style="width: 100%;height: 100vh;position: relative;" src="<?=base_url('admin/dashboard_content');?>" frameborder="0" allowfullscreen>
+                    <iframe name="DashboardFrame" style="width: 100%;height: 120vh;position: relative;" src="<?=base_url('admin/dashboard_content');?>" frameborder="0" allowfullscreen>
                     </iframe>
                 </div>
               </div><!-- panel body -->
@@ -36,9 +30,3 @@
       </div>
     </div>
     <!--/container-->
-    
-
-    <!-- load the js -->
-    <?php $this->load->view('admin/js'); ?>
-  </body>
-</html>

@@ -48,7 +48,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					  	<p class="reduced "><del>&#8377;<?=$data[0]['old_price']?></del>&#8377;<?=$data[0]['product_price']?></p>
 					</div>
 					<p class="in-pa" style="padding: 0;">
-						<?=$data[0]['product_desc']?>
+						<?=html_entity_decode($data[0]['product_desc'])?>
 					</p>
 					<hr>
 			   		<div class="add add-3">

@@ -3,7 +3,6 @@ class User extends My_Controller {
 
 	public function __construct(){
 		parent::__construct();
-
 		$this->load->model(['UsersModel','ProductsModel','OrderModel']);
 	}
 
@@ -20,14 +19,46 @@ class User extends My_Controller {
 	}
 
 	public function dashboard(){
+		
 		if ($this->session->userdata('bg_sys_ss_user_id')) {
-			$this->load->view('customer/dashboard');	
+
+			$userId=$this->session->userdata('bg_sys_ss_user_id');
+			$data=array('usr_wish_list_count'=>$this->getWishListCount($userId),
+					//'usr_payment_count'=>,
+					'usr_order_history_count'=>$this->countUserOrderList($userId),
+					'hasNullAddress'=>$this->isAddressProvided($userId)
+	                );
+			$this->load->view('customer/dashboard',['data'=>$data]);	
 		}
 		else{
 			$this->session->set_flashdata('bg_sys_msg','<div class="alert alert-danger" role="alert">
 					<strong>Sorry the session has expired, please re-login below.</strong> 
 				</div>');
 			return redirect('user/login');
+		}
+	}
+
+	public function profile(){
+		if ($this->session->userdata('bg_sys_ss_user_id')) {
+			$UserId=$this->session->userdata('bg_sys_ss_user_id');
+			$data=$this->UsersModel->FethcUserInfo($UserId);
+			$this->load->view('customer/profile',['data'=>$data]);
+		}
+		else{
+			$this->session->set_flashdata('bg_sys_msg','<div class="alert alert-danger" role="alert">
+					<strong>Sorry the session has expired, please re-login below.</strong> 
+				</div>');
+			return redirect('user/login');	
+		}
+	}
+
+	public function updateProfile(){
+		$data=$this->input->post();
+		$UserId=$this->session->userdata('bg_sys_ss_user_id');
+		if($this->UsersModel->updateProfileInfo($data,$UserId)){
+			echo "Profile Updated Successfully.";
+		}else{
+			echo "An Error occured while updating your Profile.";
 		}
 	}
 
@@ -77,9 +108,17 @@ class User extends My_Controller {
 
 	}
 
+	public function getWishListCount($UserId){
+		return $this->UsersModel->WishListCount($UserId);
+	}
+
 	public function getUserOrderList($UserId){
 		$this->load->model('OrderModel');
 		return $this->OrderModel->getOrderListByUserId($UserId);
+	}
+
+	public function countUserOrderList($UserId){
+		return $this->OrderModel->getCountOrderListByUserId($UserId);
 	}
 
 
@@ -89,7 +128,7 @@ class User extends My_Controller {
 	public function register_user(){
 		if ($this->input->post()) {
 			if($this->UsersModel->InsertUserData($this->input->post())){
-				$this->session->set_flashdata('bg_sys_msg', '<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>Congatulations! You are successfully registerd. click <a href="login">here</a> to login.');
+				$this->session->set_flashdata('bg_sys_msg', '<div class="alert alert-success alert-dismissable" style="margin:0px;"><button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>Congatulations! You are successfully registerd. click <a href="login">here</a> to login.</div>');
 					return redirect('user/register');
 
 			}
@@ -131,6 +170,18 @@ class User extends My_Controller {
 	public function logout(){
 		$this->session->sess_destroy();
 		return redirect('home');
+	}
+
+	/*
+		check wheather user has provided address or not
+	 */
+	public function isAddressProvided($UserId){
+		if ($this->UsersModel->checkAddressStatus($UserId)) {
+			return 1;
+		}
+		else{
+			return 0;
+		}
 	}
 
 }

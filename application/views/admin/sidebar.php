@@ -17,9 +17,8 @@
         <li>
             <a href="#ProductsOps" class="list-group-item" data-toggle="collapse"><i class="glyphicon glyphicon-th-list"></i>Products&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
             <li class="collapse" id="ProductsOps">
-              <a style="padding-left: 60px;" href="" class="list-group-item">View</a>
               <a style="padding-left: 60px;" href="<?=base_url('products/add_product');?>" target="DashboardFrame" class="list-group-item">Add New</a>
-              <a style="padding-left: 60px;" href="" class="list-group-item">Remove</a>
+              <a style="padding-left: 60px;" href="<?=base_url('products/manage_products');?>" target="DashboardFrame" class="list-group-item">Manage Products</a>
             </li>
         </li>
         
