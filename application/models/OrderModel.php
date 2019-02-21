@@ -49,7 +49,7 @@ class OrderModel extends My_Model {
 	}
 
 	public function getOrderInfo($orderId){
-		$query=$this->db->query("SELECT total_amount,order_date FROM orders WHERE order_id=".$orderId);
+		$query=$this->db->query("SELECT total_amount,order_date FROM orders WHERE cart_id=".$orderId);
 		return $query->row_array();
 	}
 }

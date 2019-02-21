@@ -1,5 +1,5 @@
+<?php $this->load->helper('users'); ?>
 <ul class="card">
-	
 	<?php if ($this->session->userdata('bg_sys_ss_user_id')): ?>
 		<li><a href="<?=base_url('user/wishlist/'.$this->session->userdata('bg_sys_ss_user_id'));?>" title="Your wishlist"><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
 
@@ -18,7 +18,7 @@
 	
 
 	<?php if ($this->session->userdata('bg_sys_ss_user_id')): ?>
-		<li>[<a href="<?=base_url('user/profile');?>" title="Your Profile">+ Kartik Chaudhari</a>]</li>
+		<li>[<a href="<?=base_url('user/profile');?>" title="Your Profile">+ <?=getUserName($this->session->userdata('bg_sys_ss_user_id'));?></a>]</li>
 		<li>[<a href="<?=base_url('user/logout');?>" title="Log out">Logout</a>]</li>	
 	<?php endif ?>
 	

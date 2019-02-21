@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Add Product</title>
 	<style>
-		.hide{
-			display: none;
-		}
-
-		.show{
-			display: block;
-		}
+		.hide_s{display: none;}
+		.show_s{display: block;}
 	</style>
-	<script src="<?=base_url('assets/ckeditor/ckeditor.js')?>"></script>
-	<script src="<?=base_url('assets/ckeditor/samples/js/sample.js')?>"></script>
-	<link rel="stylesheet" href="<?=base_url('assets/ckeditor/js/samples/css/samples.css')?>">
-	<link rel="stylesheet" href="<?=base_url('assets/ckeditor/js/samples/toolbarconfigurator/lib/codemirror/neo.css')?>">
-</head>
-<body id="main">
-	<h1 align="center">Add new Product</h1><br>
 	<?php 
 		if ($this->session->flashdata('bg_sys_msg')) {
 			echo $this->session->flashdata('bg_sys_msg');
@@ -25,11 +9,10 @@
 	?>
 	<hr>
 	<?=form_open_multipart(base_url('products/doAddProduct'));?>
-	<table border="1" align="center" width="92%;">
-		<tr>
-			<td width="200" align="right"><?=form_label('Product Category :', 'pro_cat');?></td>
-			<td>
-				<select id="product_cat" name="product_cat">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-4">
+				<select class="form-control" id="product_cat" name="product_cat">
 					<option value="-1" selected="selected">--- Select Product Category ---</option>
 					<?php 
 						for ($i=0;$i<count($product_cat); $i++) { 
@@ -37,43 +20,40 @@
 						}
 					?>
 				</select>
-			</td>
-		</tr>
-		<tr>
-			<td align="right"><?=form_label('Product Sub-category :', 'product_sub_cat');?></td>
-			<td>
-				<select id="product_sub_cat" name="product_sub_cat">
+			</div>
+			<div class="col-md-4">
+				<select class="form-control" id="product_sub_cat" name="product_sub_cat">	
 					<option value='-1' selected='selected'>--- Select Sub Category ---</option>
 				</select>
-			</td>
-		</tr>
-		<tr>
-			<td align="right"><?=form_label('Product Name :');?></td>
-			<td><?php 
-					$attr=array('name'=>'product_name','value'=>set_value('product_name'));
+			</div>
+			<div class="col-md-4">
+				<?php 
+					$attr=array('name'=>'product_name','value'=>set_value('product_name'),'class'=>'form-control','placeholder'=>'Product Name');
+						echo form_input($attr);
+					?>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-4">
+				<?php
+					$attr=array('name'=>'product_company', 'value'=>set_value('product_company'),'class'=>'form-control','placeholder'=>'Product Company Name');
 					echo form_input($attr);
-				?>
-			</td>
-		</tr>
-		<tr>
-			<td align="right"><?=form_label('Product Company :');?></td>
-			<td><?php
-					$attr=array('name'=>'product_company', 'value'=>set_value('product_company'));
-					echo form_input($attr);
-				?>
-			</td>
-		</tr>
-		<tr>
-			<td align="right"><?=form_label('Product thumbnail :');?></td>
-			<td><input type="file" name="product_thumb_image" style="overflow-x: hidden;width: 173px;"><span style="margin-left:20px;color:red;">Image must be in 150px x 150px resolution.</span></td>
-		</tr>
-		<tr>
-			<td align="right"><?=form_label('Product Image :');?></td>
-			<td><input type="file" name="product_image_full" style="overflow-x: hidden;width: 173px;"><span style="margin-left:20px;color:red;">Image must be in 300px x 300px resolution.</span></td>
-		</tr>
-		<tr>
-			<td align="right"><?=form_label('Product Type :');?></td>
-			<td>
+				?>	
+			</div>
+			<div class="col-md-4">
+				<span>Product Thumbnail</span>
+				<input type="file" name="product_thumb_image">
+			</div>
+			<div class="col-md-4">
+				<input type="file" name="product_image_full">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-4">
 				<?php 
 					$edibleProduct=array('name'=>'isEdible','type'=>'radio','value'=>1,'onClick'=>'ShowOptions();');
 					echo form_input($edibleProduct)."  <span>Edible</span>";
@@ -83,20 +63,24 @@
 					$NonedibleProduct=array('name'=>'isEdible','type'=>'radio','value'=>0,'onClick'=>'HideOptions();');
 					echo form_input($NonedibleProduct)."  <span>Non-edible</span>";
 				?>
-				
-				<div class="hide" id="vegNonVegChooser" style="position: relative;padding: 0px;border:1px dashed red;margin:6px;">
+				<div class="hide_s" id="vegNonVegChooser" style="position: relative;padding: 0px;border:1px dashed red;margin:6px;">
 					<input type="radio" name="veg_nonveg" value="0">
 					<span style="margin-left: 5px;">Vegitarian</span>
 					&nbsp;&nbsp;
 					<input type="radio" name="veg_nonveg" value="1">
 					<span style="margin-left: 5px;">Non-vegitarian</span>
 				</div>
-
-			</td>
-		</tr>
+			</div>
+		</div>
+	</div>
+	
+		
+		<table style="display: none;" border="1" align="center" width="92%;">
 		<tr>
 			<td align="right"><?=form_label('Product Description :');?></td>
-			<td><?=form_textarea(array('id'=>'editor-remove-me','name'=>'product_desc','rows'=>6,'cols'=>60,'style'=>'overflow-y:scroll;','value'=>'<h1>Some Text</h1>'));?></td>
+			<td><?php 
+					$value='<h4>Heading</h4><hr><p>Some Test</p><br><br><h4>Heading2</h4><hr><p>Some text</p><br><br>';
+					echo form_textarea(array('id'=>'editor-remove-me','name'=>'product_desc','rows'=>6,'cols'=>60,'style'=>'overflow-y:scroll;','value'=>$value));?></td>
 		</tr>
 		<tr>
 			<td align="right"><?=form_label('Product Weight :');?></td>
@@ -141,7 +125,7 @@
 	<?=form_close();?>
 
 	<!-- load the js -->
-    <?php $this->load->view('admin/jquery'); ?>
+    <?php $this->load->view('admin/common/jquery'); ?>
 	<script type="text/javascript">
 		function addOffers(){
 			alert('Add Offers');
@@ -171,9 +155,6 @@
 			});
 	
 		});
-	</script>
-	<script>
-		initSample();
 	</script>
 </body>
 </html>

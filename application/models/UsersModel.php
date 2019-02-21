@@ -41,6 +41,11 @@ class UsersModel extends My_Model {
 		return $query->row_array();
 	}
 
+	public function FetchUserName($UserId){
+		$query=$this->db->query("SELECT `fname`,`lname` FROM `users` WHERE user_id=".$UserId);
+		return $query->row_array();
+	}
+
 	public function updateProfileInfo($data,$userId){
 		$data = array('fname' => trim($data['fname']),
 					  'lname' => trim($data['lname']),

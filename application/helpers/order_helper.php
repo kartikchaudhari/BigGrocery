@@ -14,7 +14,7 @@
 
     function json_to_table_render($json_obj){
         $json_decoded_array=json_decode($json_obj, $assoc_array = true);
-        $table="<table border='1' width='100%;'>";
+        $table="<table class='tbl_content' border='1' width='100%;'>";
         $table.= "<tr>
                     <th>Quantity</th>
                     <th>Product</th>

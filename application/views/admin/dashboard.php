@@ -1,4 +1,8 @@
-
+    <style type="text/css">
+        body{
+            background-color:#f1f2f6;
+        }
+    </style>
     <!--nav-->
     <nav role="navigation" class="navbar navbar-custom">
         <?php $this->load->view('admin/nav',['admin_data'=>$data[0]]); ?>    

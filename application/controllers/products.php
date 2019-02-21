@@ -34,9 +34,10 @@ class Products extends My_Controller {
 	//List all the products to the dashboard
 	public function manage_products(){
 		$AllProduct=$this->ProductsModel->getAllProducts();
-		$this->load->view('admin/head');
+		$data=array('title'=>'Manage Products');
+		$this->load->view('admin/common/head',['data'=>$data]);
 		$this->load->view('admin/products/view',['data'=>$AllProduct]);
-		$this->load->view('admin/js');
+		$this->load->view('admin/common/js');
 	}
 
 	
@@ -44,6 +45,8 @@ class Products extends My_Controller {
 
 	public function add_product(){
 		$this->load->model(['SubCatModel','ProductCatModel']);
+		$data=array('title'=>'Add Products');
+		$this->load->view('admin/common/head',['data'=>$data]);
 		$this->load->view('admin/products/add',['product_cat'=>$this->ProductCatModel->FetchAllCat()]);	
 	}
 
@@ -95,8 +98,8 @@ class Products extends My_Controller {
 		$config['upload_path'] = './product_images/thumb/';
 		$config['allowed_types'] = 'jpg|png|jpeg|PNG|JPG|JPEG';
 		$config['max_size']  = '100';
-		$config['max_width']  = '150';
-		$config['max_height']  = '150';
+		$config['max_width']  = '250';
+		$config['max_height']  = '250';
 		$config['encrypt_name']=TRUE;
 
 		$this->upload->initialize($config);//tnx mate you saved my ass
@@ -119,8 +122,8 @@ class Products extends My_Controller {
 		$config['upload_path'] = './product_images/full/';
 		$config['allowed_types'] = 'jpg|png|jpeg|PNG|JPG|JPEG';
 		$config['max_size']  = '100';
-		$config['max_width']  = '300';
-		$config['max_height']  = '300';
+		$config['max_width']  = '600';
+		$config['max_height']  = '600';
 		$config['encrypt_name']=TRUE;
 		$this->load->library('upload', $config);
 		

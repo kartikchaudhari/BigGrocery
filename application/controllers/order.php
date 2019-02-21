@@ -43,9 +43,8 @@ class Order extends My_Controller {
 
         if ($this->input->post("additionalCharges")) {
             $additionalCharges = $this->input->post("additionalCharges");
-            $retHashSeq = $additionalCharges . '|' . $salt . '|' . $status . '|||||||||'.$udf2.'|'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
+            $retHashSeq = $additionalCharges . '|' . $salt . '|' . $status . '||||||||'.$udf2.'|'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
         } else {
-
             $retHashSeq = $salt . '|' . $status . '|||||||||'.$udf2.'|'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
         }
         $hash = hash("sha512", $retHashSeq);
@@ -69,11 +68,12 @@ class Order extends My_Controller {
 
 
             $UserInfo=$this->CustomerDetailById($udf2);
-            $OrderInfo=$this->OrderModel->getOrderInfo($udf2);
+            $OrderInfo=$this->OrderModel->getOrderInfo($udf1);
             $UserAndOrderInfo=array(
                 'name'=>$UserInfo['fname']." ".$UserInfo['lname'],
                 'address'=>$UserInfo['delivery_address'],
                 'phone'=>$UserInfo['contact'],
+                'email'=>$UserInfo['email'],
                 'order_id'=>$udf1,
                 'total_amount'=>$OrderInfo['total_amount'],
                 'order_date'=>$OrderInfo['order_date']
@@ -108,12 +108,13 @@ class Order extends My_Controller {
 
     	$data=array();
 
-    	        if ($this->input->post("additionalCharges")) {
+    	if ($this->input->post("additionalCharges")) {
             $additionalCharges = $this->input->post("additionalCharges");
-            $retHashSeq = $additionalCharges . '|' . $salt . '|' . $status . '||||||||||'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
+            $retHashSeq = $additionalCharges . '|' . $salt . '|' . $status . '|||||||||'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
+
         } else {
 
-            $retHashSeq = $salt . '|' . $status . '||||||||||'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
+            $retHashSeq = $salt .'|' . $status . '|||||||||'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
         }
         $hash = hash("sha512", $retHashSeq);
 

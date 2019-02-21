@@ -14,6 +14,11 @@ class Test extends My_Controller {
 		echo "<pre>";
 		print_r($this->OrderModel->getOrderInfo(55));
 	}
+
+	public function c(){
+		$this->load->helper('users');
+		print_r(getUserName(5));
+	}
 }
 
 /* End of file test.php */

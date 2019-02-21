@@ -12,6 +12,15 @@
 <!-- site css and js header -->
 	<?php $this->load->view('customer/head'); ?>
 <!--//site css and js header -->
+<style type="text/css">
+	.tbl_content th{
+		padding: 5px;
+	}
+
+	.tbl_content td{
+		padding: 2px;
+	}
+</style>
 </head>
 <body>
 <body>

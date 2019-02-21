@@ -19,7 +19,7 @@
 		$ci->email->set_newline("\r\n");
 		//ridz791997@gmail.com
 		//kokaniashishkumar@gmail.com
-		$receiver_email = "kartikchaudhari456@gmail.com";
+		$receiver_email = $UserAndOrderInfo['email'];
 		$username = "BigGrocery";
 		$subject = "Receipt";
 		$message = '<!DOCTYPE html>

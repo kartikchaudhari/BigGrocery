@@ -93,8 +93,8 @@ define('SITE_HOST','localhost');
 //PayUMoney Configurations
 define('MERCHANT_KEY', 'gEdmunJx');
 define('SALT', 'D7xcqpaZuV');
-//define('PAYU_BASE_URL', 'https://test.payu.in');    //Testing url
-define('PAYU_BASE_URL', ' https://sandboxsecure.payu.in');  //actual URL
+define('PAYU_BASE_URL', 'https://sandboxsecure.payu.in');    //Testing url
+//define('PAYU_BASE_URL', ' https://sandboxsecure.payu.in');  //actual URL
 define('SUCCESS_URL', 'http://'.SITE_HOST.'/BigGrocery/order/order_success');  
 define('FAIL_URL', 'http://'.SITE_HOST.'/BigGrocery/order/order_fail');
 define('SERVICE_PROVIDER','payu_paisa');  
