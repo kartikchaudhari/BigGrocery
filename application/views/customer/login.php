@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Big store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Login :: w3layouts</title>
+<title>Customer Login :: BigGrocery</title>
 <!-- for-mobile-apps -->
 <?php $this->load->view('customer/head'); ?>
 <body>
-<a href="offer.html"><img src="images/download.png" class="img-head" alt=""></a>
 <div class="header">
 	<div class="container">
 			<div class="logo">
@@ -60,23 +59,12 @@
 <!-- smooth scrolling -->
 	<script type="text/javascript">
 		$(document).ready(function() {
-		/*
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-		*/								
 		$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- //smooth scrolling -->
 
-<!-- for bootstrap working -->
-		<script src="<?=base_url('assets/js/bootstrap.js');?>"></script>
-<!-- //for bootstrap working -->
 <script type='text/javascript' src="<?=base_url('assets/js/jquery.mycart.js');?>"></script>
   <script type="text/javascript">
   $(function () {

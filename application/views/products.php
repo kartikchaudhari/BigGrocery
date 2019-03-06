@@ -38,10 +38,10 @@
 		
 		<div class="con-w3l" style="padding-top: 20px;">
 			<?php for ($i=0; $i <count($data['products']); $i++) { ?>
-			<div class="col-md-3 pro-1">
+			<div id="p_d_<?=$data['products'][$i]['product_id']?>" class="col-md-3 pro-1">
 				<div class="col-m">
 					<?=checkFavourites(1,$data['products'][$i]['product_id']);?>
-					<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
+					<a href="#" onclick="showProductDetailModel(<?=$data['products'][$i]['product_id']?>)" class="offer-img">
 						<img src="<?=base_url($data['products'][$i]['product_image']);?>" class="img-responsive" alt="" style="height:150px;width: 150px;">
 						<?=checkOffers($data['products'][$i]['has_offers'],$data['products'][$i]['product_id']);?></a>
 					<div class="mid-1">
@@ -68,7 +68,7 @@
 							<div class="clearfix"></div>
 						</div>
 						<div class="add">
-							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="<?=$data['products'][$i]['product_id']?>" data-name="<?=$data['products'][$i]['product_name']?>" data-summary="summary 36" data-price="<?=$data['products'][$i]['product_price']?>" data-quantity="1" data-image="<?=base_url($data['products'][$i]['product_image']);?>">Add to Cart</button>
+							<button id="product_<?=$data['products'][$i]['product_id']?>"  class="btn btn-danger my-cart-btn my-cart-b" data-id="<?=$data['products'][$i]['product_id']?>" data-name="<?=$data['products'][$i]['product_name']?>" data-summary="summary 36" data-price="<?=$data['products'][$i]['product_price']?>" data-quantity="1" data-image="<?=base_url($data['products'][$i]['product_image']);?>" data-image-full="<?=base_url($data['products'][$i]['product_image_full']);?>">Add to Cart</button>
 						</div>
 					</div>
 				</div>
@@ -101,35 +101,32 @@
 	</script>
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- //smooth scrolling -->
-<!-- for bootstrap working -->
-	<script src="<?=base_url('assets/js/bootstrap.js');?>"></script>
-<!-- //for bootstrap working -->
 
 <!-- cart function-->
 	<?php $this->load->view('cart/cart'); ?>  
   <!-- product -->
-	<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade" id="ProductModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content modal-info">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+					<a id="m_closer" href="" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>						
 				</div>
 				<div class="modal-body modal-spa">
 						<div class="col-md-5 span-2">
-									<div class="item">
-										<img src="images/of24.png" class="img-responsive" alt="">
-									</div>
+							<div class="item">
+								<img id="p_image" class="img-thumbnail img-responsive" alt="">
+							</div>
 						</div>
 						<div class="col-md-7 span-1 ">
-							<h3>Wheat(500 g)</h3>
+							<h3><span id="p_name"></span><span id="product_weight"></span></h3>
 							<p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
 							<div class="price_single">
-							  <span class="reducedfrom "><del>$2.00</del>$1.50</span>
+							  <span id="p_price" class="reducedfrom">$</span>
 							
 							 <div class="clearfix"></div>
 							</div>
 							<h4 class="quick">Quick Overview:</h4>
-							<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+							<p id="p_desc" class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 							 <div class="add-to">
 								   <button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="24" data-name="Wheat" data-summary="summary 24" data-price="1.50" data-quantity="1" data-image="images/of24.png">Add to Cart</button>
 								</div>
@@ -153,6 +150,20 @@
 			    });
 			});
 		}); 
+	</script>
+	<script type="text/javascript">
+		function showProductDetailModel(product_id){
+			var btnId="#product_"+product_id;
+			var hrf="#p_d_"+product_id;
+				$("#p_id").text($(btnId).attr('data-id'));
+				$("#p_name").text($(btnId).attr('data-name'));
+				$("#p_desc").text($(btnId).attr('data-summary'));
+				$("#p_price").text($(btnId).attr('data-price'));
+				$("#p_image").attr('src',$(btnId).attr('data-image-full'));
+				$("#m_closer").attr('href',hrf);
+				$("#ProductModel").modal();
+			return false;
+		}
 	</script>		
 </body>
 </html>

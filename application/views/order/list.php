@@ -80,13 +80,17 @@
 							?>
 						</table>
 					</div>
+					<div class="row">
+						<div class="col-md-4 col-md-offset-5" style="padding-top: 0px;padding-bottom: 0px;">
+							<?=$this->pagination->create_links();?>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<br>
 	<hr width="90%" align="center"><br>
-	
 	<br>
 	<hr width="90%" align="center">
 	<br>
@@ -102,8 +106,6 @@
 	<?php $this->load->view('site/site_footer'); ?>
 </div>
 <!-- //footer-->
-
-
 <!-- smooth scrolling -->
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -116,7 +118,6 @@
 <!-- for bootstrap working -->
 		<script src="<?=base_url('assets/js/bootstrap.js');?>"></script>
 <!-- //for bootstrap working -->
-
 
 <?php $this->load->view('cart/cart');?>
 </body>

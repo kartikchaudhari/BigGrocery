@@ -153,9 +153,6 @@
 	</script>
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- //smooth scrolling -->
-<!-- for bootstrap working -->
-		<script src="<?=base_url('assets/js/bootstrap.js');?>"></script>
-<!-- //for bootstrap working -->
 <?php $this->load->view('cart/cart');?>
 </body>
 </html>

@@ -142,7 +142,6 @@
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- //smooth scrolling -->
 
-<script src="<?=base_url('assets/js/bootstrap.js');?>"></script>
 <script type="text/javascript">
     function updateProfileInfo(){
         $.post('<?=base_url('user/updateProfile');?>',

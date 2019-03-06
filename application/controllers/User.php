@@ -3,7 +3,9 @@ class User extends My_Controller {
 
 	public function __construct(){
 		parent::__construct();
+		$this->load->helper("url");
 		$this->load->model(['UsersModel','ProductsModel','OrderModel']);
+		 $this->load->library("pagination");
 	}
 
 	public function index(){
@@ -75,13 +77,46 @@ class User extends My_Controller {
 	}
 
 	public function order_history(){
+		
+
 		if ($this->session->userdata('bg_sys_ss_user_id')) {
-			$this->load->view('order/list',['order_history_data'=>$this->getUserOrderList($this->session->userdata('bg_sys_ss_user_id'))]);	
+
+			$userId=$this->session->userdata('bg_sys_ss_user_id');
+
+			$config = array();
+	        $config["base_url"] = base_url()."user/order_history";
+	        $config["total_rows"] = $this->OrderModel->getCountOrderListByUserId($userId);
+	        $config["per_page"] = 5;
+	        $config["uri_segment"] = 3;
+
+	        $choice = $config["total_rows"] / $config["per_page"];
+    		$config["num_links"] = round($choice);
+
+    		$config['full_tag_open'] = "<ul class='pagination'>";
+			$config['full_tag_close'] ="</ul>";
+			$config['num_tag_open'] = '<li>';
+			$config['num_tag_close'] = '</li>';
+			$config['cur_tag_open'] = "<li class='disabled'><li class='active'><a href='#'>";
+			$config['cur_tag_close'] = "<span class='sr-only'></span></a></li>";
+			$config['next_tag_open'] = "<li>";
+			$config['next_tagl_close'] = "</li>";
+			$config['prev_tag_open'] = "<li>";
+			$config['prev_tagl_close'] = "</li>";
+			$config['first_tag_open'] = "<li>";
+			$config['first_tagl_close'] = "</li>";
+			$config['last_tag_open'] = "<li>";
+			$config['last_tagl_close'] = "</li>";
+
+	        $this->pagination->initialize($config);
+
+	        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+	        $data["results"] =$this->OrderModel->getOrderListByUserId($userId,$page,$config["per_page"]); 
+			$this->load->view('order/list',['order_history_data'=>$data["results"]]);	
 		}
 		else{
 			return redirect('user/login');
 		}
-		
+			
 	}
 
 	public function shipping(){
@@ -112,10 +147,15 @@ class User extends My_Controller {
 		return $this->UsersModel->WishListCount($UserId);
 	}
 
-	public function getUserOrderList($UserId){
+	public function getUserOrderList($UserId,$limit,$offset){
 		$this->load->model('OrderModel');
-		return $this->OrderModel->getOrderListByUserId($UserId);
+		return $this->OrderModel->getOrderListByUserId($UserId,$limit,$offset);
 	}
+
+	// public function getUserOrderList($UserId){
+	// 	$this->load->model('OrderModel');
+	// 	return $this->OrderModel->getOrderListByUserId($UserId);
+	// }
 
 	public function countUserOrderList($UserId){
 		return $this->OrderModel->getCountOrderListByUserId($UserId);
@@ -183,6 +223,37 @@ class User extends My_Controller {
 			return 0;
 		}
 	}
+
+
+	//create pagination 
+	// public function doCreatePagination($UserId){
+	// 	$this->load->library('pagination');
+	// 	$config['base_url'] = base_url('user/order_history'),
+	// 	$config['total_rows'] = $this->OrderModel->getOrderListByUserId($UserId),
+	// 	$config['per_page'] = 5;
+	// 	$config['uri_segment'] = 3;
+	// 	$config['num_links'] = 3;
+	// 	$config['full_tag_open'] = '<p>';
+	// 	$config['full_tag_close'] = '</p>';
+	// 	$config['first_link'] = 'First';
+	// 	$config['first_tag_open'] = '<div>';
+	// 	$config['first_tag_close'] = '</div>';
+	// 	$config['last_link'] = 'Last';
+	// 	$config['last_tag_open'] = '<div>';
+	// 	$config['last_tag_close'] = '</div>';
+	// 	$config['next_link'] = '&gt;';
+	// 	$config['next_tag_open'] = '<div>';
+	// 	$config['next_tag_close'] = '</div>';
+	// 	$config['prev_link'] = '&lt;';
+	// 	$config['prev_tag_open'] = '<div>';
+	// 	$config['prev_tag_close'] = '</div>';
+	// 	$config['cur_tag_open'] = '<b>';
+	// 	$config['cur_tag_close'] = '</b>';
+		
+	// 	$this->pagination->initialize($config);
+		
+	// 	echo $this->pagination->create_links();
+	// }
 
 }
 ?>

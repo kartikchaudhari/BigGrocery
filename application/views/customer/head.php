@@ -4,6 +4,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="<?=base_url('assets/css/bootstrap.css');?>" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="<?=base_url('assets/css/style.css');?>" rel='stylesheet' type='text/css' />
+<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+
 <!-- js -->
    <script src="<?=base_url('assets/js/jquery-1.11.1.min.js');?>"></script>
 <!-- //js -->

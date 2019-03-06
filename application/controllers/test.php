@@ -11,8 +11,7 @@ class Test extends My_Controller {
 
 	public function b(){
 		$this->load->model('OrderModel');
-		echo "<pre>";
-		print_r($this->OrderModel->getOrderInfo(55));
+		print_r($this->OrderModel->getOrderListByUserId(5,1,1));
 	}
 
 	public function c(){
