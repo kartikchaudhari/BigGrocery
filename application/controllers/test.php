@@ -18,6 +18,10 @@ class Test extends My_Controller {
 		$this->load->helper('users');
 		print_r(getUserName(5));
 	}
+
+	public function d(){
+		$this->load->view('dataTbl');
+	}
 }
 
 /* End of file test.php */
