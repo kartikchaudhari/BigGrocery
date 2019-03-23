@@ -139,6 +139,46 @@ class Products extends My_Controller {
 		}
 	}
 
+	public function doSearchProduct(){
+		$search_data = $this->input->post('search_data');
+		$result = $this->ProductsModel->get_searches($search_data);
+		// echo "<pre>";
+		// print_r($result);
+		if (!empty($result)){
+          
+          for($i=0;$i<count($result);$i++){
+          		$product_name=explode(',',$result[$i]['product_name']);
+          		echo "
+          		<div class='table-responsive' style='padding-left: 10px;padding-right: 10px;'>
+                	<table align='left' width='100%' style='border-bottom: 1px solid black;'>
+                    <tr>
+                        <td>
+                            <img class='img-responsive' src='".site_url($result[$i]['product_image'])."' height='65px' width='65px'>
+                        </td>
+                        <td style='padding-left: 10px;'>
+                            <a href='".site_url('products/product_info/').$result[$i]['product_id']."'>".$product_name[0]."</a>
+                        </td>
+                        <td>
+                            <span>".$result[$i]['product_weight']."</span>
+                        </td>
+
+                        <td>
+                            <span>".$this->lang->line('rs').$result[$i]['product_price']."</span>
+                        </td>
+                        <td>
+                            <button type='button' class='btn btn-xs btn-success'>
+                                Add <span class='glyphicon glyphicon-shopping-cart'></span>
+                            </button>
+                        </td>
+                    </tr>
+                	</table>
+            	</div>";
+          }
+     	}
+     	else{
+           echo "<em> Not found ... </em>";
+     	}
+	}
 
 
 	public function remove_product(){

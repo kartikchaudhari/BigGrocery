@@ -77,4 +77,17 @@
         }
     }
 
+    function isFavouriteProduct($ProductId,$UserId){
+        $ci=&get_instance();
+        $ci->load->model('ProductsModel');
+        
+        $data=$ci->ProductsModel->returnProductFavouriteStatus($ProductId,$UserId);
+        if($data!=NULL){
+            return 0;
+        }
+        else{
+            return 1;
+        }   
+    }
+
 ?>

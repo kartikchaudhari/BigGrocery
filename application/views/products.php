@@ -40,7 +40,16 @@
 			<?php for ($i=0; $i <count($data['products']); $i++) { ?>
 			<div id="p_d_<?=$data['products'][$i]['product_id']?>" class="col-md-3 pro-1">
 				<div class="col-m">
-					<?=checkFavourites(1,$data['products'][$i]['product_id']);?>
+					<?php
+						if ($this->session->userdata('bg_sys_ss_user_id')) {
+							$UserId=$this->session->userdata('bg_sys_ss_user_id');
+							$ProductId=$data['products'][$i]['product_id'];
+							isFavouriteProduct($ProductId,$UserId);
+							echo checkFavourites(isFavouriteProduct($ProductId,$UserId),$ProductId);
+						}else{
+							echo checkFavourites(0,$data['products'][$i]['product_id']);
+						}
+					?>
 					<a href="#" onclick="showProductDetailModel(<?=$data['products'][$i]['product_id']?>)" class="offer-img">
 						<img src="<?=base_url($data['products'][$i]['product_image']);?>" class="img-responsive" alt="" style="height:150px;width: 150px;">
 						<?=checkOffers($data['products'][$i]['has_offers'],$data['products'][$i]['product_id']);?></a>

@@ -1,45 +1,103 @@
+<style type="text/css">white{color:white;} hover{color:#FAB005;}.footer-nav{list-style: none;display: inline;line-height: 1;}</style>
 <div class="footer">
 	<div class="container">
-		<div class="col-md-3 footer-grid">
-			<h3>About Us</h3>
-			<p>Nam libero tempore, cum soluta nobis est eligendi 
-				optio cumque nihil impedit quo minus id quod maxime 
-				placeat facere possimus.</p>
+		<div class="row">
+			<div class="col-md-3 footer-grid ">
+				<h3>BigGrocery</h3>
+				<ul>
+					<li><a href="<?=site_url('site/about');?>">About us</a></li>
+					<li><a href="<?=site_url('site/privacy');?>">Privacy Policy</a></li>
+					<li><a href="<?=site_url('#');?>">Affiliate</a></li>
+					<li><a href="<?=site_url('service/terms');?>">Terms & Conditions</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 footer-grid ">
+				<h3>Help</h3>
+				<ul>
+					<li><a href="<?=site_url('service/faq');?>">Faqs</a></li>
+					<li><a href="<?=site_url('service/shipping');?>">Shipping</a></li>
+					<li><a href="<?=site_url('site/contact');?>">Contact</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 footer-grid">
+				<h3>Developers</h3>
+				<ul>
+					<li><a href="<?php echo site_url('rest_server'); ?>">API</a></li>
+					<?php if (file_exists(FCPATH.'documentation/index.html')) : ?>
+	        		<li><a href="<?php echo base_url('documentation/index.html'); ?>" target="_blank">API Documentation</a></li>
+	        		<?php endif ?>
+				</ul>
+			</div>
+			<div class="col-md-3 footer-grid">
+				<h3>Get Social With Us</h3>
+					<ul class="social-fo" style="text-align: center;">
+						<li><a href="#" class="face">
+								<white><i class="fa fa-facebook" aria-hidden="true"></i></white>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="twi">
+								<white><i class="fa fa-twitter" aria-hidden="true"></i></white>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="pin">
+								<white><i class="fa fa-pinterest-p" aria-hidden="true"></i></white>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="dri">
+								<white><i class="fa fa-dribbble" aria-hidden="true"></i></white>
+							</a>
+						</li>
+					</ul>
+			</div>
+			<div class="clearfix"></div>
 		</div>
-		<div class="col-md-3 footer-grid ">
-			<h3>Menu</h3>
-			<ul>
-				<li><a href="<?=site_url();?>">Home</a></li>
-				<li><a href="kitchen.html">Kitchen</a></li>
-				<li><a href="care.html">Personal Care</a></li>
-				<li><a href="hold.html">Household</a></li>						 
-				<li><a href="codes.html">Short Codes</a></li> 
-				<li><a href="<?=site_url('site/contact');?>">Contact</a></li>
-			</ul>
+		<br>
+		<div class="row" style="border-top:1px solid white;padding-top: 20px;">
+			<div class="col-md-2"><span><hover>POPULAR CATEGORIES:</hover></span></div>
+			<div class="col-md-9 footer-grid">
+				<ul>
+					<?php
+						$x="Fruits & Vegetables, Basmati Rice, Green Tea, OTC, Cheese, Dry Fruits, Foodgrains, Oil & Masala, Chocolates & Sweets, Soft Drinks, Energy Drinks, Bakery, Cakes & Dairy, Olive Oils, Sunflower Oils, Liquid Soaps & Bars ";
+						$y=explode(",", $x);
+						for($i=0;$i<count($y);$i++){
+							echo "<li class='footer-nav'><a href='".site_url('site/about')."'>".$y[$i]."</a>, </li>";
+						}
+					?>
+				</ul>
+			</div>
 		</div>
-		<div class="col-md-3 footer-grid ">
-			<h3>Customer Services</h3>
-			<ul>
-				<li><a href="<?=site_url('service/shipping');?>">Shipping</a></li>
-				<li><a href="<?=site_url('service/terms');?>">Terms & Conditions</a></li>
-				<li><a href="<?=site_url('service/faq');?>">Faqs</a></li>
-				<li><a href="<?=site_url('site/contact');?>">Contact</a></li>
-				<li><a href="offer.html">Online Shopping</a></li>						 
-				 
-			</ul>
+		<div class="row" style="padding-top: 20px;">
+			<div class="col-md-2"><span><hover>POPULAR BRANDS:</hover></span></div>
+			<div class="col-md-9 footer-grid">
+				<ul>
+					<?php
+						$x="Amul,Haldirams ,Tropicana,Kelloggs,Dettol,MTR,Bru ,McCain,Ariel ,Britannia,Nescafe , Colgate,Horlicks,Galaxy,Complan";
+						$y=explode(",", $x);
+						for($i=0;$i<count($y);$i++){
+							echo "<li class='footer-nav'><a href='".site_url('site/about')."'>".$y[$i]."</a>, </li>";
+						}
+					?>
+				</ul>
+			</div>
 		</div>
-		<div class="col-md-3 footer-grid">
-			<h3>My Account</h3>
-			<ul>
-				<li><a href="<?=site_url('user/login');?>">Login</a></li>
-				<li><a href="<?=site_url('user/register');?>">Register</a></li>
-				<li><a href="<?=site_url('user/wishlist');?>">Wishlist</a></li>
-				
-			</ul>
+		<div class="row" style="padding-top: 20px;">
+			<div class="col-md-2"><span><hover>CITIES WE SERVE:</hover></span></div>
+			<div class="col-md-9 footer-grid">
+				<ul>
+					<?php
+						$x="Bangalore,Hyderabad,Mumbai,Pune,Chennai,Delhi,Mysore,Coimbatore,Vijayawada-Guntur,Kolkata,Ahmedabad-Gandhinagar,Lucknow-Kanpur,Gurgaon,Vadodara,Visakhapatnam,Surat,Nagpur,Patna,Indore,Chandigarh Tricity,Jaipur,Bhopal,Noida-Ghaziabad";
+						$y=explode(",", $x);
+						for($i=0;$i<count($y);$i++){
+							echo "<li class='footer-nav'><a href='".site_url('site/about')."'>".$y[$i]."</a>, </li>";
+						}
+					?>
+				</ul>
+			</div>
 		</div>
-		<div class="clearfix"></div>
-			<div class="footer-bottom">
-				<style type="text/css">white{color:white;}</style>
+		<div class="footer-bottom">
 				<div class="logo">
 					<h1>
 						<a href="<?=site_url('home');?>" title="Home :: The BigGrocery ">
@@ -49,30 +107,10 @@
 						</a>
 					</h1>
 				</div>
-				<p class="fo-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-				<ul class="social-fo">
-					<li><a href="#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="#" class=" twi"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href="#" class=" pin"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-					<li><a href="#" class=" dri"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-				</ul>
-				<div class=" address">
-					<div class="col-md-4 fo-grid1">
-							<p><i class="fa fa-home" aria-hidden="true"></i>12K Street , 45 Building Road Canada.</p>
-					</div>
-					<div class="col-md-4 fo-grid1">
-							<p><i class="fa fa-phone" aria-hidden="true"></i>+1234 758 839 , +1273 748 730</p>	
-					</div>
-					<div class="col-md-4 fo-grid1">
-						<p><a href="mailto:info@example.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>info@example1.com</a></p>
-					</div>
-					<div class="clearfix"></div>
-					
-					</div>
-			</div>
+		</div>
 		<div class="copy-right">
 			<p> &copy; 2016 BigGrocery. All Rights Reserved.</p>
 		</div>
 	</div>
-</div>
+
 <script type="text/javascript" src="<?=site_url('assets/js/bootstrap.js');?>"></script>

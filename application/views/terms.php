@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>BigGrocery ::  Shipping Information </title>
+<title>BigGrocery ::  Terms & Conditions </title>
 <?php $this->load->view('site/meta'); ?>
 <?php $this->load->view('site/favicon'); ?>
 <?php $this->load->view('site/css'); ?>

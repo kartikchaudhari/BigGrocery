@@ -45,9 +45,6 @@ class ProductsModel extends My_Model {
 
 	public function removeProductFromWishList($data){
 		return $this->db->delete('wishlist',$data);
-		//$sql="DELETE FROM wishlist WHERE product_id=".$data['product_id']." AND user_id=".$data['user_id'];
-		//return $sql;
-		//return $this->db->query($sql);
 	}
 
 	public function returnWishListProducts($UserId){
@@ -55,8 +52,16 @@ class ProductsModel extends My_Model {
 		return $query->result_array();
 	}
 
+	public function returnProductFavouriteStatus($ProductId,$UserId){
+			$query=$this->db->query("SELECT wish_id FROM wishlist WHERE product_id=$ProductId AND user_id=$UserId");
+			return $query->row_array();
+	}
 
-
+	public function get_searches($search_data){
+		$this->db->select('*');
+    	$this->db->like('product_name',$search_data);
+		return $this->db->get('products', 10)->result_array();
+	}
 }
 
 /* End of file ProductsModel.php */

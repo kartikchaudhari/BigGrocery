@@ -1,4 +1,5 @@
 <script type='text/javascript' src="<?=base_url('assets/js/jquery.mycart.js');?>"></script>
+
 <script type="text/javascript">
   $(function () {
 
@@ -23,8 +24,7 @@
       numberOfDecimals: 2,
       affixCartIcon: true,
       checkoutCart: function(products, totalPrice, totalQuantity) {
-       var dataString=JSON.stringify(products);
-       
+        var dataString=JSON.stringify(products);
        //get user_id
        //if user is not logged in then set the varaible to zero
        var UserId=<?= ($this->session->userdata('bg_sys_ss_user_id'))?$this->session->userdata('bg_sys_ss_user_id'):0; ?>;
@@ -32,6 +32,7 @@
        //if user is logged in then 
        //do following
        if (UserId!=0) {
+          var dataString=JSON.stringify(products);
           $.ajax({
               url: '<?=base_url('cart/AddToCart')?>',
               data: {myData: dataString,tPrice:totalPrice,tQuantity:totalQuantity,user_id:UserId},
@@ -43,7 +44,8 @@
         }
         //else redirect to login 
         else{
-          window.location.href='<?=base_url('user/login');?>'
+          window.sessionStorage.setItem('products',JSON.stringify(dataString));
+          window.location.href='<?=base_url('user/login');?>';
         }
       },
       clickOnAddToCart: function($addTocart){

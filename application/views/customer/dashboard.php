@@ -132,6 +132,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </div>
         </div>
+        <div id="rowData" class="row">
+           
+        </div>
 	</div>
 </div>
 <!--footer-->
@@ -159,5 +162,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<script src="<?=base_url('assets/js/bootstrap.js');?>"></script>
 <!-- //for bootstrap working -->
 <?php $this->load->view('cart/cart');?>
+
 </body>
 </html>

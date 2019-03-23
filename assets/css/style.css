@@ -3136,3 +3136,67 @@ h1.t-button {
     font-size: 13px;
 }
 }
+
+/*---------- Search ----------*/
+.result-bucket li {
+    padding: 7px 15px;
+}
+.instant-results {
+    background: #fff;
+    width: 100%;
+    color: gray;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid #888;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .175);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .175);
+    display: none;
+    z-index: 9;
+}
+.form-search {
+    transition: all 200ms ease-out;
+    -webkit-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+}
+
+.result-link {
+    color: #4f7593;
+}
+.result-link .media-body {
+    font-size: 13px;
+    color: gray;
+}
+.result-link .media-heading {
+    font-size: 15px;
+    font-weight: 400;
+    color: #4f7593;
+}
+.result-link:hover,
+.result-link:hover .media-heading,
+.result-link:hover .media-body {
+    text-decoration: none;
+    color: #4f7593
+}
+.result-link .media-object {
+    width: 50px;
+    padding: 3px;
+    border: 1px solid #c1c1c1;
+    border-radius: 3px;
+}
+.result-entry + .result-entry {
+    border-top:1px solid #ddd;
+}
+.top-keyword {
+    margin: 3px 0 0;
+    font-size: 12px;
+    font-family: Arial;
+}
+.top-keyword a {
+    font-size: 12px;
+    font-family: Arial;
+}
+.top-keyword a:hover {
+    color: rgba(0, 0, 0, 0.7);
+}

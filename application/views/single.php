@@ -8,8 +8,8 @@
 <meta property="og:title" content="Vide" />
 <meta name="keywords" content="Big store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-
-<?php $this->load->view('site/head'); ?>
+<?php $this->load->view('site/css'); ?>
+<?php $this->load->view('site/js'); ?>
 </head>
 <body>
 <div class="header">
@@ -109,22 +109,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- smooth scrolling -->
 	<script type="text/javascript">
 		$(document).ready(function() {
-		/*
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-		*/								
-		$().UItoTop({ easingType: 'easeOutQuart' });
+			$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- //smooth scrolling -->
-<!-- for bootstrap working -->
-		<script src="<?=base_url('assets/js/bootstrap.js');?>"></script>
-<!-- //for bootstrap working -->
 <!-- cart function-->
 <?php $this->load->view('cart/cart'); ?>
 </body>

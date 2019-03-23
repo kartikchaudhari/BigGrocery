@@ -22,6 +22,12 @@ class Test extends My_Controller {
 	public function d(){
 		$this->load->view('dataTbl');
 	}
+
+	public function e(){
+		$this->load->model('OffersModel');
+		echo "<pre>";
+		print_r($this->OffersModel->getOfferedProducts(1,2));		
+	}
 }
 
 /* End of file test.php */
