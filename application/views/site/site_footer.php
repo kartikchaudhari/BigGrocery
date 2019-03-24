@@ -97,6 +97,14 @@
 				</ul>
 			</div>
 		</div>
+		<div class="row" style="padding-top: 20px;">
+			<div class="col-md-2"><span><hover>PAYMENT OPTIONS:</hover></span></div>
+			<div class="col-md-9 footer-grid">
+				<ul>
+					<li><span style="font-size: 10px;">CASH ON DELIVERY</span></li>
+				</ul>
+			</div>
+		</div>
 		<div class="footer-bottom">
 				<div class="logo">
 					<h1>
