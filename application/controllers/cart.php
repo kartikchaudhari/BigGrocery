@@ -6,7 +6,6 @@ class Cart extends My_Controller {
 	public function __construct(){
 		parent::__construct();
 
-		//load the model 
 		$this->load->model('CartModel');
 	}
 
@@ -17,11 +16,9 @@ class Cart extends My_Controller {
 					'total_qty'=>$this->input->post('tQuantity'),
 					'total_price'=>$this->input->post('tPrice')
 				);
-		//print_r($data);
 		echo $this->CartModel->addToCart($data);
 	}
 
-	
 }
 
 /* End of file cart.php */

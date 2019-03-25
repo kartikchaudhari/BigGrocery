@@ -101,7 +101,14 @@
 			<div class="col-md-2"><span><hover>PAYMENT OPTIONS:</hover></span></div>
 			<div class="col-md-9 footer-grid">
 				<ul>
-					<li><span style="font-size: 10px;">CASH ON DELIVERY</span></li>
+					<?php
+						$x="visa, master, payu,paytm";
+						$y=explode(",", $x);
+						for($i=0;$i<count($y);$i++){
+							echo "<li class='footer-nav'><i class='payment ".$y[$i]."'> </i></li>";
+						}
+					?>
+					
 				</ul>
 			</div>
 		</div>
