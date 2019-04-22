@@ -18,6 +18,14 @@ class ProductsModel extends My_Model {
 		return $query->result_array();
 	}
 
+	function get_all_product() {
+      $this->datatables->select('`product_id`, `cat_id`, `sub_cat_id`, `product_name`, `product_image`,`product_price`,`product_stock`');
+      $this->datatables->from('products');
+      
+      $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-info" data-code="$1" data-name="$2" data-price="$3" data-category="$4">Edit</a>  <a href="javascript:void(0);" class="delete_record btn btn-danger" data-code="$1">Delete</a>','product_id');
+      return $this->datatables->generate();
+  }
+
 	public function getAllProductsBySubCategory($SubCatId){
 		$query=$this->db->query("SELECT * FROM products WHERE sub_cat_id=".$SubCatId."");
 		return $query->result_array();

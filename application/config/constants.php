@@ -107,3 +107,7 @@ define('BOOTFLAT_DIST_CSS_FILE','assets/bootflat-assets/dist/css/site.min.css');
 define('BOOTFLAT_DIST_JS_FILE','assets/bootflat-assets/dist/js/site.min.js');
 define('BOOTFLAT_DIST_IMG_DIR','assets/bootflat-assets/dist/img/');
 define('JQUERY','assets/js/jquery-1.11.1.min.js');
+
+define('OWL_STYLE','assets/owl/css/owl.carousel.min.css');
+define('OWL_THEME_STYLE','assets/owl/css/owl.theme.default.min.css');
+define('OWL_JS','assets/owl/js/owl.carousel.js');

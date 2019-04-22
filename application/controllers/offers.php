@@ -12,6 +12,10 @@ class Offers extends My_Controller {
 		return $this->OffersModel->getOfferedProducts(1,2);
 	}
 
+	public function doAddOffers(){
+		
+	}
+
 }
 
 /* End of file offers.php */

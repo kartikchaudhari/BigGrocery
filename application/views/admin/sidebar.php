@@ -4,7 +4,12 @@
         <li class="list-group-item"><input type="text" class="form-control search-query" placeholder="Search Something" onkeydown="javascript:alert('searching...');" onkeyup="javascript:alert('searching...');"></li>
         
         <li><a class="list-group-item"  href="<?=base_url('admin/dashboard_content');?>" target="DashboardFrame"><i class="glyphicon glyphicon-home"></i>Dashboard </a></li>
-        
+        <li>
+            <a href="#DesignOps" class="list-group-item" data-toggle="collapse"><i class="fa fa-television fw"></i>Design&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+            <li class="collapse" id="DesignOps">
+              <a style="padding-left: 60px;" href="<?=base_url('design/banner');?>" target="DashboardFrame" class="list-group-item">Banner</a>
+            </li>
+        </li>
         <li><a class="list-group-item" href="<?=base_url('categories');?>" target="DashboardFrame"><i class="glyphicon glyphicon-certificate"></i>Categories</a></li>
         <li>
             <a href="#SubCatOps" class="list-group-item" data-toggle="collapse"><i class="glyphicon glyphicon-th-list"></i>Sub-Categories&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>

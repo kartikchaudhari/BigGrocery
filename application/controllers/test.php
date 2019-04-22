@@ -28,6 +28,15 @@ class Test extends My_Controller {
 		echo "<pre>";
 		print_r($this->OffersModel->getOfferedProducts(1,2));		
 	}
+
+	public function f(){
+		for ($i=0; $i <4; $i++) { 
+			for ($j=0; $j <4; $j++) { 
+				echo $j;			
+			}
+			echo "<br>";
+		}
+	}
 }
 
 /* End of file test.php */

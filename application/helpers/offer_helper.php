@@ -43,9 +43,9 @@
 		foreach ($data as $row) {
 			if(count($data)>0){
 				echo "<div class='col-md-3 m-wthree'>
-					<div class='col-m'>								
+						<div class='col-m'>								
 						<a href='#' data-toggle='modal' data-target='#myModal1' class='offer-img'>
-							<img src='".site_url($row['product_image_full'])."'' class='img-responsive' alt=''>
+							<img src='".site_url($row['product_image_full'])."' class='img-responsive' alt=''>
 							<div class='offer'><p><span>offer</span></p></div>
 						</a>
 						<div class='mid-1'>
@@ -64,8 +64,8 @@
 							</div>
 							
 						</div>
-					</div>
-			 	</div>";
+						</div>
+			 		  </div>";
 			}
 			else{
 				echo "<h3>No Offers Yet</h3>";

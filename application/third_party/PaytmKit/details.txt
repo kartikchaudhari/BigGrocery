@@ -1,0 +1,26 @@
+
+======:~ Visa Card Details ~:======
+Card Type: Visa
+Card Name: Test
+Card Number: 4012001037141112
+Expiry Date : 05/20
+CVV : 123
+
+======:~ Master Card Details ~:======
+Card Type: Master
+Card Name: Test
+Card Number: 5123456789012346
+Expiry Date : 05/20
+CVV : 123
+
+
+======:~ Test Wallet Details ~:======
+Mobile Number: 77777 77777
+Password: Paytm12345
+OTP: 489871
+
+
+======:~ Net Banking ~:======
+Bank Name: Andhra Bank
+User ID	: test
+Password: Test

@@ -1,4 +1,4 @@
-<?php $this->load->helper('offer'); ?>
+<?php $this->load->helper(array('offer','site')); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,24 +47,23 @@
 	<!-- Carousel-->
 	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
 	      <!-- Indicators -->
-	      <ol class="carousel-indicators">
-	        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-	        <li data-target="#myCarousel" data-slide-to="1"></li>
-	        <li data-target="#myCarousel" data-slide-to="2"></li>
-	      </ol>
-	      <div class="carousel-inner" role="listbox">
-	        <div class="item active">
-	         <a href="kitchen.html"> <img class="first-slide" src="<?=site_url('assets/images/ba.jpg');?>" alt="First slide"></a>
-	       
-	        </div>
-	        <div class="item">
-	         <a href="care.html"> <img class="second-slide " src="<?=site_url('assets/images/ba1.jpg');?>" alt="Second slide"></a>
-	         
-	        </div>
-	        <div class="item">
-	          <a href="hold.html"><img class="third-slide " src="<?=site_url('assets/images/ba2.jpg');?>" alt="Third slide"></a>
-	        </div>
+	      <div class="col-md-offset-0">
+	      	<ol class="carousel-indicators">
+		        <?=make_slide_indicators();?>
+	      	</ol>
 	      </div>
+	      <div class="carousel-inner" role="listbox">
+	      	<?=make_slides();?>
+	      </div>
+	      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+     <span class="glyphicon glyphicon-chevron-left"></span>
+     <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right"></span>
+     <span class="sr-only">Next</span>
+    </a>
 	    </div>
 	<!-- /.carousel -->
 
@@ -86,112 +85,111 @@
 					</ul>
 				</nav>
 				<div class=" tab-content tab-content-t ">
+					<!-- staples -->
 					<div class="tab-pane active text-style" id="tab1">
-						<div class=" con-w3l">
-							<div class="col-md-3 m-wthree">
-								<div class="col-m">								
-									<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
-										<img src="<?=site_url('assets/images/of.png');?>" class="img-responsive" alt="">
-										<div class="offer"><p><span>Offer</span></p></div>
-									</a>
-									<div class="mid-1">
-										<div class="women">
-											<h6><a href="single.html">Moong</a>(1 kg)</h6>							
-										</div>
-										<div class="mid-2">
-											<p ><label>$2.00</label><em class="item_price">$1.50</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-										<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b " data-id="1" data-name="Moong" data-summary="summary 1" data-price="1.50" data-quantity="1" data-image="<?=site_url('assets/images/of.png');?>">Add to Cart</button>
-										</div>
-										
-									</div>
-								</div>
+							<div id="productCarasoule" class="carousel slide" data-ride="carousel">
+							  <!-- Indicators -->
+							  <ol class="carousel-indicators">
+							    <li data-target="#productCarasoule" data-slide-to="0" class="active"></li>
+							    <li data-target="#productCarasoule" data-slide-to="1"></li>
+							    <li data-target="#productCarasoule" data-slide-to="2"></li>
+							  </ol>
+
+							  <!-- Wrapper for slides -->
+								<div class="carousel-inner">
+									<?php
+										for ($i=0; $i <4; $i++) { 
+											if ($i==0) {
+												echo '<div class="item active">
+							    						<div class="row">';
+											}
+											else{
+												echo '<div class="item">
+							    						<div class="row">';
+											}
+											for ($j=0; $j <4; $j++) { 
+												echo '<div class="col-md-3">
+												<div class="panel panel-default">
+													<div class="panel-body">
+														<div class="table-responsive">
+															<table class="table">
+																<tr>
+																	<td>
+																		<a href="#" onclick="showProductDetailModel(1)" class="offer-img">
+																			<img src="http://127.0.0.1/BigGrocery/product_images/thumb/cocacola_PNG21.png" class="img-responsive" alt="" style="height:150px;width: 150px;">
+																			<img style="position: absolute;top: 0;right: -15px;padding: 2px;" src="http://127.0.0.1/BigGrocery/assets/images/output-onlinepngtools.png"  height="22px">
+																			</a>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="col-4 pull-left" style="padding-left: 10px;">
+																				<img src="http://127.0.0.1/BigGrocery/assets/images/veg.png" title="Veg Product" height="18px" width="18px">
+																					
+																					<h6 style="margin-top:6px;"><a href="http://127.0.0.1/BigGrocery/products/product_info/1">CocaCola Bottle</a> (1.5 ml)</h6>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="mid-2">
+
+																			<div class="block">
+																				<div class="starbox small ghosting">
+																					<div class="positioner">
+																						<div class="stars">
+																							<div class="ghost" style="width: 42.5px;">
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="clearfix"></div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="add">
+																			<button id="product_1" class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="CocaCola Bottle" data-summary="summary 36" data-price="63" data-quantity="1" data-image="http://127.0.0.1/BigGrocery/product_images/thumb/cocacola_PNG21.png" data-image-full="http://127.0.0.1/BigGrocery/product_images/full/sprite.jpg">Add to Cart</button>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>													
+													</div>
+												</div>
+											</div>';			
+											}
+											echo "</div>
+											</div>";
+										}
+									?>
+							  </div>
+							  <!-- Left and right controls -->
+							  <a class="left pull-left" href="#productCarasoule" data-slide="prev">
+							    <span class="glyphicon glyphicon-chevron-left"></span>
+							    <span class="sr-only">Previous</span>
+							  </a>
+							  <a class="right pull-right" href="#productCarasoule" data-slide="next">
+							    <span class="glyphicon glyphicon-chevron-right"></span>
+							    <span class="sr-only">Next</span>
+							  </a>
 							</div>
-							<div class="col-md-3 m-wthree">
-								<div class="col-m">
-									<a href="#" data-toggle="modal" data-target="#myModal2" class="offer-img">
-										<img src="<?=site_url('assets/images/of1.png');?>" class="img-responsive" alt="">
-										<div class="offer"><p><span>Offer</span></p></div>
-									</a>
-									<div class="mid-1">
-										<div class="women">
-											<h6><a href="single.html">Sunflower Oil</a>(5 kg)</h6>							
-										</div>
-										<div class="mid-2">
-											<p ><label>$10.00</label><em class="item_price">$9.00</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-												<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="2" data-name="Sunflower Oil" data-summary="summary 2" data-price="9.00" data-quantity="1" data-image="<?=site_url('assets/images/of1.png');?>">Add to Cart</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 m-wthree">
-								<div class="col-m">
-									<a href="#" data-toggle="modal" data-target="#myModal3" class="offer-img">
-										<img src="<?=site_url('assets/images/of2.png');?>" class="img-responsive" alt="">
-										<div class="offer"><p><span>Offer</span></p></div>
-									</a>
-									<div class="mid-1">
-										<div class="women">
-											<h6><a href="single.html">Kabuli Chana</a>(1 kg)</h6>							
-										</div>
-										<div class="mid-2">
-											<p ><label>$3.00</label><em class="item_price">$2.00</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="<?=site_url('assets/images/of2.png');?>">Add to Cart</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 m-wthree">
-								<div class="col-m">
-									<a href="#" data-toggle="modal" data-target="#myModal4" class="offer-img">
-										<img src="<?=site_url('assets/images/of3.png');?>" class="img-responsive" alt="">
-										<div class="offer"><p><span>Offer</span></p></div>
-									</a>
-									<div class="mid-1">
-										<div class="women">
-											<h6><a href="single.html">Soya Chunks</a>(1 kg)</h6>							
-										</div>
-										<div class="mid-2">
-											<p ><label>$4.00</label><em class="item_price">$3.50</em></p>
-											  <div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-											<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="4" data-name="Soya Chunks" data-summary="summary 4" data-price="3.50" data-quantity="1" data-image="<?=site_url('assets/images/of3.png');?>">Add to Cart</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="clearfix"></div>
-						 </div>
+						
+						
+
+
 					</div>
+					<!--/staples -->
 					<div class="tab-pane  text-style" id="tab2">
 						<div class=" con-w3l">
 							<?=snacksOffer(); ?>
 							<div class="clearfix"></div>
 						</div>		  
 					</div>
-					<div class="tab-pane  text-style" id="tab3">
-						<div class=" con-w3l">
+					<div class="tab-pane text-style" id="tab3">
+						<div id="flexiselDemo1" class="con-w3l">
 							<?=fruitsVegOffer();?>
 							<div class="clearfix"></div>
 						 </div>		  
@@ -280,7 +278,7 @@
 <script type="text/javascript">
 function ajaxSearch()
 {
-    var input_data = $('#search_data').val();
+  var input_data = $('#search_data').val();
 	if (input_data.length === 0){
         $('.instant-results').hide();
     }
@@ -300,5 +298,6 @@ function ajaxSearch()
  }
 </script>
 <!--/live search-->
+
 </body>
 </html>

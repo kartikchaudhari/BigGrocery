@@ -5,7 +5,7 @@ class Products extends My_Controller {
 
 	public function __construct(){
 		parent::__construct();
-        
+        $this->load->library('datatables');        
         $this->load->model('ProductsModel');
         $this->load->helper('product');
 	}
@@ -32,14 +32,25 @@ class Products extends My_Controller {
 
 	//For Admin Section:
 	//List all the products to the dashboard
+	// public function manage_products(){
+	// 	$AllProduct=$this->ProductsModel->getAllProducts();
+	// 	$data=array('title'=>'Manage Products');
+	// 	$this->load->view('admin/common/head',['data'=>$data]);
+	// 	$this->load->view('admin/products/view',['data'=>$AllProduct]);
+	// 	$this->load->view('admin/common/js');
+	// 	//$this->load->view('dataTbl',['data'=>$final]);
+	// }
+
+	//dataTable version
 	public function manage_products(){
-		$AllProduct=$this->ProductsModel->getAllProducts();
-		$data=array('title'=>'Manage Products');
-		$this->load->view('admin/common/head',['data'=>$data]);
-		$this->load->view('admin/products/view',['data'=>$AllProduct]);
-		$this->load->view('admin/common/js');
+		$this->load->view('dataTbl');
 	}
 
+	function get_product_json() { //get product data and encode to be JSON object
+      header('Content-Type: application/json');
+      echo $this->ProductsModel->get_all_product();
+  }
+ 
 	
 
 
@@ -141,45 +152,47 @@ class Products extends My_Controller {
 
 	public function doSearchProduct(){
 		$search_data = $this->input->post('search_data');
-		$result = $this->ProductsModel->get_searches($search_data);
-		// echo "<pre>";
-		// print_r($result);
-		if (!empty($result)){
-          
-          for($i=0;$i<count($result);$i++){
-          		$product_name=explode(',',$result[$i]['product_name']);
-          		echo "
-          		<div class='table-responsive' style='padding-left: 10px;padding-right: 10px;'>
-                	<table align='left' width='100%' style='border-bottom: 1px solid black;'>
-                    <tr>
-                        <td>
-                            <img class='img-responsive' src='".site_url($result[$i]['product_image'])."' height='65px' width='65px'>
-                        </td>
-                        <td style='padding-left: 10px;'>
-                            <a href='".site_url('products/product_info/').$result[$i]['product_id']."'>".$product_name[0]."</a>
-                        </td>
-                        <td>
-                            <span>".$result[$i]['product_weight']."</span>
-                        </td>
+		if (!empty($search_data)) {
+			
+			$result = $this->ProductsModel->get_searches($search_data);
+			if (!empty($result)){
+	          for($i=0;$i<count($result);$i++){
+	          		$product_name=explode(',',$result[$i]['product_name']);
+	          		echo "
+	          		<div class='table-responsive' style='padding-left: 10px;padding-right: 10px;'>
+	                	<table align='left' width='100%' style='border-bottom: 1px solid black;'>
+	                    <tr>
+	                        <td>
+	                            <img class='img-responsive' src='".site_url($result[$i]['product_image'])."' height='65px' width='65px'>
+	                        </td>
+	                        <td style='padding-left: 10px;'>
+	                            <a href='".site_url('products/product_info/').$result[$i]['product_id']."'>".$product_name[0]."</a>
+	                        </td>
+	                        <td>
+	                            <span>".$result[$i]['product_weight']."</span>
+	                        </td>
 
-                        <td>
-                            <span>".$this->lang->line('rs').$result[$i]['product_price']."</span>
-                        </td>
-                        <td>
-                            <button type='button' class='btn btn-xs btn-success'>
-                                Add <span class='glyphicon glyphicon-shopping-cart'></span>
-                            </button>
-                        </td>
-                    </tr>
-                	</table>
-            	</div>";
-          }
-     	}
-     	else{
-           echo "<em> Not found ... </em>";
-     	}
+	                        <td>
+	                            <span>".$this->lang->line('rs').$result[$i]['product_price']."</span>
+	                        </td>
+	                        <td>
+	                            <button type='button' class='btn btn-xs btn-success'>
+	                                Add <span class='glyphicon glyphicon-shopping-cart'></span>
+	                            </button>
+	                        </td>
+	                    </tr>
+	                	</table>
+	            	</div>";
+	          }
+	     	}
+	     	else{
+	           echo "<em> Not found ... </em>";
+			}
+
+		}else{
+			show_404();
+		}
 	}
-
 
 	public function remove_product(){
 		$this->load->view('admin/products/remove');
