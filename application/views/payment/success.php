@@ -40,7 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-9 col-md-offset-2">
 				<div class="panel panel-info">
 					<div class="panel-heading" style="padding: 10px;">
 						<h4 align="center">Payment Successful</h4>

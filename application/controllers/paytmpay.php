@@ -33,11 +33,11 @@
 				$paramList["WEBSITE"] = PAYTM_MERCHANT_WEBSITE;
 
 
-				$paramList["CALLBACK_URL"] = site_url('paytmpay/pgResponse');
-				$paramList["MSISDN"] = "7990608088"; //Mobile number of customer
-				$paramList["EMAIL"] = "myciapps2018@gmail.com"; //Email ID of customer
-				$paramList["VERIFIED_BY"] = "EMAIL"; //
-				$paramList["IS_USER_VERIFIED"] = "YES"; //
+				$paramList["CALLBACK_URL"] = base_url('order/response');
+				$paramList["MSISDN"] = $this->input->post("CUST_PHONE"); //Mobile number of customer
+				$paramList["EMAIL"] = $this->input->post("CUST_EMAIL"); //Email ID of customer
+				$paramList["VERIFIED_BY"] = "EMAIL"; 
+				$paramList["IS_USER_VERIFIED"] = "YES";
 
 
 

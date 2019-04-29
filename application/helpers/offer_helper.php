@@ -1,8 +1,15 @@
 <?php
+	function staplesOffer(){
+		$ci=& get_instance();
+		$ci->load->model('OffersModel');
+		return $ci->OffersModel->getOfferedProducts(3);
+		
+	}
+
 	function snacksOffer(){
 		$ci=& get_instance();
 		$ci->load->model('OffersModel');
-		$data=$ci->OffersModel->getOfferedProducts(1,6);
+		$data=$ci->OffersModel->getOfferedProducts(6);
 		foreach ($data as $row) {
 			if(count($data)>0){
 				echo "<div class='col-md-3 m-wthree'>
@@ -39,7 +46,7 @@
 	function fruitsVegOffer(){
 		$ci=& get_instance();
 		$ci->load->model('OffersModel');
-		$data=$ci->OffersModel->getOfferedProducts(1,2);
+		$data=$ci->OffersModel->getOfferedProducts(2);
 		foreach ($data as $row) {
 			if(count($data)>0){
 				echo "<div class='col-md-3 m-wthree'>
@@ -76,7 +83,7 @@
 	function breakCerelOffers(){
 		$ci=& get_instance();
 		$ci->load->model('OffersModel');
-		$data=$ci->OffersModel->getOfferedProducts(1,5);
+		$data=$ci->OffersModel->getOfferedProducts(5);
 		foreach ($data as $row) {
 			if($data!=NULL){
 				echo "<div class='col-md-3 m-wthree'>

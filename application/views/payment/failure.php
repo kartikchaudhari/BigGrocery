@@ -41,13 +41,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-10 col-md-offset-1">
 				<div class="panel panel-danger">
 					<div class="panel-heading" style="padding: 10px;">
 						<h4 align="center">Payment Failure</h4>
 					</div>
 					<div class="panel-body" style="padding: 20px;">
-						<?php echo $data['msg1']."<br>".$data['msg2']; ?>
+						<?php echo $data['msg1']."<br>".$data['msg3']."<br>".$data['msg2']; ?>
 					</div>
 					<div class="panel-footer">
 						<a href="<?=base_url('home');?>"><button type="button" class="btn btn-warning">Back to Home</button></a>

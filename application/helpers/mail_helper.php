@@ -79,7 +79,7 @@
 </body>
 </html>
 ';
-				// Sender email address
+		// Sender email address
 		$ci->email->from($config['smtp_user'], $username);
 
 		// Receiver email address

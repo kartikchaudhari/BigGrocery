@@ -68,7 +68,7 @@
 					</div>
 					<div class="clearfix"></div>
 				</td>
-				<td class="t-data">$<?=$wishlist_products[$i]['product_price']?></td>
+				<td class="t-data"><?=$this->lang->line('rs');?>&nbsp;<?=$wishlist_products[$i]['product_price']?></td>
 				<td class="t-data">
 					<div class="quantity"> 
 						<div class="quantity-select">            

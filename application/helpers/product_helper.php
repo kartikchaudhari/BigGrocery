@@ -69,7 +69,7 @@
     }
 
     function checkFavourites($FavouritesStatus,$ProductId){
-        if ($FavouritesStatus==0) {
+        if ($FavouritesStatus==1) {
             return "<img class='btnWish' src='".base_url('assets/images/wished.png')."' style='cursor:pointer;height:13px;width:13px;' data-pid=".$ProductId.">";
         }   
         else{
@@ -83,10 +83,10 @@
         
         $data=$ci->ProductsModel->returnProductFavouriteStatus($ProductId,$UserId);
         if($data!=NULL){
-            return 0;
+            return 1;
         }
         else{
-            return 1;
+            return 0;
         }   
     }
 

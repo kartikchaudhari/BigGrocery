@@ -81,8 +81,8 @@
 						</table>
 					</div>
 					<div class="row">
-						<div class="col-md-4 col-md-offset-5" style="padding-top: 0px;padding-bottom: 0px;">
-							<?=$this->pagination->create_links();?>
+						<div class="col-md-12" style="padding-top: 0px;padding-bottom: 0px;">
+							<center><?=$this->pagination->create_links();?></center>
 						</div>
 					</div>
 				</div>
@@ -114,11 +114,6 @@
 </script>
 <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 <!-- //smooth scrolling -->
-
-<!-- for bootstrap working -->
-		<script src="<?=base_url('assets/js/bootstrap.js');?>"></script>
-<!-- //for bootstrap working -->
-
 <?php $this->load->view('cart/cart');?>
 </body>
 </html>

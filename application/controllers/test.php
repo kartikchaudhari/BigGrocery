@@ -37,6 +37,16 @@ class Test extends My_Controller {
 			echo "<br>";
 		}
 	}
+
+	public function g(){
+		$this->load->view('payment/paytm/pg');
+	}
+
+	public function h(){
+		date_default_timezone_set('Asia/Kolkata');
+		echo date('Y-m-d G:i:s');
+	}
+
 }
 
 /* End of file test.php */
