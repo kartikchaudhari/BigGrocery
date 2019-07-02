@@ -47,22 +47,30 @@
 	<!-- Carousel-->
 	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
 	      <!-- Indicators -->
-	    	<div class="col-md-offset-0">
-	      		<ol class="carousel-indicators">
-		        	<?=make_slide_indicators();?>
-	      		</ol>
-	      	</div>
-	      	<div class="carousel-inner" role="listbox">
-	      		<?=make_slides();?>
-	      	</div>
-	      	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-     			<span class="glyphicon glyphicon-chevron-left"></span>
-     			<span class="sr-only">Previous</span>
-    		</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">
-		    	<span class="glyphicon glyphicon-chevron-right"></span>
-		    	<span class="sr-only">Next</span>
-    		</a>
+	    	<div class="row">
+				<div class="col-md-12">
+					<div class="carousel-inner" role="listbox">
+			      		<?=make_slides();?>
+			      	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		     			<span class="glyphicon glyphicon-chevron-left"></span>
+		     			<span class="sr-only">Previous</span>
+		    		</a>
+					<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				    	<span class="glyphicon glyphicon-chevron-right"></span>
+				    	<span class="sr-only">Next</span>
+		    		</a>
+			      	</div>
+				</div>
+	    	</div>
+	    	<div class="row">
+	    		<div class="col-md-12">
+	    			<div class="col-md-4 col-md-offset-3" style="text-align: center;">
+			      		<ol class="carousel-indicators">
+				        	<?=make_slide_indicators();?>
+			      		</ol>
+			      	</div>
+	    		</div>
+	    	</div>
 	    </div>
 	<!-- /.carousel -->
 

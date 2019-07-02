@@ -47,6 +47,15 @@ class Test extends My_Controller {
 		echo date('Y-m-d G:i:s');
 	}
 
+	public function i(){
+		$name="alex";
+		$_SESSION['name']=$name;
+		echo $_SESSION['name'];
+	}
+
+
+
+
 }
 
 /* End of file test.php */

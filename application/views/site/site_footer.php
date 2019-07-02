@@ -124,7 +124,7 @@
 				</div>
 		</div>
 		<div class="copy-right">
-			<p> &copy; 2016 BigGrocery. All Rights Reserved.</p>
+			<p> &copy; 2020 BigGrocery. All Rights Reserved. | Designed and Developed by Kartik Chaudhari</p>
 		</div>
 	</div>
 

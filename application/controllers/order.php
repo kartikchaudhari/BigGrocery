@@ -104,15 +104,6 @@ class Order extends My_Controller {
 
         $data=array();
 
-        
-
-        /*if ($post["additionalCharges"]) {
-            $additionalCharges = $post("additionalCharges");
-            $retHashSeq = $additionalCharges . '|' . $salt . '|' . $status . '||||||||'.$udf2.'|'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
-        } else {
-            $retHashSeq = $salt . '|' . $status . '|||||||||'.$udf2.'|'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
-        }*/
-
 
         $retHashSeq = $salt . '|' . $status . '|||||||||'.$udf2.'|'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
 
@@ -187,14 +178,6 @@ class Order extends My_Controller {
 
         $data=array();
 
-        // if ($this->input->post("additionalCharges")) {
-        //     $additionalCharges = $this->input->post("additionalCharges");
-        //     $retHashSeq = $additionalCharges . '|' . $salt . '|' . $status . '|||||||||'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
-
-        // } else {
-
-        //     $retHashSeq = $salt .'|' . $status . '|||||||||'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
-        // }
 
         $retHashSeq = $salt .'|' . $status . '|||||||||'.$udf1.'|' . $email . '|' . $firstname . '|' . $productinfo . '|' . $amount . '|' . $txnid . '|' . $key;
 
@@ -315,7 +298,7 @@ class Order extends My_Controller {
     * PayUMoney Order Faile
     */
     public function PaytmOrderFail($post){
-     header("Pragma: no-cache");
+        header("Pragma: no-cache");
         header("Cache-Control: no-cache");
         header("Expires: 0");
 
