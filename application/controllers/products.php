@@ -30,6 +30,10 @@ class Products extends My_Controller {
 		$this->load->view('single',['data'=>$ProductInfo]);
 	}
 
+	public function cat_name_by_id(){
+		echo getCatNameByCatId($this->input->post('id'));
+	}
+
 	//For Admin Section:
 	//List all the products to the dashboard
 	// public function manage_products(){

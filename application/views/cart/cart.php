@@ -23,14 +23,13 @@
       showCheckoutModal: true,
       numberOfDecimals: 2,
       affixCartIcon: true,
+      <?php if(isset($_COOKIE["tempProductData"])) { ?>
+        
+      <?php } ?>
       checkoutCart: function(products, totalPrice, totalQuantity) {
-        var dataString=JSON.stringify(products);
-       //get user_id
-       //if user is not logged in then set the varaible to zero
+      
        var UserId=<?= ($this->session->userdata('bg_sys_ss_user_id'))?$this->session->userdata('bg_sys_ss_user_id'):0; ?>;
 
-       //if user is logged in then 
-       //do following
        if (UserId!=0) {
           var dataString=JSON.stringify(products);
           $.ajax({
@@ -44,8 +43,9 @@
         }
         //else redirect to login 
         else{
-          window.sessionStorage.setItem('products',JSON.stringify(dataString));
-          window.location.href='<?=base_url('user/login');?>';
+            setCookie("tempProductData",JSON.stringify(products),30);
+            console.log(document.cookie);
+            window.location.href='<?=base_url('user/login');?>';
         }
       },
       clickOnAddToCart: function($addTocart){
@@ -61,5 +61,11 @@
     });
 
   });
+
+  function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
 </script>
- 

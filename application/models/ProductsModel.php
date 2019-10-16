@@ -16,6 +16,7 @@ class ProductsModel extends My_Model {
 		$string="SELECT `product_id`, `cat_id`, `sub_cat_id`, `product_name`, `product_image`,`product_price`,`product_stock` FROM `products`";
 		$query=$this->db->query($string);
 		return $query->result_array();
+		
 	}
 
 	function get_all_product() {

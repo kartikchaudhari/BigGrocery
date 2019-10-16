@@ -105,21 +105,13 @@
 				<?=form_input(array('name'=>'product_price','type'=>'number','class'=>'form-control','placeholder'=>'Product Price'));?>
 			</div>
 			<div class="col-md-4" style="border: 1px solid #aab2bd;padding-left: 15px;padding-right: 10px;padding-top: 4px;width: 310px;height: 34px;margin-left:16px;border-radius: 4px;">
-				<div class="col-md-6">
-					<div class="radio">
-	  					<label>
-	  						<?=form_input(array('name'=>'has_offers','type'=>'radio','value'=>'1','onClick'=>'addOffers();'));
-							?>Yes (add it later.)
-						</label>
-					</div>	
-				</div>
-				<div class="col-md-6">
-					<div class="radio">
-						<label>
-	  						<?=form_input(array('name'=>'has_offers','type'=>'radio','value'=>'0'));?>No
-						</label>
-					</div>	
-				</div>
+				<label>Offers ?  </label>
+					<?=form_input(array('name'=>'has_offers','type'=>'radio','value'=>'1'));?>Yes 
+					<label id="lblOffers">
+						<button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Link</button>
+					</label>
+					<?=form_input(array('name'=>'has_offers','type'=>'radio','value'=>'0'));?>No
+					
 			</div>
 		</div>
 	</div>
@@ -140,13 +132,46 @@
 			
 		</div>
 	</div>
+	
+	<!-- product offers model -->
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+	        		<h4 class="modal-title">Add Offer to This Product</h4>
+	      		</div>
+	      		<div class="modal-body">
+					<div class="col-md-4">
+						<?php 
+							$attr=array('name'=>'offer_name','value'=>set_value('offer_name'),'class'=>'form-control','placeholder'=>'Offer Name');
+								echo form_input($attr);
+						?>
+					</div>
+					<div class="col-md-4">
+						<?php 
+							$attr=array('name'=>'offer_price','value'=>set_value('offer_price'),'class'=>'form-control','placeholder'=>'Offer Name','type'=>'number');
+								echo form_input($attr);
+						?>
+					</div>
+  				</div>
+	      		<div class="modal-footer">
+	        		<button type="button" class="btn btn-default" data-dismiss="modal">Add Offers</button>
+	      		</div>
+	    	</div>
+	  	</div>
+	</div>
+	<!--/product offers model -->
+	
 	<?=form_close();?>
 
+
 	<!-- load the js -->
+    <script type="text/javascript" src="<?=base_url(BOOTFLAT_DIST_JS_FILE);?>"></script>
     <?php $this->load->view('admin/common/jquery'); ?>
 	<script type="text/javascript">
 		function addOffers(){
-			alert('Add Offers');
+			$("#myModal").modal();
 		}
 
 		function ShowOptions(){

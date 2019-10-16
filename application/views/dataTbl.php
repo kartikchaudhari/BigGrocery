@@ -1,3 +1,4 @@
+<?php $this->load->helper('product');?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,6 +49,21 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <?php $this->load->view('assets/dataTablesJs');?>
 <script type="text/javascript">
+
+  function renderCategory(c_id){
+    $.post("<?=base_url('products/cat_name_by_id');?>",{
+      id:c_id
+    },
+    function(data, status){
+      return data;
+      //console.log(data);
+    });
+    
+  }
+  //renderCategory(1);
+
+</script>
+<script type="text/javascript">
     $(document).ready(function(){
         // Setup datatables
       $.fn.dataTableExt.oApi.fnPagingInfo = function(oSettings)
@@ -77,7 +93,8 @@
           },
               processing: true,
               serverSide: true,
-              ajax: {"url": "<?php echo base_url('products/get_product_json');?>", "type": "POST"},
+              ajax: {"url": "<?php echo base_url('products/get_product_json');?>", 
+                    "type": "POST"},
                     columns: [
                         {"data": "product_id"},
                         {"data": "cat_id"},
@@ -121,5 +138,6 @@
             // End delete Records
     });
 </script>
+
 </body>
 </html>

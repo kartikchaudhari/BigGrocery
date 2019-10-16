@@ -57,7 +57,7 @@
 		<br>
 		<div class="row" style="border-top:1px solid white;padding-top: 20px;">
 			<div class="col-md-2"><span><hover>POPULAR CATEGORIES:</hover></span></div>
-			<div class="col-md-9 footer-grid">
+			<div class="col-sm-9 col-md-9 col-lg-9 footer-grid">
 				<ul>
 					<?php
 						$x="Fruits & Vegetables, Basmati Rice, Green Tea, OTC, Cheese, Dry Fruits, Foodgrains, Oil & Masala, Chocolates & Sweets, Soft Drinks, Energy Drinks, Bakery, Cakes & Dairy, Olive Oils, Sunflower Oils, Liquid Soaps & Bars ";
@@ -71,7 +71,7 @@
 		</div>
 		<div class="row" style="padding-top: 20px;">
 			<div class="col-md-2"><span><hover>POPULAR BRANDS:</hover></span></div>
-			<div class="col-md-9 footer-grid">
+			<div class="col-sm-9 col-md-9 col-lg-9 footer-grid">
 				<ul>
 					<?php
 						$x="Amul,Haldirams ,Tropicana,Kelloggs,Dettol,MTR,Bru ,McCain,Ariel ,Britannia,Nescafe , Colgate,Horlicks,Galaxy,Complan";
@@ -85,7 +85,7 @@
 		</div>
 		<div class="row" style="padding-top: 20px;">
 			<div class="col-md-2"><span><hover>CITIES WE SERVE:</hover></span></div>
-			<div class="col-md-9 footer-grid">
+			<div class="col-sm-9 col-md-9 col-lg-9 footer-grid">
 				<ul>
 					<?php
 						$x="Bangalore,Hyderabad,Mumbai,Pune,Chennai,Delhi,Mysore,Coimbatore,Vijayawada-Guntur,Kolkata,Ahmedabad-Gandhinagar,Lucknow-Kanpur,Gurgaon,Vadodara,Visakhapatnam,Surat,Nagpur,Patna,Indore,Chandigarh Tricity,Jaipur,Bhopal,Noida-Ghaziabad";
@@ -99,7 +99,7 @@
 		</div>
 		<div class="row" style="padding-top: 20px;">
 			<div class="col-md-2"><span><hover>PAYMENT OPTIONS:</hover></span></div>
-			<div class="col-md-9 footer-grid">
+			<div class="col-sm-9 col-md-9 col-lg-9 footer-grid">
 				<ul>
 					<?php
 						$x="visa, master, payu,paytm";

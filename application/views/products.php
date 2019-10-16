@@ -10,7 +10,6 @@
 	<?php $this->load->view('site/head'); ?>
 </head>
 <body>
-<a href="offer.html"><img src="images/download.png" class="img-head" alt=""></a>
 <div class="header">
 	<div class="container">
 		<div class="logo">
@@ -59,11 +58,11 @@
 						</div>
 						<div class="row" style="margin-top:2%;padding-left: 5%;padding-right: 5%;">
 							<div class="col-12">
-								<h6><a href="<?=base_url('products/product_info/')?><?=$data['products'][$i]['product_id']?>"><?=$data['products'][$i]['product_name']?></a> (<?=$data['products'][$i]['product_weight']?>)</h6>
+								<h6><a href="<?=base_url('products/product_info/')?><?=$data['products'][$i]['product_id']?>"><?=$data['products'][$i]['product_name']?></a></h6>
 							</div>
 						</div>
 						<div class="mid-2">
-							<p><strong>Price:</strong> <em class="item_price"><span>&#8377;</span><?=$data['products'][$i]['product_price']?></em>&nbsp;&nbsp;<strong>&middot;</strong>&nbsp;&nbsp;<?=isAvailableInStock($data['products'][$i]['product_status']);?>&nbsp;&nbsp;<strong>&middot;</strong></p>
+							<p><strong>Price:</strong> <em class="item_price"><span>&#8377;</span><?=$data['products'][$i]['product_price']?></em>&nbsp;&nbsp;<strong>&middot;</strong>&nbsp;&nbsp;<?=isAvailableInStock($data['products'][$i]['product_status']);?>&nbsp;&nbsp;<strong>&middot;</strong>&nbsp;&nbsp;<strong><?=$data['products'][$i]['product_weight']?></strong></p>
 							<div class="block">
 								<div class="starbox small ghosting">
 									<div class="positioner">
