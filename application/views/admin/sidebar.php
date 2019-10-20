@@ -10,7 +10,8 @@
               <a style="padding-left: 60px;" href="<?=base_url('design/banner');?>" target="DashboardFrame" class="list-group-item">Banner</a>
             </li>
         </li>
-        <li><a class="list-group-item" href="<?=base_url('categories');?>" target="DashboardFrame"><i class="glyphicon glyphicon-certificate"></i>Categories</a></li>
+        <li><a class="list-group-item" href="<?=base_url('categories');?>" target="DashboardFrame"><i class="glyphicon glyphicon-certificate"></i>Categories</a>
+        </li>
         <li>
             <a href="#SubCatOps" class="list-group-item" data-toggle="collapse"><i class="glyphicon glyphicon-th-list"></i>Sub-Categories&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
             <li class="collapse" id="SubCatOps">

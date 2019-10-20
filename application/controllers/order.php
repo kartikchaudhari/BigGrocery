@@ -72,8 +72,6 @@ class Order extends My_Controller {
                 $this->load->view('payment/success',['data'=>$message_data]);
             }
             else if($this->input->post("STATUS")=="TXN_FAILURE"){
-                //echo "<pre>";
-                //print_r($this->input->post());
                 $message_data=$this->PaytmOrderFail($this->input->post());
                 $this->load->view('payment/failure',['data'=>$message_data]);
             }

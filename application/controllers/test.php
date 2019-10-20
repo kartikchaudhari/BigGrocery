@@ -3,17 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Test extends My_Controller {
 	public function index(){
-		$this->load->model('UsersModel');
-		$userInfo = $this->UsersModel->getUserInfoByEmail("kartikchaudhari456@gmail.com");
-        if(!$userInfo){
-            echo 'We cant find your email address';
-        }
-        else{
-        	echo "<pre>";
-        	print_r($userInfo);
-        	echo "<br><br>";
-        	echo $this->UsersModel->insertToken($userInfo->user_id);
-        }
+		$this->load->helper('utility');
+        echo alert_style('warning','');
 	}
 }
 

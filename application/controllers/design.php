@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Design extends CI_Controller {
+class Design extends My_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('DesignModel');
+		$this->load->model(array('DesignModel','AdminModel'));
 	}
 
 	public function index()
@@ -14,7 +14,12 @@ class Design extends CI_Controller {
 	}
 
 	public function banner(){
-		$this->load->view('admin/design/banner');
+		// $this->load->view('admin/common/head', ['data' => $page_data]);
+  //       $this->load->view('admin/common/nav',['data' => $admin_info]);
+  //       $this->load->view('admin/dashboard', ['data' => $admin_info]);
+  //       $this->load->view('admin/common/footer');
+		// $this->load->view('admin/design/banner');
+		$this->doLoadView('')
 	}
 
 	public function add(){

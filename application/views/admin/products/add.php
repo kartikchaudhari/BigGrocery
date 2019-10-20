@@ -1,14 +1,22 @@
-	<style>
-		.hide_s{display: none;}
-		.show_s{display: block;}
-	</style>
-	<?php 
+	
+<!-- main document container -->
+<style>
+	.hide_s{display: none;}
+	.show_s{display: block;}
+</style>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Add Product</h1>
+        </div>
+    </div>
+    <!-- /.rows -->
+    <?php 
 		if ($this->session->flashdata('bg_sys_msg')) {
 			echo $this->session->flashdata('bg_sys_msg');
 		}
 	?>
-	<hr>
-	<?=form_open_multipart(base_url('products/doAddProduct'));?>
+	<?=form_open_multipart(base_url('Products/doAddProduct'));?>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="col-md-4">
@@ -162,42 +170,8 @@
 	  	</div>
 	</div>
 	<!--/product offers model -->
-	
 	<?=form_close();?>
-
-
-	<!-- load the js -->
-    <script type="text/javascript" src="<?=base_url(BOOTFLAT_DIST_JS_FILE);?>"></script>
-    <?php $this->load->view('admin/common/jquery'); ?>
-	<script type="text/javascript">
-		function addOffers(){
-			$("#myModal").modal();
-		}
-
-		function ShowOptions(){
-			$('#vegNonVegChooser').fadeIn();
-		}	
-
-		function HideOptions(){
-			$('#vegNonVegChooser').fadeOut();
-		}
-
-		$(document).ready(function() {
-			$("#product_cat").change(function(){
-				var product_cat_id=$("#product_cat").val();
-				if (product_cat_id!="") {
-					$.ajax({
-						url: '<?=base_url('sub_categories/getAllSubCatByCatId');?>',
-						type: 'POST',
-						data: {cat_id: product_cat_id},
-						success:function(data){
-							$("#product_sub_cat").html(data);
-						}
-					})
-				}
-			});
+    <!-- /.rows-->
+</div>
+<!--./main document contaner ends -->
 	
-		});
-	</script>
-</body>
-</html>

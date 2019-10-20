@@ -56,12 +56,9 @@
     },
     function(data, status){
       return data;
-      //console.log(data);
     });
     
   }
-  //renderCategory(1);
-
 </script>
 <script type="text/javascript">
     $(document).ready(function(){

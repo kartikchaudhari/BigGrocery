@@ -1,36 +1,103 @@
-    <style type="text/css">
-        body{
-            background-color:#f1f2f6;
-        }
-    </style>
-    <!--nav-->
-    <nav role="navigation" class="navbar navbar-custom">
-        <?php $this->load->view('admin/nav',['admin_data'=>$data[0]]); ?>    
-    </nav>
-    <!--/nav -->
-    
-    <!--container-->
-    <div class="container-fluid">
-        <div class="row row-offcanvas row-offcanvas-left">
-            <!-- page sidebar -->
-            <?php $this->load->view('admin/sidebar',['admin_name'=>$data[0]['username']]);?>
-            <!-- page sidebar -->
-               
-            <!-- page body -->
-            <div class="col-xs-12 col-sm-9 content">
-                <div class="panel panel-success">
-              <div class="panel-heading">
-                <h3 class="panel-title"><a href="javascript:void(0);" class="toggle-sidebar"><span style="color:white;" class="fa fa-angle-double-left" data-toggle="offcanvas" title="Maximize Panel"></span></a> Dashboard</h3>
-              </div>
-              <div class="panel-body" style="padding-left: 5px;">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <iframe name="DashboardFrame" style="width: 100%;height: 120vh;position: relative;" src="<?=base_url('admin/dashboard_content');?>" frameborder="0" allowfullscreen>
-                    </iframe>
-                </div>
-              </div><!-- panel body -->
-            </div>
-            <!--/ page body -->
+
+<!-- main document container -->
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dashboard</h1>
         </div>
-      </div>
     </div>
-    <!--/container-->
+    <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-comments fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">26</div>
+                                    <div>New Comments!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">12</div>
+                                    <div>New Tasks!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">124</div>
+                                    <div>New Orders!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-support fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">13</div>
+                                    <div>Support Tickets!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            
+</div>
+<!--./main document contaner ends -->

@@ -1,41 +1,30 @@
-
-    <style>
-      body {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        background-color: #303641;
-        color: #C1C3C6
-      }
-    </style>
-    <div class="container">
-      <form class="form-signin" role="form" method="post" action="<?=base_url('admin/do_login');?>">
-        <h3 align="center" class="form-signin-heading">Login to System</h3><hr>
-        <div class="form-group"><strong>username:</strong> <span>Kartik_1003</span>&nbsp;&nbsp;&nbsp;&nbsp;<strong>password:</strong> <span>kartik</span></div>
-
-        <div class="form-group">
-          <div class="input-group">
-            <div class="input-group-addon">
-              <i class="glyphicon glyphicon-user"></i>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Please Sign In</h3>
+                </div>
+                <div class="panel-body">
+                    <?php 
+                        if($this->session->flashdata('msg')){
+                            echo $this->session->flashdata('msg');
+                        }
+                    ?>
+                    <form role="form" method="post" action="<?=base_url('admin/do_login');?>">
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Enter Username" name="uname" type="text" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Password" name="pass" type="password" value="">
+                            </div>
+                            <!-- Change this to a button or input when using this as a form -->
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
-            <input type="text" class="form-control" name="uname" id="username" placeholder="Username" autocomplete="off" />
-          </div>
         </div>
-                <div class="form-group">
-          <div class="input-group">
-            <div class="input-group-addon">
-              <i class=" glyphicon glyphicon-lock "></i>
-            </div>
-            <input type="password" class="form-control" name="pass" id="password" placeholder="Password" autocomplete="off" />
-          </div>
-        </div>
-
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> &nbsp Remember me
-        </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
-
     </div>
-    <div class="clearfix"></div>
-    <br><br>
-    
+</div>

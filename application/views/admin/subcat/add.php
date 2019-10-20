@@ -1,22 +1,23 @@
-<style type="text/css">
-    body{
-        background-color:white;
-    }
-</style>
-    <!--container-->
-    <div class="content-row" style="padding: 0px;">
-        <div class="content-row"><br><br>
-            <div class="panel panel-info" style="border:1px solid grey;">
-                <?php 
-                    if ($this->session->flashdata('bg_sys_msg')) {
-                        echo $this->session->flashdata('bg_sys_msg');
-                    }
-                ?>
-                <div class="panel-heading">
-                    <div class="panel-title"><b>Add Sub Category</b></div>
-                </div>
-                <div class="panel-body">
-                    <?=form_open(base_url('sub_categories/add_action'));?>
+<!-- main document container -->
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Add Sub Category</h1>
+        </div>
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <?php 
+            if ($this->session->flashdata('bg_sys_msg')) {
+                echo $this->session->flashdata('bg_sys_msg');
+            }
+        ?>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title"><b>Add Sub Category</b></div>
+            </div>
+            <div class="panel-body">
+                    <?=form_open(base_url('SubCategories/add_action'));?>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Select Category :</label>
                             <select class="form-control" name="cat_id" required="">
@@ -29,12 +30,13 @@
                         </div>
                         <div class="form-group">
                           <label for="exampleInputPassword1">Sub Category:</label>
-                          <input class="form-control" id="exampleInputPassword1" placeholder="Enter Sub-Category name" name="sub_cat_name" type="text" required="">
+                          <input class="form-control"placeholder="Enter Sub-Category name" name="sub_cat_name" type="text"  required="">
                         </div>
                         <button type="submit" class="btn btn-success">Add</button>
                       </form>
                     </div>    
-            </div>
-        </div>                 
+        </div>
     </div>
-    <!--/container-->
+    <!-- /.row -->
+</div>
+<!--./main document contaner ends -->

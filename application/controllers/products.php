@@ -7,8 +7,10 @@ class Products extends My_Controller {
 		parent::__construct();
         $this->load->library('datatables');        
         $this->load->model('ProductsModel');
-        $this->load->helper('product');
+        $this->load->helper(array('product','utility','admin'));
 	}
+
+
 
 
 
@@ -58,11 +60,18 @@ class Products extends My_Controller {
 	
 
 
-	public function add_product(){
-		$this->load->model(['SubCatModel','ProductCatModel']);
-		$data=array('title'=>'Add Products');
-		$this->load->view('admin/common/head',['data'=>$data]);
-		$this->load->view('admin/products/add',['product_cat'=>$this->ProductCatModel->FetchAllCat()]);	
+	public function add(){
+		if (is_logged_in()) {
+            $this->load->model(['SubCatModel','ProductCatModel']);
+            $page_data=array('title' => 'Add Product');
+            $id=$this->session->userdata('bg_sys_ss_admin_id');
+            $categories=$this->ProductCatModel->FetchAllCat();
+
+            $this->load->view('admin/common/head', ['data' => $page_data]);
+            $this->load->view('admin/common/nav',['id' => $id]);
+            $this->load->view('admin/products/add',['product_cat'=>$categories]);
+            $this->load->view('admin/common/footer');
+        }
 	}
 
 	public function doAddProduct(){
@@ -94,10 +103,10 @@ class Products extends My_Controller {
 									);
 					if ($this->ProductsModel->addNewProduct($ProductsInfo)) {
 						$this->session->set_flashdata('bg_sys_msg', '<strong style="color:green;">The Product is Addedd Successfully..</strong>');
-						return redirect('products/add_product');
+						return redirect('Products/add');
 					}else{
 							$this->session->set_flashdata('bg_sys_msg', '<strong style="color:red;">An error while adding Product...</strong>');
-						return redirect('products/add_product');
+						return redirect('Products/add');
 					}
 			}	
 			else{

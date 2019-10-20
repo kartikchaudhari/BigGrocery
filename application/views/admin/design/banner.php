@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Banner</title>
-    <?php $this->load->view('admin/common/head'); ?>
-</head>
-<body>
+
+<!-- main document container -->
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Manage Banner</h1>
+        </div>
+    </div>
+            
+</div>
+<!--./main document contaner ends -->
+
+
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-4">
