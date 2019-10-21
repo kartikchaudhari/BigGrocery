@@ -133,9 +133,9 @@
 			</div>
 			<div class="col-md-4">
 				<?=form_input(array('name'=>'product_stock','type'=>'number','class'=>'form-control','placeholder'=>'Product Stock'));?><br>
-				<?=form_input(array('type'=>'submit','value'=>'Add Product','class'=>'btn btn-success btn-lg'));?>
+				<?=form_input(array('type'=>'submit','value'=>'Add Product','class'=>'btn btn-success'));?>
 				&nbsp;<strong>&middot;</strong>&nbsp;
-				<?=form_input(array('type'=>'reset','value'=>'Reset','class'=>'btn btn-danger btn-lg'));?>
+				<?=form_input(array('type'=>'reset','value'=>'Reset','class'=>'btn btn-danger'));?>
 			</div>
 			
 		</div>

@@ -30,6 +30,11 @@ class SubCatModel extends My_Model {
 		}
 		return $output;
 	}
+
+	public function fetchSubCatCountByCatId($cat_id){
+		$query=$this->db->query("SELECT COUNT(sub_categories.sub_cat_id) AS 'sub_cat_count' FROM sub_categories WHERE sub_categories.cat_id=$cat_id");
+		return $query->row_array();
+	}
 }
 
 /* End of file SubCatModel.php */

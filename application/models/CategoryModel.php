@@ -9,6 +9,12 @@ class CategoryModel extends My_Model {
 		return $query->result();
 	}
 
+	public function getCategoriesArray(){
+		$this->db->order_by('cat_id', 'ASC');
+		$query=$this->db->get('categories');
+		return $query->result_array();
+	}
+
 }
 
 /* End of file CategoryModel.php */

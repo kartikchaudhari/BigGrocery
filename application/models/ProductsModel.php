@@ -27,10 +27,16 @@ class ProductsModel extends My_Model {
       return $this->datatables->generate();
   }
 
+	public function getProductCountByCategory($cat_id){
+		$query=$this->db->query("SELECT COUNT(products.product_id) AS 'product_count' FROM products WHERE products.cat_id=$cat_id");
+		return $query->row_array();
+	}
+
 	public function getAllProductsBySubCategory($SubCatId){
 		$query=$this->db->query("SELECT * FROM products WHERE sub_cat_id=".$SubCatId."");
 		return $query->result_array();
 	}
+	
 
 	public function returnCategoryName($CatId){
 		$query=$this->db->query("SELECT cat_name FROM categories WHERE cat_id=".$CatId."");

@@ -11,14 +11,7 @@ class Categories extends My_Controller {
 
 	public function index()
 	{
-	   if (is_logged_in()) {
-            $page_data=array('title' => 'Add Product');
-            $id=$this->session->userdata('bg_sys_ss_admin_id');
-            $this->load->view('admin/common/head', ['data' => $page_data]);
-            $this->load->view('admin/common/nav',['id' => $id]);
-            $this->load->view('admin/categories/list');
-            $this->load->view('admin/common/footer');
-        }		
+	   
 	}
 
 	public function add(){
@@ -33,6 +26,20 @@ class Categories extends My_Controller {
         }
 	}
 
+	public function manage(){
+		if (is_logged_in()) {
+            $page_data=array('title' => 'Add Product');
+            $id=$this->session->userdata('bg_sys_ss_admin_id');
+
+            $this->load->model('CategoryModel');
+            $data=$this->CategoryModel->getCategoriesArray();
+
+            $this->load->view('admin/common/head', ['data' => $page_data]);
+            $this->load->view('admin/common/nav',['id' => $id]);
+            $this->load->view('admin/categories/list',['data'=>$data]);
+            $this->load->view('admin/common/footer');
+        }		
+	}
 
 	public function FethCategories(){
 		
