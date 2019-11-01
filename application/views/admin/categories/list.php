@@ -7,7 +7,13 @@
     </div>
     <!-- /.row -->
     <div class="row">
-        	    <div class="table-responsive">
+    	<div class="col-sm-12 col-md-12 col-lg-12">
+            <?php
+            if ($this->session->flashdata('bg_sys_msg')) {
+                echo $this->session->flashdata('bg_sys_msg');
+            }
+            ?>
+	       	<div class="table-responsive">
 		    	<table class="table table-bordered table-hover">
 		    		<thead>
 		    			<tr class="active">
@@ -29,26 +35,24 @@
 		    			<td><?=$data[$i]['cat_name']?></td>
 		    			<td><?=countSubCategoryByCategory($data[$i]['cat_id'])?></td>
 		    			<td><?=countProductByCategory($data[$i]['cat_id'])?></td>
-		    			<td><?php 
-		    						$url=array();
-		    						$url['read']='#';
-		    						$url['update']='#';
-		    						$url['delete']='#';
-		    						echo manage_button_maker('RUD',$url);
-		    				?></td>
+		    			<td>
+		    				<?php 
+								$url=array();
+								$url['read']=base_url('Categories/view/'.$data[$i]['cat_id']);
+								$url['update']=base_url('Categories/update/'.$data[$i]['cat_id']);
+								$url['delete']='#';
+								echo manage_button_maker('RUD',$url);
+		    				?>
+		    			</td>
 		    		</tr>
-	    		<?php 
-	    				endfor;
-	    			else:?>
-	    		<?php 
-	    			endif;
-	    		?>
-	    		</tbody>
-	    	</table>
-		</div>                
-
+		    		<?php endfor;
+		    			else:?>
+		    		<?php endif; ?>
+		    		</tbody>
+		    	</table>
+			</div>                
+		</div>
     </div>
-    <!-- /.row -->
-            
+    <!-- /.row -->        
 </div>
 <!--./main document contaner ends -->

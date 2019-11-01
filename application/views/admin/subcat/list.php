@@ -1,4 +1,4 @@
-<?php $this->load->helper('utility'); ?>
+<?php $this->load->helper(array('utility','product')); ?>
 <!-- main document container -->
 <div id="page-wrapper">
     <div class="row">
@@ -22,11 +22,15 @@
                         $url['read']=base_url('SubCategories/view/'.$data[$i]['sub_cat_id']);
                         $url['update']=base_url('SubCategories/update/'.$data[$i]['sub_cat_id']);
                         $url['delete']=base_url('SubCategories/remove/'.$data[$i]['sub_cat_id']);
+
+                        $attr['read']='';
+                        $attr['update']="";
+                        $attr['delete']='';
                         echo "<tr>
                                     <td>".$data[$i]['sub_cat_id']."</td>
                                     <td>".$data[$i]['sub_cat_name']."</td>
                                     <td>".$data[$i]['cat_id']."</td>
-                                    <td>".manage_button_maker('RUD',$url)."</td>
+                                    <td>".manage_button_maker('RUD',$url,$attr)."</td>
                         </tr>";
                     }
                 ?>

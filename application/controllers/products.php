@@ -36,20 +36,21 @@ class Products extends My_Controller {
 		echo getCatNameByCatId($this->input->post('id'));
 	}
 
-	//For Admin Section:
-	//List all the products to the dashboard
-	// public function manage_products(){
-	// 	$AllProduct=$this->ProductsModel->getAllProducts();
-	// 	$data=array('title'=>'Manage Products');
-	// 	$this->load->view('admin/common/head',['data'=>$data]);
-	// 	$this->load->view('admin/products/view',['data'=>$AllProduct]);
-	// 	$this->load->view('admin/common/js');
-	// 	//$this->load->view('dataTbl',['data'=>$final]);
-	// }
-
 	//dataTable version
 	public function manage_products(){
-		$this->load->view('dataTbl');
+		//$this->load->view('dataTbl');
+		if (is_logged_in()) {
+            $this->load->model(['SubCatModel','ProductCatModel']);
+
+            $page_data=array('title' => 'Add Product');
+            $id=$this->session->userdata('bg_sys_ss_admin_id');
+            $categories=$this->ProductCatModel->FetchAllCat();
+            $AllProduct=$this->ProductsModel->getAllProducts();
+            $this->load->view('admin/common/head', ['data' => $page_data]);
+            $this->load->view('admin/common/nav',['id' => $id]);
+            $this->load->view('admin/products/list',['products'=>$AllProduct]);
+            $this->load->view('admin/common/footer');
+        }
 	}
 
 	function get_product_json() { //get product data and encode to be JSON object
@@ -85,21 +86,21 @@ class Products extends My_Controller {
 				$isProductEdible=($this->input->post('isEdible')?$this->input->post('veg_nonveg'):$this->input->post('isEdible'));
 
 				$ProductsInfo=array(
-										'cat_id'=>$this->input->post('product_cat'),
-										'sub_cat_id'=>$this->input->post('product_sub_cat'),
-										'product_name'=>trim($this->input->post('product_name')),
-										'company_name'=>trim($this->input->post('product_company')),
-										'product_image'=>substr($ThumbNail['full_file_path'],2),
-										'product_image_full'=>substr($FullImage['full_file_path'],2),
-										'product_weight'=>trim($this->input->post('product_weight'))." ".$this->input->post('weight_unit'),
-										'veg_nonveg'=>$isProductEdible,
-										'product_desc'=>htmlspecialchars($this->input->post('product_desc')),
-										'product_discount'=>$this->input->post('product_discount'),
-										'product_price'=>trim($this->input->post('product_price')),
-										'old_price'=>0,
-										'has_offers'=>$this->input->post('has_offers'),
-										'product_status'=>1,
-										'product_stock'=>$this->input->post('product_stock')
+								'cat_id'=>$this->input->post('product_cat'),
+								'sub_cat_id'=>$this->input->post('product_sub_cat'),
+								'product_name'=>trim($this->input->post('product_name')),
+								'company_name'=>trim($this->input->post('product_company')),
+								'product_image'=>substr($ThumbNail['full_file_path'],2),
+								'product_image_full'=>substr($FullImage['full_file_path'],2),
+								'product_weight'=>trim($this->input->post('product_weight'))." ".$this->input->post('weight_unit'),
+								'veg_nonveg'=>$isProductEdible,
+								'product_desc'=>htmlspecialchars($this->input->post('product_desc')),
+								'product_discount'=>$this->input->post('product_discount'),
+								'product_price'=>trim($this->input->post('product_price')),
+								'old_price'=>0,
+								'has_offers'=>$this->input->post('has_offers'),
+								'product_status'=>1,
+								'product_stock'=>$this->input->post('product_stock')
 									);
 					if ($this->ProductsModel->addNewProduct($ProductsInfo)) {
 						$this->session->set_flashdata('bg_sys_msg', '<strong style="color:green;">The Product is Addedd Successfully..</strong>');
@@ -172,8 +173,8 @@ class Products extends My_Controller {
 	          for($i=0;$i<count($result);$i++){
 	          		$product_name=explode(',',$result[$i]['product_name']);
 	          		echo "
-	          		<div class='table-responsive' style='padding-left: 10px;padding-right: 10px;'>
-	                	<table align='left' width='100%' style='border-bottom: 1px solid black;'>
+	          		<div class='table-responsive' style='padding-left: 10px;padding-right: 10px;padding-bottom:0px;'>
+	                	<table class='table table-hover' align='left' width='100%'>
 	                    <tr>
 	                        <td>
 	                            <img class='img-responsive' src='".site_url($result[$i]['product_image'])."' height='65px' width='65px'>

@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Customer Login :: BigGrocery</title>
-        <!-- for-mobile-apps -->
+       <!-- for-mobile-apps -->
         <?php $this->load->view('customer/head'); ?>
     <body>
         <div class="header">
@@ -32,8 +32,8 @@
                     <h3>Login</h3>
                     <form action="<?= base_url('user/login_user') ?>" enctype="pplication/x-www-form-urlencoded" method="post">
                         <div class="key">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <input id="email"   placeholder="Enter email or phone" type="text" name="uname" required="">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <input id="email"   placeholder="Email or Phone" type="text" name="uname" required="">
                             <div class="clearfix"></div>
                         </div>
                         <div class="key">
@@ -67,43 +67,29 @@
 
         <script type='text/javascript' src="<?= base_url('assets/js/jquery.mycart.js'); ?>"></script>
         <script type="text/javascript">
-                  $(function () {
-
-                      var goToCartIcon = function ($addTocartBtn) {
-                          var $cartIcon = $(".my-cart-icon");
-                          var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
-                          $addTocartBtn.prepend($image);
-                          var position = $cartIcon.position();
-                          $image.animate({
-                              top: position.top,
-                              left: position.left
-                          }, 500, "linear", function () {
-                              $image.remove();
-                          });
-                      }
-
-                      $('.my-cart-btn').myCart({
-                          classCartIcon: 'my-cart-icon',
-                          classCartBadge: 'my-cart-badge',
-                          affixCartIcon: true,
-                          checkoutCart: function (products) {
-                              $.each(products, function () {
-                                  console.log(this);
-                              });
-                          },
-                          clickOnAddToCart: function ($addTocart) {
-                              goToCartIcon($addTocart);
-                          },
-                          getDiscountPrice: function (products) {
-                              var total = 0;
-                              $.each(products, function () {
-                                  total += this.quantity * this.price;
-                              });
-                              return total * 1;
-                          }
+          $(function () {
+              $('.my-cart-btn').myCart({
+                  classCartIcon: 'my-cart-icon',
+                  classCartBadge: 'my-cart-badge',
+                  affixCartIcon: true,
+                  checkoutCart: function (products) {
+                      $.each(products, function () {
+                          console.log(this);
                       });
+                  },
+                  clickOnAddToCart: function ($addTocart) {
+                      goToCartIcon($addTocart);
+                  },
+                  getDiscountPrice: function (products) {
+                      var total = 0;
+                      $.each(products, function () {
+                          total += this.quantity * this.price;
+                      });
+                      return total * 1;
+                  }
+              });
 
-                  });
+          });
         </script>
     </body>
 </html>

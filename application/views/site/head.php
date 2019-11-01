@@ -21,4 +21,4 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	});
 </script>
 <!-- start-smoth-scrolling -->
-<link href="<?=base_url('assets/css/font-awesome.css');?>" rel="stylesheet"> 
+<link href="<?=base_url('assets/css/font-awesome.css');?>" rel="stylesheet">

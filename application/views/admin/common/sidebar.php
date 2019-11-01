@@ -21,7 +21,6 @@
         <li>
             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Categories<span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
-                <li><a href="<?=base_url('Categories/add');?>">Add</a></li>
                 <li><a href="<?=base_url('Categories/manage');?>">Manage</a></li>
             </ul>
         </li>

@@ -15,6 +15,22 @@ class CategoryModel extends My_Model {
 		return $query->result_array();
 	}
 
+    public function getCategoryInfoByCatId($cat_id){
+        $query=$this->db->query("SELECT * FROM `categories` WHERE cat_id=$cat_id");
+        return $query->row_array();
+    }
+
+    public function updateCategory($data){
+        $this->db->where('cat_id', $data['cat_id']);
+        $this->db->update('categories', array('cat_name' => $data['cat_name']));
+        $success = $this->db->affected_rows();
+
+        if(!$success){
+            return false;
+        }
+        return true;
+    }
+
 }
 
 /* End of file CategoryModel.php */

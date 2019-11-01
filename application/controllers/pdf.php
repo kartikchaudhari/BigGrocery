@@ -15,7 +15,7 @@ class Pdf extends CI_Controller {
 	<title>Receipt</title>
 </head>
 <body>
-	<table border="0" width="26%" align="center" cellspacing="0" cellpadding="10">
+	<table border="1" width="50%" align="center" cellspacing="0" cellpadding="10">
 		<tr>
 			<td colspan="2" align="center" style="border-bottom: 1px solid black;">
 				<img src="'.APPPATH.'/third_party/dompdf/big_Brocery_resized.jpg">
@@ -75,15 +75,9 @@ class Pdf extends CI_Controller {
 </body>
 </html>';
 	// Convert to PDF
-	// $this->dompdf->load_html($html);        
-	// $this->dompdf->render();
-	// $this->dompdf->stream("report_".date('d-m-y')."_".date("h:i:s"),array("Attachment"=>1));		
-		 // $this->Dom_pdf->doPdf($html);	
-
-		$this->dompdf->load_html($html);
-
-		$this->dompdf->render();
-		$this->dompdf->stream("report_".date('d-m-y')."_".date("h:i:s"),array("Attachment"=>1));	
+	$this->dompdf->load_html($html);
+    $this->dompdf->render();
+	$this->dompdf->stream("report_".date('d-m-y')."_".date("h:i:s"),array("Attachment"=>1));
 	}
 
 

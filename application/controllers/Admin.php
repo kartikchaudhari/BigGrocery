@@ -44,10 +44,10 @@ class Admin extends My_Controller {
     }
 
     public function do_login() {
+
         if(isset($_POST['uname'])){
             $userName = $this->input->post('uname');
             $passWord = md5($this->input->post('pass'));
-
             $AdminId = $this->AdminModel->getAdminLoginData($userName, $passWord);
             if ($AdminId > 0 AND $AdminId != null) {
                 $array = array('bg_sys_ss_admin_id' => $AdminId);

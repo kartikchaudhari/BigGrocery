@@ -42,26 +42,28 @@
 		return $msg;
 	}
 
-	function manage_button_maker($type,$url){
+	function manage_button_maker($type,$url,$attr=null){
 		$btn_html='';
 		switch ($type) {
 			case 'CRUD':
 				$btn_html.='
 					<a href="'.$url['create'].'"><button type="button" class="btn btn-success"><i class="fa fa-plus"></i>  Create</button></a>
-					<a href="'.$url['read'].'"><button type="button" class="btn btn-primary"><i class="fa fa-eye"></i>  View</button></a>
-					<a href="'.$url['update'].'"><button type="button" class="btn btn-nfo"><i class="fa fa-pencil"></i>  Update</button></a>
-					<a href="'.$url['delete'].'"><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i>  Delete</button></a>
+					<a href="'.$url['read'].'"><button type="button" class="btn btn-primary" $attr><i class="fa fa-eye"></i>  View</button></a>
+					<a href="'.$url['update'].'"><button type="button" class="btn btn-nfo" $attr><i class="fa fa-pencil"></i>  Update</button></a>
+					<a href="'.$url['delete'].'"><button type="button" class="btn btn-danger" $attr><i class="fa fa-trash-o"></i>  Delete</button></a>
 					';	
 			break;
 			
 			case 'RUD':
 				$btn_html.='
 					<a href="'.$url['read'].'">
-						<button type="button" class="btn btn-success"><i class="fa fa-eye"></i>  View</button></a>
+						<button type="button" class="btn btn-success" '.$attr['read'].'><i class="fa fa-eye"></i>  View</button>
+					</a>
+                    <a href="'.$url['update'].'">
+                        <button type="button" class="btn btn-info" '.$attr['update'].'><i class="fa fa-pencil"></i>  Update</button>
+                    </a>
 
-					<a href="'.$url['update'].'"><button type="button" class="btn btn-info"><i class="fa fa-pencil"></i>  Update</button></a>
-
-					<a href="'.$url['delete'].'"><button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i>  Delete</button></a>
+					<a href="'.$url['delete'].'"><button type="button" class="btn btn-danger" '.$attr['delete'].'><i class="fa fa-trash-o"></i>  Delete</button></a>
 					';	
 			break;
 			
