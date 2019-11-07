@@ -6,7 +6,7 @@ class Categories extends My_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model(array('AdminModel','CategoryModel'));
-		$this->load->helper(array('admin','utility'));
+		$this->load->helper(array('product','utility','admin'));
 	}
 
 	public function index()
@@ -36,9 +36,11 @@ class Categories extends My_Controller {
             $cat_info_data['count_sub_cat']=$this->SubCatModel->fetchSubCatCountByCatId($cat_id)['sub_cat_count'];
             $cat_info_data['count_product']=$this->ProductsModel->getProductCountByCategory($cat_id)['product_count'];
 
+            $products_of_category=$this->ProductsModel->getAllProductsByCategory($cat_id);
+
             $this->load->view('admin/common/head', ['data' => $page_data]);
             $this->load->view('admin/common/nav',['id' => $id]);
-            $this->load->view('admin/categories/view',['cat_info_data'=>$cat_info_data]);
+            $this->load->view('admin/categories/view',['cat_info_data'=>$cat_info_data,'products'=>$products_of_category]);
             $this->load->view('admin/common/footer');
         }
     }

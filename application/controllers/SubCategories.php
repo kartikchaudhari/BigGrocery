@@ -5,8 +5,8 @@ class SubCategories extends My_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('SubCatModel');
-		$this->load->helper(array('admin','utility'));
+		$this->load->model(array('SubCatModel','ProductsModel','CategoryModel'));
+		$this->load->helper(array('admin','utility','product'));
 	}
 
 	public function index()
@@ -23,7 +23,6 @@ class SubCategories extends My_Controller {
 
 	public function add()
 	{	
-
 		if (is_logged_in()) {
             
             $page_data=array('title' => 'Add Sub Category');
@@ -37,6 +36,25 @@ class SubCategories extends My_Controller {
             $this->load->view('admin/subcat/add',['data'=>$data]);
             $this->load->view('admin/common/footer');
         }		
+	}
+
+	public function view($sub_cat_id){
+		if (is_logged_in()) {
+            $page_data=array('title' => 'View Sub Category Info');
+            $id=$this->session->userdata('bg_sys_ss_admin_id');
+
+            $subcat_info_data=array();
+            $subcat_info_data['cat_name']=getCatNameByCatId($this->SubCatModel->fetchCatIdBySubCatId($sub_cat_id)['cat_id']);
+            $subcat_info_data['sub_cat_name']='Name Name';
+            $subcat_info_data['count_product']=20;
+
+            $products_of_subcategory=$this->ProductsModel->getAllProductsBySubCategory(1);
+
+            $this->load->view('admin/common/head', ['data' => $page_data]);
+            $this->load->view('admin/common/nav',['id' => $id]);
+            $this->load->view('admin/subcat/view',['subcat_info_data'=>$subcat_info_data,'products'=>$products_of_subcategory]);
+            $this->load->view('admin/common/footer');
+        }
 	}
 
 	public function remove()

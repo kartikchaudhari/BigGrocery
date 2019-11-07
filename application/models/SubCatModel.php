@@ -21,6 +21,11 @@ class SubCatModel extends My_Model {
 
 	}
 
+	public function fetchCatIdBySubCatId($sub_cat_id){
+		$query=$this->db->query("SELECT cat_id FROM sub_categories WHERE sub_cat_id=$sub_cat_id");
+		return $query->row_array();
+	}
+
 	public function fetchSubCatListByCatId($CatId){
 		$this->db->where('cat_id',$CatId);
 		$query=$this->db->get('sub_categories');

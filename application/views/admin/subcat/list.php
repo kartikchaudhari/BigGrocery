@@ -1,4 +1,3 @@
-<?php $this->load->helper(array('utility','product')); ?>
 <!-- main document container -->
 <div id="page-wrapper">
     <div class="row">
@@ -9,13 +8,15 @@
     <!-- /.row -->
     <div class="row">
         <div class="table-responsive">
-            <table class="table table-bordered table-hover">
-                <tr>
-                    <th class="active">Sub-Category ID</th>
-                    <th class="active">Sub-Category Name</th>
-                    <th class="active">Category</th>
-                    <th class="active">Action</th>
-                </tr>
+            <table id="mytable" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th class="active">Sub-Category ID</th>
+                        <th class="active">Sub-Category Name</th>
+                        <th class="active">Category</th>
+                        <th class="active">Action</th>
+                    </tr>
+                </thead>
                 <?php 
                     $url=array();
                     for ($i=0; $i <count($data) ; $i++) { 
@@ -29,7 +30,7 @@
                         echo "<tr>
                                     <td>".$data[$i]['sub_cat_id']."</td>
                                     <td>".$data[$i]['sub_cat_name']."</td>
-                                    <td>".$data[$i]['cat_id']."</td>
+                                    <td>".getCatNameByCatId($data[$i]['cat_id'])."</td>
                                     <td>".manage_button_maker('RUD',$url,$attr)."</td>
                         </tr>";
                     }

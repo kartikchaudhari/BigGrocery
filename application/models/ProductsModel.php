@@ -32,8 +32,13 @@ class ProductsModel extends My_Model {
 		return $query->row_array();
 	}
 
-	public function getAllProductsBySubCategory($SubCatId){
-		$query=$this->db->query("SELECT * FROM products WHERE sub_cat_id=".$SubCatId."");
+	public function getAllProductsByCategory($cat_id){
+		$query=$this->db->query("SELECT * FROM products WHERE cat_id=$cat_id");
+		return $query->result_array();
+	}
+
+	public function getAllProductsBySubCategory($sub_cat_id){
+		$query=$this->db->query("SELECT * FROM products WHERE sub_cat_id=$sub_cat_id");
 		return $query->result_array();
 	}
 	
