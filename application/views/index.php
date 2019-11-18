@@ -198,7 +198,7 @@
 				<a href="kitchen.html">
 					<img src="<?=site_url('assets/images/co2.jpg');?>" class="img-responsive img1" alt="">
 					<div class="big-sale2">
-						<h3>Cooking <span>Oil</span></h3>
+						<h3>Cooking <span>Oil</<span></span>></h3>
 						<p>It is a long established fact that a reader </p>		
 					</div>
 				</a>
@@ -237,12 +237,13 @@
 <script type="text/javascript">
 function ajaxSearch()
 {
+
   var input_data = $('#search_data').val();
 	if (input_data.length === 0){
         $('.instant-results').hide();
     }
     else{
-		var post_data = {'search_data': input_data};
+		var post_data = {'search_data': input_data,'<?=$this->security->get_csrf_token_name(); ?>':'<?=$this->security->get_csrf_hash(); ?>'};
         $.ajax({
             type: "POST",
             url: "<?php echo base_url(); ?>products/doSearchProduct/",

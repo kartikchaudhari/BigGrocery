@@ -13,7 +13,7 @@
                             echo $this->session->flashdata('msg');
                         }
                     ?>
-                    <form role="form" method="post" action="<?=base_url('admin/do_login');?>">
+                    <?=form_open('admin/do_login');?>
                         <fieldset>
                             <div class="form-group">
                                 <input class="form-control" placeholder="Enter Username" name="uname" type="text" autofocus>
@@ -29,7 +29,7 @@
                             <!-- Change this to a button or input when using this as a form -->
                             <button class="btn btn-lg btn-success btn-block" type="submit">Login</button>
                         </fieldset>
-                    </form>
+                    <?=form_close();?>
                 </div>
             </div>
         </div>

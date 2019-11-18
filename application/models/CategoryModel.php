@@ -30,7 +30,6 @@ class CategoryModel extends My_Model {
         }
         return true;
     }
-
 }
 
 /* End of file CategoryModel.php */

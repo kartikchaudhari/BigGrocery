@@ -28,21 +28,21 @@
                 ?>
             </div>
             <div class="main-agileits">
-                <div class="form-w3agile">
-                    <h3>Login</h3>
-                    <form action="<?= base_url('user/login_user') ?>" enctype="pplication/x-www-form-urlencoded" method="post">
-                        <div class="key">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <input id="email"   placeholder="Email or Phone" type="text" name="uname" required="">
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="key">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                            <input id="pass"  type="password" name="password" required="" placeholder="Password">
-                            <div class="clearfix"></div>
-                        </div>
-                        <input type="submit" value="Login">
-                    </form>
+              <div class="form-w3agile">
+                  <h3>Login</h3>
+                  <?=form_open('user/login_user');?>
+                      <div class="key">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input id="email"   placeholder="Email or Phone" type="text" name="uname" required="">
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="key">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input id="pass"  type="password" name="password" required="" placeholder="Password">
+                        <div class="clearfix"></div>
+                      </div>
+                      <input type="submit" value="Login">
+                  <?=form_close();?>
                 </div>
                 <div class="forg">
                     <a href="<?= base_url('User/forgot_password');?>" class="forg-left">Forgot Password</a>

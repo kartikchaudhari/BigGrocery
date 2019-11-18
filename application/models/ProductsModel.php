@@ -32,6 +32,12 @@ class ProductsModel extends My_Model {
 		return $query->row_array();
 	}
 
+		public function getProductCountBySubCategory($sub_cat_id){
+		$query=$this->db->query("SELECT COUNT(products.product_id) AS 'product_count' FROM products WHERE products.sub_cat_id=$sub_cat_id");
+		return $query->row_array();
+	}
+
+
 	public function getAllProductsByCategory($cat_id){
 		$query=$this->db->query("SELECT * FROM products WHERE cat_id=$cat_id");
 		return $query->result_array();

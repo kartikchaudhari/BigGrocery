@@ -17,10 +17,9 @@
         if ($ci->session->userdata('bg_sys_ss_admin_id')) {
             return true;
         } else {
+            $ci->session->set_flashdata('msg',alert_style('warning','Your current Session is expired. Please Re-login below.'));
             return redirect('admin/login');
         }
     }
-
-
 
 ?>

@@ -63,7 +63,7 @@
                         <button type="button" class="btn btn-info" '.$attr['update'].'><i class="fa fa-pencil"></i>  Update</button>
                     </a>
 
-					<a href="'.$url['delete'].'"><button type="button" class="btn btn-danger" '.$attr['delete'].'><i class="fa fa-trash-o"></i>  Delete</button></a>
+					<button type="button" class="btn btn-danger" '.$attr['delete'].'><i class="fa fa-trash-o"></i>  Delete</button>
 					';	
 			break;
 			

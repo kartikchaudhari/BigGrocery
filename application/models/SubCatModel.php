@@ -11,13 +11,32 @@ class SubCatModel extends My_Model {
 		return $this->db->insert('sub_categories',$data);
 	}
 
+	public function fetchSubcatInfoBySubCatId($sub_cat_id){
+		$query=$this->db->query("SELECT * FROM `sub_categories` WHERE sub_cat_id=$sub_cat_id");
+
+		return $query->row_array();
+	}
+
 	public function FetchAllSubCat(){
 		$query=$this->db->query("SELECT * FROM sub_categories");
 		return $query->result_array();
 	}
 
+	public function updateSubCategory($data){
+        $this->db->where('sub_cat_id', $data['sub_cat_id']);
+        $this->db->update('sub_categories', array('cat_id' => $data['cat_id'],'sub_cat_name'=>$data['sub_cat_name']));
+        $success = $this->db->affected_rows();
+
+        if(!$success){
+            return false;
+        }
+        return true;
+    }
+
 	public function DeleteSubCat($SubCatId){
-		return $this->db->query("DELETE FROM sub_categories WHERE sub_cat_id=".$SubCatId);
+		$this->db->query("CALL delSubCatAndPrdocuts($SubCatId)");
+
+		return true;
 
 	}
 

@@ -5,7 +5,7 @@ class Test extends My_Controller {
 	public function index(){
 		$this->load->model('SubCatModel');
 		echo "<pre>";
-		print_r();
+		print_r($this->SubCatModel->DeleteSubCat(85));
 	}
 }
 

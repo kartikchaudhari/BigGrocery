@@ -24,6 +24,13 @@
 			$('#vegNonVegChooser').fadeOut();
 		}
 
+		function deleteSubCategory(id){
+			var url='<?=base_url('SubCategories/remove/');?>'+id;
+			if(confirm("Are you sure ?")){
+				window.location=url;	
+			}
+		}
+
 		$(document).ready(function() {
 			$("#product_cat").change(function(){
 				var product_cat_id=$("#product_cat").val();

@@ -45,8 +45,8 @@ class SubCategories extends My_Controller {
 
             $subcat_info_data=array();
             $subcat_info_data['cat_name']=getCatNameByCatId($this->SubCatModel->fetchCatIdBySubCatId($sub_cat_id)['cat_id']);
-            $subcat_info_data['sub_cat_name']='Name Name';
-            $subcat_info_data['count_product']=20;
+            $subcat_info_data['sub_cat_name']=getSubCatNameBySubCatId($sub_cat_id);
+            $subcat_info_data['count_product']=$this->ProductsModel->getProductCountBySubCategory($sub_cat_id)['product_count'];
 
             $products_of_subcategory=$this->ProductsModel->getAllProductsBySubCategory(1);
 
@@ -57,10 +57,36 @@ class SubCategories extends My_Controller {
         }
 	}
 
-	public function remove()
+	public function  update($sub_cat_id){
+        if (is_logged_in()) {
+            $page_data=array('title' => 'Update Sub Category');
+            $id=$this->session->userdata('bg_sys_ss_admin_id');
+
+            $cat_info_mixed_array=$this->CategoryModel->getCategoriesArray();
+            $sub_cat_info=$this->SubCatModel->fetchSubcatInfoBySubCatId($sub_cat_id);
+            
+            $cat_list=array();
+            foreach ($cat_info_mixed_array as $cat) {
+            	$cat_list[$cat['cat_id']]=$cat['cat_name'];
+            }
+
+            $this->load->view('admin/common/head', ['data' => $page_data]);
+            $this->load->view('admin/common/nav',['id' => $id]);
+            $this->load->view('admin/subcat/update',['cat_list'=>$cat_list,'sub_cat_info'=>$sub_cat_info]);
+            $this->load->view('admin/common/footer');
+        }
+    }
+
+	public function remove($sub_cat_id)
 	{
-		$this->load->view('admin/common/head',['data'=>array('title'=>'Delete Sub-Categories')]);
-		$this->load->view('admin/subcat/remove',['data'=>$this->getAllSubCat()]);		
+		if($this->SubCatModel->DeleteSubCat($sub_cat_id)){
+			$the_message='<strong>Success!</strong> The Sub category <strong>'.$this->input->post("sub_cat_name").'</strong> and it&quot;s associated products are removed successfully.';
+			$this->session->set_flashdata('bg_sys_msg',alert_style('success',$the_message));
+
+			return redirect('SubCategories');
+		}else{
+			return redirect('SubCategories');
+		}	
 	}
 
 	public function add_action(){
@@ -83,16 +109,30 @@ class SubCategories extends My_Controller {
 		}
 	}
 
-	public function delete_action($SubCatId){
-		if($this->SubCatModel->DeleteSubCat($SubCatId)){
-			$the_message='<strong>Success!</strong> The Sub category <strong>'.$this->input->post("sub_cat_name").'</strong> and it&quot;s associated products are removed successfully.';
-			$this->session->set_flashdata('bg_sys_msg',alert_style('success',$the_message));
 
-			return redirect('sub_categories/remove','refresh');
-		}else{
-			return redirect('sub_categories/remove','refresh');
-		}
-	}
+	public function doUpdateSubCategory(){
+		if (is_logged_in()) {
+            if(isset($_POST['btnUpdate'])){
+                $data=array();
+                $data['cat_id']=$this->security->xss_clean($this->input->post('cat_name'));
+                $data['sub_cat_name']=$this->security->xss_clean($this->input->post('sub_cat_name'));
+                $data['sub_cat_id']=$this->security->xss_clean($this->input->post('sub_cat_id'));
+
+
+                if($this->SubCatModel->updateSubCategory($data)){
+                    $this->session->set_flashdata('bg_sys_msg',alert_style('success','Sub Category Updated Successfully. !'));
+                    return redirect('SubCategories');
+                }
+                else{
+                    $this->session->set_flashdata('bg_sys_msg',alert_style('danger','An Error  Occured while updating data. !'));
+                    return redirect('SubCategories');
+                }
+            }
+            else{
+                return redirect('SubCategories');
+            }
+        }
+	}	
 
 	public function getCategoriesList(){
 		return $this->SubCatModel->FetchCatToList();

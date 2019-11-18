@@ -19,7 +19,7 @@ class AdminModel extends My_Model {
 	}
 
 	public function getAdminInfo($adminId){
-		$query=$this->db->query("SELECT admin_id,email,phone,username FROM admin WHERE admin_id=".$adminId);
+		$query=$this->db->query("SELECT admin_id,email,phone,username FROM admin WHERE admin_id=$adminId");
 		return $query->result_array();
 	}
 }
