@@ -35,7 +35,7 @@
             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Products<span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
                 <li><a href="<?=base_url('Products/add');?>">Add</a></li>
-                <li><a href="<?=base_url('products/manage_products');?>">Manage</a></li>
+                <li><a href="<?=base_url('Products/list');?>">Manage</a></li>
             </ul>
         </li>
         <li><a href="forms.html"><i class="fa fa-edit fa-fw"></i> Stock</a></li>

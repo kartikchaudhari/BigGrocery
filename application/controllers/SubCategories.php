@@ -90,7 +90,6 @@ class SubCategories extends My_Controller {
 	}
 
 	public function add_action(){
-		
 		if(isset($_POST)){
 			if($this->SubCatModel->AddSubCat($this->input->post())){
 				$the_message='<strong>Success!</strong> The Sub category <strong>'.$this->input->post("sub_cat_name").'</strong> is added successfully.';

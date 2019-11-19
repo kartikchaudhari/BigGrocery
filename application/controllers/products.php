@@ -36,13 +36,11 @@ class Products extends My_Controller {
 		echo getCatNameByCatId($this->input->post('id'));
 	}
 
-	//dataTable version
-	public function manage_products(){
-		//$this->load->view('dataTbl');
+	public function list(){
 		if (is_logged_in()) {
             $this->load->model(['SubCatModel','ProductCatModel']);
 
-            $page_data=array('title' => 'Add Product');
+            $page_data=array('title' => 'Manage Products');
             $id=$this->session->userdata('bg_sys_ss_admin_id');
             $categories=$this->ProductCatModel->FetchAllCat();
             $AllProduct=$this->ProductsModel->getAllProducts();
@@ -103,19 +101,21 @@ class Products extends My_Controller {
 								'product_stock'=>$this->input->post('product_stock')
 									);
 					if ($this->ProductsModel->addNewProduct($ProductsInfo)) {
-						$this->session->set_flashdata('bg_sys_msg', '<strong style="color:green;">The Product is Addedd Successfully..</strong>');
+						$this->session->set_flashdata('bg_sys_msg', alert_style('success','The Product is Addedd Successfully..'));
 						return redirect('Products/add');
 					}else{
-							$this->session->set_flashdata('bg_sys_msg', '<strong style="color:red;">An error while adding Product...</strong>');
+						$this->session->set_flashdata('bg_sys_msg',alert_style('success','An error while adding Product...'));
 						return redirect('Products/add');
 					}
 			}	
 			else{
-				echo "<strong>Full Image: </strong>".$ThumbNail['error'];
+				$this->session->set_flashdata('bg_sys_msg',alert_style('danger',"<strong>Full Image: </strong>".$ThumbNail['error']));
+				return redirect('Products/add');
+				
 			}
-		}else{ 
-			echo "<strong>Thumbnail Image: </strong>".$FullImage['error'];
-
+		}else{
+			 	$this->session->set_flashdata('bg_sys_msg',alert_style('danger',"<strong>Thumbnail Image: </strong>".$FullImage['error']));
+				return redirect('Products/add');
 		}
 	}
 

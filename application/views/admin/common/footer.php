@@ -38,7 +38,7 @@
 					$.ajax({
 						url: '<?=base_url('SubCategories/getAllSubCatByCatId');?>',
 						type: 'POST',
-						data: {cat_id: product_cat_id},
+						data: {cat_id: product_cat_id,'<?=$this->security->get_csrf_token_name(); ?>':'<?=$this->security->get_csrf_hash(); ?>'},
 						success:function(data){
 							$("#product_sub_cat").html(data);
 						}
