@@ -1,3 +1,4 @@
+<?php $this->load->helper('settings'); ?>
 <style type="text/css">white{color:white;} hover{color:#FAB005;}.footer-nav{list-style: none;display: inline;line-height: 1;}</style>
 <div class="footer">
 	<div class="container">
@@ -113,19 +114,33 @@
 			</div>
 		</div>
 		<div class="footer-bottom">
-				<div class="logo">
-					<h1>
-						<a href="<?=site_url('home');?>" title="Home :: The BigGrocery ">
-							<b>T<br>H<br>E</b>
-							&nbsp;<white>BigGrocery</white>
-							<span><white>The Best Supermarket</white></span>
-						</a>
-					</h1>
-				</div>
+			<div class="logo">
+				<h1>
+					<a href="<?=site_url('home');?>" title="Home :: The BigGrocery ">
+						<b>T<br>H<br>E</b>
+						&nbsp;<white>BigGrocery</white>
+						<span><white>The Best Supermarket</white></span>
+					</a>
+				</h1>
+			</div>
+		</div>
+		<div class=" address">
+			<?php
+				$data=get_footer_data();
+			?>
+			<div class="col-md-4 fo-grid1">
+				<p align="center"><i class="fa fa-home" aria-hidden="true"></i><?=$data['contact_address']?></p>
+			</div>
+			<div class="col-md-4 fo-grid1">
+				<p align="center"><i class="fa fa-phone" aria-hidden="true"></i><?=$data['contact_phone'];?></p>	
+			</div>
+			<div class="col-md-4 fo-grid1">
+				<p align="center"><a href="mailto:<?=$data['contact_email'];?>"><i class="fa fa-envelope-o" aria-hidden="true"></i><?=$data['contact_email'];?></a></p>
+			</div>
+			<div class="clearfix"></div>
 		</div>
 		<div class="copy-right">
-			<p> &copy; 2020 BigGrocery. All Rights Reserved. | Designed and Developed by Kartik Chaudhari</p>
+			<p><?=$data['footer_copyright'];?></p>
 		</div>
 	</div>
-
 <script type="text/javascript" src="<?=site_url('assets/js/bootstrap.js');?>"></script>

@@ -219,7 +219,11 @@
 <!--content-->
 
 <!--footer-->
-<?php $this->load->view('site/site_footer'); ?>
+<?php 
+	$data=array();
+	
+	$this->load->view('site/site_footer'); 
+?>
 <!-- //footer-->
 
 <!-- smooth scrolling -->
