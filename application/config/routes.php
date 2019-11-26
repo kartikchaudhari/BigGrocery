@@ -58,3 +58,8 @@ $route['translate_uri_dashes'] = FALSE;
 //customer routers
 //$route['Dashboard']='User/Dashboard';
 $route['Login']='user/login';
+
+//default site routes
+$route['Site/contact']='Contact';
+$route['Site/about']='About';
+$route['Site/privacy']='Privacy';

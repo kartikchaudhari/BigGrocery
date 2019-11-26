@@ -30,19 +30,19 @@
             <div class="main-agileits">
                 <div class="form-w3agile">
                     <h3>Forgot Password ?</h3>
-                    <form action="<?= base_url('User/forgot_password'); ?>" enctype="pplication/x-www-form-urlencoded" method="post">
+                    <?=form_open(base_url('User/forgot_password'));?>
                         <div class="key">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                             <input id="email"   placeholder="Enter email or phone" type="text" name="email" required="">
                             <div class="clearfix"></div>
                         </div>
                         <input name="btnSendPassword" type="submit" value="Send Password">
-                    </form>
+                    <?=form_close();?>
                 </div>
-                <?php if(isset($forgot_link)): ?>
+                <?php if(isset($forgot_password_msg)): ?>
                 <div class="alert alert-success">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <?=$forgot_link;?>
+                    <?=$forgot_password_msg;?>
                 </div>
                 <?php endif; ?>
                 <?php echo form_error('email') ?>

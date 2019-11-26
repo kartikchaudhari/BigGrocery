@@ -9,7 +9,14 @@ class Site extends CI_Controller {
 	}
 
 	public function contact(){
-		$this->load->view('contact');
+		$data=array(
+					'map'=>$this->config->item('contact_map_iframe'),
+					'address'=>$this->config->item('contact_address'),
+					'mail'=>$this->config->item('contact_email'),
+					'phone'=>$this->config->item('contact_phone')
+				);
+
+		$this->load->view('contact',$data);
 	}
 
 	public function about(){

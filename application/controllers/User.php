@@ -3,7 +3,7 @@ class User extends My_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->helper(['url', 'cookie','form']);
+        $this->load->helper(['url', 'cookie','form','mail']);
         $this->load->model(['UsersModel', 'ProductsModel', 'OrderModel']);
         $this->load->library("pagination");
     }
@@ -203,16 +203,24 @@ class User extends My_Controller {
                     return redirect('User/forgot_password','refresh');
                 }
                 $token = $this->UsersModel->insertToken($userInfo->user_id);
-                $qstring = $this->base64url_encode($token);                  
+                $qstring = $this->base64url_encode($token);
                 $url = site_url() . 'User/reset_password/token/' . $qstring;
-                $link = '<a href="' . $url . '">' . $url . '</a>'; 
-                
-                $message = '';                     
-                $message .= '<strong>A password reset has been requested for this email account</strong><br>';
-                $message .= '<strong>Please click:</strong> ' . $link;             
 
-                //echo $message; //send this through mail
-                $this->load->view('customer/forget_pass',['forgot_link'=>$message]);
+                //collect forgot password data for email
+                $data=array(
+                            'receiver'=>$userInfo->fname.' '.$userInfo->lname,
+                            'receiver_email'=>$userInfo->email,
+                            'link'=>$url
+                        );
+
+                
+                
+                $message = '<strong>'.$this->config->item('forget_password_message').'</strong><br>';
+
+                //send email
+                send_forgot_password($data);
+                //display user-friendly message on view
+                $this->load->view('customer/forget_pass',['forgot_password_msg'=>$message]);
             }
         }
         else{

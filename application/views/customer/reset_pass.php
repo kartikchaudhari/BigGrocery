@@ -29,7 +29,7 @@
                 <div class="form-w3agile">
                     <h3 style="margin-bottom: 15px;">Reset Password</h3>
                     <h5 style="margin-bottom: 15px;">Hello <span><?=$data['firstName']?></span>, Please enter your password 2x below to reset.</h5>
-                    <form action="<?= base_url('User/reset_password/token/'.$data['token']); ?>" method="post">
+                    <?=form_open(base_url('User/reset_password/token/'.$data['token']));?>
                         <div class="key">
                             <i class="fa fa-lock" aria-hidden="true"></i>
                             <input  placeholder="Password" type="text" name="pass" required="">
@@ -41,7 +41,7 @@
                             <div class="clearfix"></div>
                         </div>
                         <input class="btn btn-lg btn-block" name="btnResetPassword" type="submit" value="Reset Password">
-                    </form>
+                    <?=form_close();?>
                 </div>
                 <div class="forg">
                     <a href="#" class="forg-left">[ Login ]</a>

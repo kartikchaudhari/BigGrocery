@@ -3,9 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Test extends My_Controller {
 	public function index(){
-		$this->load->model('SubCatModel');
-		echo "<pre>";
-		print_r($this->SubCatModel->DeleteSubCat(85));
+		$this->load->helper('mail');
+		send_forgot_password('Kartik Chaudhari','kartikchaudhari456@gmail.com','http://localhost/phpmyadmin/sql.php?db=biggrocer&table=settings&pos=0');
 	}
 }
 
