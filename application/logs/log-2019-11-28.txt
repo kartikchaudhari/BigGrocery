@@ -1,0 +1,350 @@
+INFO - 28-11-2019 16:23:46 --> Config Class Initialized
+INFO - 28-11-2019 16:23:46 --> Hooks Class Initialized
+DEBUG - 28-11-2019 16:23:46 --> UTF-8 Support Enabled
+INFO - 28-11-2019 16:23:46 --> Utf8 Class Initialized
+INFO - 28-11-2019 16:23:46 --> URI Class Initialized
+DEBUG - 28-11-2019 16:23:46 --> No URI present. Default controller set.
+INFO - 28-11-2019 16:23:46 --> Router Class Initialized
+INFO - 28-11-2019 16:23:46 --> Output Class Initialized
+INFO - 28-11-2019 16:23:46 --> Security Class Initialized
+DEBUG - 28-11-2019 16:23:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 28-11-2019 16:23:46 --> CSRF cookie sent
+INFO - 28-11-2019 16:23:46 --> Input Class Initialized
+INFO - 28-11-2019 16:23:46 --> Language Class Initialized
+INFO - 28-11-2019 16:23:46 --> Loader Class Initialized
+INFO - 28-11-2019 16:23:46 --> Helper loaded: url_helper
+INFO - 28-11-2019 16:23:46 --> Helper loaded: form_helper
+INFO - 28-11-2019 16:23:46 --> Helper loaded: security_helper
+INFO - 28-11-2019 16:23:46 --> Language file loaded: language/english/en_lang.php
+INFO - 28-11-2019 16:23:47 --> Database Driver Class Initialized
+DEBUG - 28-11-2019 16:23:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 28-11-2019 16:23:47 --> Session: Class initialized using 'files' driver.
+DEBUG - 28-11-2019 16:23:47 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 28-11-2019 16:23:47 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 28-11-2019 16:23:47 --> Encryption Class Initialized
+INFO - 28-11-2019 16:23:47 --> Controller Class Initialized
+INFO - 28-11-2019 16:23:47 --> Helper loaded: language_helper
+INFO - 28-11-2019 16:23:47 --> Helper loaded: string_helper
+INFO - 28-11-2019 16:23:47 --> Helper loaded: offer_helper
+INFO - 28-11-2019 16:23:47 --> Helper loaded: site_helper
+INFO - 28-11-2019 16:23:47 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/favicon.php
+INFO - 28-11-2019 16:23:47 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/css.php
+INFO - 28-11-2019 16:23:47 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/js.php
+INFO - 28-11-2019 16:23:47 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 28-11-2019 16:23:47 --> Helper loaded: users_helper
+INFO - 28-11-2019 16:23:47 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 28-11-2019 16:23:47 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\search.php
+INFO - 28-11-2019 16:23:48 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 28-11-2019 16:23:48 --> Helper loaded: settings_helper
+INFO - 28-11-2019 16:23:48 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_footer.php
+INFO - 28-11-2019 16:23:48 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\cart/cart.php
+INFO - 28-11-2019 16:23:48 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\index.php
+INFO - 28-11-2019 16:23:48 --> Final output sent to browser
+DEBUG - 28-11-2019 16:23:48 --> Total execution time: 1.8976
+INFO - 28-11-2019 16:34:47 --> Config Class Initialized
+INFO - 28-11-2019 16:34:47 --> Hooks Class Initialized
+DEBUG - 28-11-2019 16:34:47 --> UTF-8 Support Enabled
+INFO - 28-11-2019 16:34:47 --> Utf8 Class Initialized
+INFO - 28-11-2019 16:34:47 --> URI Class Initialized
+INFO - 28-11-2019 16:34:47 --> Router Class Initialized
+INFO - 28-11-2019 16:34:47 --> Output Class Initialized
+INFO - 28-11-2019 16:34:47 --> Security Class Initialized
+DEBUG - 28-11-2019 16:34:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 28-11-2019 16:34:47 --> CSRF cookie sent
+INFO - 28-11-2019 16:34:47 --> CSRF token verified
+INFO - 28-11-2019 16:34:47 --> Input Class Initialized
+INFO - 28-11-2019 16:34:47 --> Language Class Initialized
+INFO - 28-11-2019 16:34:47 --> Loader Class Initialized
+INFO - 28-11-2019 16:34:47 --> Helper loaded: url_helper
+INFO - 28-11-2019 16:34:47 --> Helper loaded: form_helper
+INFO - 28-11-2019 16:34:47 --> Helper loaded: security_helper
+INFO - 28-11-2019 16:34:47 --> Language file loaded: language/english/en_lang.php
+INFO - 28-11-2019 16:34:47 --> Database Driver Class Initialized
+DEBUG - 28-11-2019 16:34:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 28-11-2019 16:34:47 --> Session: Class initialized using 'files' driver.
+DEBUG - 28-11-2019 16:34:47 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 28-11-2019 16:34:47 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 28-11-2019 16:34:47 --> Encryption Class Initialized
+INFO - 28-11-2019 16:34:47 --> Controller Class Initialized
+INFO - 28-11-2019 16:34:47 --> Helper loaded: language_helper
+INFO - 28-11-2019 16:34:47 --> Helper loaded: string_helper
+INFO - 28-11-2019 16:34:47 --> Helper loaded: product_helper
+INFO - 28-11-2019 16:34:47 --> Helper loaded: utility_helper
+INFO - 28-11-2019 16:34:47 --> Helper loaded: admin_helper
+INFO - 28-11-2019 16:34:47 --> Final output sent to browser
+DEBUG - 28-11-2019 16:34:47 --> Total execution time: 0.3059
+INFO - 28-11-2019 16:34:47 --> Config Class Initialized
+INFO - 28-11-2019 16:34:47 --> Hooks Class Initialized
+DEBUG - 28-11-2019 16:34:47 --> UTF-8 Support Enabled
+INFO - 28-11-2019 16:34:47 --> Utf8 Class Initialized
+INFO - 28-11-2019 16:34:47 --> URI Class Initialized
+INFO - 28-11-2019 16:34:47 --> Router Class Initialized
+INFO - 28-11-2019 16:34:47 --> Output Class Initialized
+INFO - 28-11-2019 16:34:47 --> Security Class Initialized
+DEBUG - 28-11-2019 16:34:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 28-11-2019 16:34:47 --> CSRF cookie sent
+INFO - 28-11-2019 16:34:47 --> CSRF token verified
+INFO - 28-11-2019 16:34:47 --> Input Class Initialized
+INFO - 28-11-2019 16:34:47 --> Language Class Initialized
+INFO - 28-11-2019 16:34:47 --> Loader Class Initialized
+INFO - 28-11-2019 16:34:47 --> Helper loaded: url_helper
+INFO - 28-11-2019 16:34:47 --> Helper loaded: form_helper
+INFO - 28-11-2019 16:34:47 --> Helper loaded: security_helper
+INFO - 28-11-2019 16:34:47 --> Language file loaded: language/english/en_lang.php
+INFO - 28-11-2019 16:34:47 --> Database Driver Class Initialized
+DEBUG - 28-11-2019 16:34:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 28-11-2019 16:34:47 --> Session: Class initialized using 'files' driver.
+DEBUG - 28-11-2019 16:34:47 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 28-11-2019 16:34:47 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 28-11-2019 16:34:47 --> Encryption Class Initialized
+INFO - 28-11-2019 16:34:47 --> Controller Class Initialized
+INFO - 28-11-2019 16:34:47 --> Helper loaded: language_helper
+INFO - 28-11-2019 16:34:47 --> Helper loaded: string_helper
+INFO - 28-11-2019 16:34:47 --> Helper loaded: product_helper
+INFO - 28-11-2019 16:34:47 --> Helper loaded: utility_helper
+INFO - 28-11-2019 16:34:47 --> Helper loaded: admin_helper
+INFO - 28-11-2019 16:34:47 --> Final output sent to browser
+DEBUG - 28-11-2019 16:34:47 --> Total execution time: 0.1812
+INFO - 28-11-2019 16:34:50 --> Config Class Initialized
+INFO - 28-11-2019 16:34:50 --> Hooks Class Initialized
+DEBUG - 28-11-2019 16:34:50 --> UTF-8 Support Enabled
+INFO - 28-11-2019 16:34:50 --> Utf8 Class Initialized
+INFO - 28-11-2019 16:34:50 --> URI Class Initialized
+INFO - 28-11-2019 16:34:50 --> Router Class Initialized
+INFO - 28-11-2019 16:34:50 --> Output Class Initialized
+INFO - 28-11-2019 16:34:50 --> Security Class Initialized
+DEBUG - 28-11-2019 16:34:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 28-11-2019 16:34:50 --> CSRF cookie sent
+INFO - 28-11-2019 16:34:50 --> CSRF token verified
+INFO - 28-11-2019 16:34:50 --> Input Class Initialized
+INFO - 28-11-2019 16:34:50 --> Language Class Initialized
+INFO - 28-11-2019 16:34:50 --> Loader Class Initialized
+INFO - 28-11-2019 16:34:50 --> Helper loaded: url_helper
+INFO - 28-11-2019 16:34:50 --> Helper loaded: form_helper
+INFO - 28-11-2019 16:34:50 --> Helper loaded: security_helper
+INFO - 28-11-2019 16:34:50 --> Language file loaded: language/english/en_lang.php
+INFO - 28-11-2019 16:34:50 --> Database Driver Class Initialized
+DEBUG - 28-11-2019 16:34:50 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 28-11-2019 16:34:50 --> Session: Class initialized using 'files' driver.
+DEBUG - 28-11-2019 16:34:50 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 28-11-2019 16:34:50 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 28-11-2019 16:34:50 --> Encryption Class Initialized
+INFO - 28-11-2019 16:34:50 --> Controller Class Initialized
+INFO - 28-11-2019 16:34:50 --> Helper loaded: language_helper
+INFO - 28-11-2019 16:34:50 --> Helper loaded: string_helper
+INFO - 28-11-2019 16:34:50 --> Helper loaded: product_helper
+INFO - 28-11-2019 16:34:50 --> Helper loaded: utility_helper
+INFO - 28-11-2019 16:34:50 --> Helper loaded: admin_helper
+INFO - 28-11-2019 16:34:50 --> Final output sent to browser
+DEBUG - 28-11-2019 16:34:50 --> Total execution time: 0.1601
+INFO - 28-11-2019 16:34:51 --> Config Class Initialized
+INFO - 28-11-2019 16:34:51 --> Hooks Class Initialized
+DEBUG - 28-11-2019 16:34:51 --> UTF-8 Support Enabled
+INFO - 28-11-2019 16:34:51 --> Utf8 Class Initialized
+INFO - 28-11-2019 16:34:51 --> URI Class Initialized
+INFO - 28-11-2019 16:34:51 --> Router Class Initialized
+INFO - 28-11-2019 16:34:51 --> Output Class Initialized
+INFO - 28-11-2019 16:34:51 --> Security Class Initialized
+DEBUG - 28-11-2019 16:34:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 28-11-2019 16:34:51 --> CSRF cookie sent
+INFO - 28-11-2019 16:34:51 --> CSRF token verified
+INFO - 28-11-2019 16:34:51 --> Input Class Initialized
+INFO - 28-11-2019 16:34:51 --> Language Class Initialized
+INFO - 28-11-2019 16:34:51 --> Loader Class Initialized
+INFO - 28-11-2019 16:34:51 --> Helper loaded: url_helper
+INFO - 28-11-2019 16:34:51 --> Helper loaded: form_helper
+INFO - 28-11-2019 16:34:51 --> Helper loaded: security_helper
+INFO - 28-11-2019 16:34:51 --> Language file loaded: language/english/en_lang.php
+INFO - 28-11-2019 16:34:51 --> Database Driver Class Initialized
+DEBUG - 28-11-2019 16:34:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 28-11-2019 16:34:51 --> Session: Class initialized using 'files' driver.
+DEBUG - 28-11-2019 16:34:51 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 28-11-2019 16:34:51 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 28-11-2019 16:34:51 --> Encryption Class Initialized
+INFO - 28-11-2019 16:34:51 --> Controller Class Initialized
+INFO - 28-11-2019 16:34:51 --> Helper loaded: language_helper
+INFO - 28-11-2019 16:34:51 --> Helper loaded: string_helper
+INFO - 28-11-2019 16:34:51 --> Helper loaded: product_helper
+INFO - 28-11-2019 16:34:51 --> Helper loaded: utility_helper
+INFO - 28-11-2019 16:34:51 --> Helper loaded: admin_helper
+INFO - 28-11-2019 16:34:51 --> Final output sent to browser
+DEBUG - 28-11-2019 16:34:51 --> Total execution time: 0.1660
+INFO - 28-11-2019 16:34:51 --> Config Class Initialized
+INFO - 28-11-2019 16:34:51 --> Hooks Class Initialized
+DEBUG - 28-11-2019 16:34:51 --> UTF-8 Support Enabled
+INFO - 28-11-2019 16:34:51 --> Utf8 Class Initialized
+INFO - 28-11-2019 16:34:51 --> URI Class Initialized
+INFO - 28-11-2019 16:34:51 --> Router Class Initialized
+INFO - 28-11-2019 16:34:51 --> Output Class Initialized
+INFO - 28-11-2019 16:34:51 --> Security Class Initialized
+DEBUG - 28-11-2019 16:34:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 28-11-2019 16:34:51 --> CSRF cookie sent
+INFO - 28-11-2019 16:34:51 --> CSRF token verified
+INFO - 28-11-2019 16:34:51 --> Input Class Initialized
+INFO - 28-11-2019 16:34:51 --> Language Class Initialized
+INFO - 28-11-2019 16:34:51 --> Loader Class Initialized
+INFO - 28-11-2019 16:34:51 --> Helper loaded: url_helper
+INFO - 28-11-2019 16:34:51 --> Helper loaded: form_helper
+INFO - 28-11-2019 16:34:51 --> Helper loaded: security_helper
+INFO - 28-11-2019 16:34:51 --> Language file loaded: language/english/en_lang.php
+INFO - 28-11-2019 16:34:51 --> Database Driver Class Initialized
+DEBUG - 28-11-2019 16:34:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 28-11-2019 16:34:52 --> Session: Class initialized using 'files' driver.
+DEBUG - 28-11-2019 16:34:52 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 28-11-2019 16:34:52 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 28-11-2019 16:34:52 --> Encryption Class Initialized
+INFO - 28-11-2019 16:34:52 --> Controller Class Initialized
+INFO - 28-11-2019 16:34:52 --> Helper loaded: language_helper
+INFO - 28-11-2019 16:34:52 --> Helper loaded: string_helper
+INFO - 28-11-2019 16:34:52 --> Helper loaded: product_helper
+INFO - 28-11-2019 16:34:52 --> Helper loaded: utility_helper
+INFO - 28-11-2019 16:34:52 --> Helper loaded: admin_helper
+INFO - 28-11-2019 16:34:52 --> Final output sent to browser
+DEBUG - 28-11-2019 16:34:52 --> Total execution time: 0.1516
+INFO - 28-11-2019 16:34:52 --> Config Class Initialized
+INFO - 28-11-2019 16:34:52 --> Hooks Class Initialized
+DEBUG - 28-11-2019 16:34:52 --> UTF-8 Support Enabled
+INFO - 28-11-2019 16:34:52 --> Utf8 Class Initialized
+INFO - 28-11-2019 16:34:52 --> URI Class Initialized
+INFO - 28-11-2019 16:34:52 --> Router Class Initialized
+INFO - 28-11-2019 16:34:52 --> Output Class Initialized
+INFO - 28-11-2019 16:34:52 --> Security Class Initialized
+DEBUG - 28-11-2019 16:34:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 28-11-2019 16:34:52 --> CSRF cookie sent
+INFO - 28-11-2019 16:34:52 --> CSRF token verified
+INFO - 28-11-2019 16:34:52 --> Input Class Initialized
+INFO - 28-11-2019 16:34:52 --> Language Class Initialized
+INFO - 28-11-2019 16:34:52 --> Loader Class Initialized
+INFO - 28-11-2019 16:34:52 --> Helper loaded: url_helper
+INFO - 28-11-2019 16:34:52 --> Helper loaded: form_helper
+INFO - 28-11-2019 16:34:52 --> Helper loaded: security_helper
+INFO - 28-11-2019 16:34:52 --> Language file loaded: language/english/en_lang.php
+INFO - 28-11-2019 16:34:52 --> Database Driver Class Initialized
+DEBUG - 28-11-2019 16:34:52 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 28-11-2019 16:34:52 --> Session: Class initialized using 'files' driver.
+DEBUG - 28-11-2019 16:34:52 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 28-11-2019 16:34:52 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 28-11-2019 16:34:52 --> Encryption Class Initialized
+INFO - 28-11-2019 16:34:52 --> Controller Class Initialized
+INFO - 28-11-2019 16:34:52 --> Helper loaded: language_helper
+INFO - 28-11-2019 16:34:52 --> Helper loaded: string_helper
+INFO - 28-11-2019 16:34:52 --> Helper loaded: product_helper
+INFO - 28-11-2019 16:34:52 --> Helper loaded: utility_helper
+INFO - 28-11-2019 16:34:52 --> Helper loaded: admin_helper
+INFO - 28-11-2019 16:34:52 --> Final output sent to browser
+DEBUG - 28-11-2019 16:34:52 --> Total execution time: 0.2002
+INFO - 28-11-2019 16:35:26 --> Config Class Initialized
+INFO - 28-11-2019 16:35:26 --> Hooks Class Initialized
+DEBUG - 28-11-2019 16:35:26 --> UTF-8 Support Enabled
+INFO - 28-11-2019 16:35:26 --> Utf8 Class Initialized
+INFO - 28-11-2019 16:35:26 --> URI Class Initialized
+INFO - 28-11-2019 16:35:26 --> Router Class Initialized
+INFO - 28-11-2019 16:35:26 --> Output Class Initialized
+INFO - 28-11-2019 16:35:26 --> Security Class Initialized
+DEBUG - 28-11-2019 16:35:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 28-11-2019 16:35:26 --> CSRF cookie sent
+INFO - 28-11-2019 16:35:26 --> Input Class Initialized
+INFO - 28-11-2019 16:35:26 --> Language Class Initialized
+INFO - 28-11-2019 16:35:26 --> Loader Class Initialized
+INFO - 28-11-2019 16:35:26 --> Helper loaded: url_helper
+INFO - 28-11-2019 16:35:26 --> Helper loaded: form_helper
+INFO - 28-11-2019 16:35:26 --> Helper loaded: security_helper
+INFO - 28-11-2019 16:35:26 --> Language file loaded: language/english/en_lang.php
+INFO - 28-11-2019 16:35:26 --> Database Driver Class Initialized
+DEBUG - 28-11-2019 16:35:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 28-11-2019 16:35:26 --> Session: Class initialized using 'files' driver.
+DEBUG - 28-11-2019 16:35:26 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 28-11-2019 16:35:26 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 28-11-2019 16:35:26 --> Encryption Class Initialized
+INFO - 28-11-2019 16:35:26 --> Controller Class Initialized
+INFO - 28-11-2019 16:35:26 --> Helper loaded: language_helper
+INFO - 28-11-2019 16:35:26 --> Helper loaded: string_helper
+INFO - 28-11-2019 16:35:26 --> Helper loaded: product_helper
+INFO - 28-11-2019 16:35:26 --> Helper loaded: utility_helper
+INFO - 28-11-2019 16:35:26 --> Helper loaded: admin_helper
+INFO - 28-11-2019 16:35:27 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/css.php
+INFO - 28-11-2019 16:35:27 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/js.php
+INFO - 28-11-2019 16:35:27 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 28-11-2019 16:35:27 --> Helper loaded: users_helper
+INFO - 28-11-2019 16:35:27 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 28-11-2019 16:35:27 --> Helper loaded: site_helper
+INFO - 28-11-2019 16:35:27 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 28-11-2019 16:35:27 --> Helper loaded: settings_helper
+INFO - 28-11-2019 16:35:27 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_footer.php
+INFO - 28-11-2019 16:35:27 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\cart/cart.php
+INFO - 28-11-2019 16:35:27 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\single.php
+INFO - 28-11-2019 16:35:27 --> Final output sent to browser
+DEBUG - 28-11-2019 16:35:27 --> Total execution time: 0.3010
+INFO - 28-11-2019 16:35:28 --> Config Class Initialized
+INFO - 28-11-2019 16:35:28 --> Hooks Class Initialized
+DEBUG - 28-11-2019 16:35:28 --> UTF-8 Support Enabled
+INFO - 28-11-2019 16:35:28 --> Utf8 Class Initialized
+INFO - 28-11-2019 16:35:28 --> URI Class Initialized
+INFO - 28-11-2019 16:35:28 --> Router Class Initialized
+INFO - 28-11-2019 16:35:28 --> Output Class Initialized
+INFO - 28-11-2019 16:35:28 --> Security Class Initialized
+DEBUG - 28-11-2019 16:35:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 28-11-2019 16:35:28 --> CSRF cookie sent
+INFO - 28-11-2019 16:35:28 --> Input Class Initialized
+INFO - 28-11-2019 16:35:28 --> Language Class Initialized
+INFO - 28-11-2019 16:35:28 --> Loader Class Initialized
+INFO - 28-11-2019 16:35:28 --> Helper loaded: url_helper
+INFO - 28-11-2019 16:35:28 --> Helper loaded: form_helper
+INFO - 28-11-2019 16:35:28 --> Helper loaded: security_helper
+INFO - 28-11-2019 16:35:28 --> Language file loaded: language/english/en_lang.php
+INFO - 28-11-2019 16:35:28 --> Database Driver Class Initialized
+DEBUG - 28-11-2019 16:35:28 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 28-11-2019 16:35:28 --> Session: Class initialized using 'files' driver.
+DEBUG - 28-11-2019 16:35:28 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 28-11-2019 16:35:28 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 28-11-2019 16:35:28 --> Encryption Class Initialized
+INFO - 28-11-2019 16:35:28 --> Controller Class Initialized
+INFO - 28-11-2019 16:35:28 --> Helper loaded: language_helper
+INFO - 28-11-2019 16:35:28 --> Helper loaded: string_helper
+INFO - 28-11-2019 16:35:28 --> Helper loaded: product_helper
+INFO - 28-11-2019 16:35:28 --> Helper loaded: utility_helper
+INFO - 28-11-2019 16:35:28 --> Helper loaded: admin_helper
+ERROR - 28-11-2019 16:35:28 --> Query error: Unknown column 'images' in 'where clause' - Invalid query: SELECT * FROM products WHERE product_id=images
+INFO - 28-11-2019 16:35:28 --> Language file loaded: language/english/db_lang.php
+INFO - 28-11-2019 16:35:52 --> Config Class Initialized
+INFO - 28-11-2019 16:35:52 --> Hooks Class Initialized
+DEBUG - 28-11-2019 16:35:52 --> UTF-8 Support Enabled
+INFO - 28-11-2019 16:35:52 --> Utf8 Class Initialized
+INFO - 28-11-2019 16:35:52 --> URI Class Initialized
+INFO - 28-11-2019 16:35:52 --> Router Class Initialized
+INFO - 28-11-2019 16:35:52 --> Output Class Initialized
+INFO - 28-11-2019 16:35:52 --> Security Class Initialized
+DEBUG - 28-11-2019 16:35:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 28-11-2019 16:35:52 --> CSRF cookie sent
+INFO - 28-11-2019 16:35:52 --> Input Class Initialized
+INFO - 28-11-2019 16:35:52 --> Language Class Initialized
+INFO - 28-11-2019 16:35:52 --> Loader Class Initialized
+INFO - 28-11-2019 16:35:52 --> Helper loaded: url_helper
+INFO - 28-11-2019 16:35:52 --> Helper loaded: form_helper
+INFO - 28-11-2019 16:35:52 --> Helper loaded: security_helper
+INFO - 28-11-2019 16:35:52 --> Language file loaded: language/english/en_lang.php
+INFO - 28-11-2019 16:35:52 --> Database Driver Class Initialized
+DEBUG - 28-11-2019 16:35:52 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 28-11-2019 16:35:52 --> Session: Class initialized using 'files' driver.
+DEBUG - 28-11-2019 16:35:52 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 28-11-2019 16:35:52 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 28-11-2019 16:35:52 --> Encryption Class Initialized
+INFO - 28-11-2019 16:35:52 --> Controller Class Initialized
+INFO - 28-11-2019 16:35:52 --> Helper loaded: language_helper
+INFO - 28-11-2019 16:35:52 --> Helper loaded: string_helper
+INFO - 28-11-2019 16:35:52 --> Helper loaded: cookie_helper
+INFO - 28-11-2019 16:35:52 --> Helper loaded: mail_helper
+INFO - 28-11-2019 16:35:52 --> Helper loaded: utility_helper
+INFO - 28-11-2019 16:35:52 --> Language file loaded: language/english/pagination_lang.php
+INFO - 28-11-2019 16:35:52 --> Pagination Class Initialized
+INFO - 28-11-2019 16:35:52 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/head.php
+INFO - 28-11-2019 16:35:52 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_logo_tagline.php
+INFO - 28-11-2019 16:35:52 --> Helper loaded: users_helper
+INFO - 28-11-2019 16:35:52 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/customer_nav.php
+INFO - 28-11-2019 16:35:52 --> Helper loaded: site_helper
+INFO - 28-11-2019 16:35:52 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_nav.php
+INFO - 28-11-2019 16:35:52 --> Helper loaded: settings_helper
+INFO - 28-11-2019 16:35:52 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\site/site_footer.php
+INFO - 28-11-2019 16:35:52 --> File loaded: C:\xampp\htdocs\BigGrocery\application\views\customer/login.php
+INFO - 28-11-2019 16:35:52 --> Final output sent to browser
+DEBUG - 28-11-2019 16:35:52 --> Total execution time: 0.3738

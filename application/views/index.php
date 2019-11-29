@@ -74,7 +74,7 @@
 	    </div>
 	<!-- /.carousel -->
 
-		<div class="spec" style="margin-top: 5%;">
+		<div class="spec" style="margin-top: 7em;">
 			<h3>Special Offers</h3>
 			<div class="ser-t">
 				<b></b>
@@ -84,61 +84,64 @@
 		</div>
 			<div class="tab-head ">
 				<nav class="nav-sidebar">
-					<ul class="nav tabs ">
+					<ul class="nav tabs" style="margin-bottom: 1em;">
 					  <li class="active"><a href="#tab1" data-toggle="tab">Staples</a></li>
 					  <li class=""><a href="#tab2" data-toggle="tab">Snacks</a></li> 
 					  <li class=""><a href="#tab3" data-toggle="tab">Fruits & Vegetables</a></li>  
 					  <li class=""><a href="#tab4" data-toggle="tab">Breakfast & Cereal</a></li>
 					</ul>
 				</nav>
-				<div class=" tab-content tab-content-t ">
+				<div class=" tab-content tab-content-t" >
+					<div class="row" style="margin-bottom: 1em;">
+						<div class="col-md-12">
+							<div class="col-md-1 col-sm-2 col-lg-1 col-xs-1 pull-right">
+								<a class="btn btn-primary btn-xs" href="#productCarasoule" data-slide="prev">
+							    	<span class="glyphicon glyphicon-chevron-left"></span>
+							    	<span class="sr-only">Previous</span>
+							  	</a>
+
+							  	<a class="btn btn-primary btn-xs" href="#productCarasoule" data-slide="next">
+							    	<span class="glyphicon glyphicon-chevron-right"></span>
+							    	<span class="sr-only">Next</span>
+							    </a>
+							</div>
+						</div>
+					</div>
 					<!-- staples -->
 					<div class="tab-pane active text-style" id="tab1">
-							<div id="productCarasoule" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
-							  <ol class="carousel-indicators">
-							    <li data-target="#productCarasoule" data-slide-to="0" class="active"></li>
+						<div id="productCarasoule" class="carousel slide" data-ride="carousel" >
+							<!-- bottom slider Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#productCarasoule" data-slide-to="0" class="active"></li>
 							    <li data-target="#productCarasoule" data-slide-to="1"></li>
 							    <li data-target="#productCarasoule" data-slide-to="2"></li>
-							  </ol>
+							</ol>
+							<!--./bottom slider indictors -->
 
-							  <!-- Wrapper for slides -->
+							<!-- offer products carasoul with tabs-->
+							<?php
+								$products = staplesOffer(); // Products retreived from database
+
+								$is_active = true; // Only true for the first iteration
+								$i = 0;
+							?>
+							<div class="carousel-inner">
+								<?php foreach($products as $p):?>
+								<?php if ($i % 1 == 0):?>
+								    <div class="item<?php if ($is_active) echo ' active'?>">
+								<?php endif?>
+									<?=fruitsVegOffer();?>
+								<?php if (($i+1) % 1 == 0 || $i == count($products)-1):?>
+								    </div>
+								<?php endif?>
+								
 								<?php
-									$products = staplesOffer(); // Products retreived from database
-
-									$is_active = true; // Only true for the first iteration
-									$i = 0;
-									?>
-									<div class="carousel-inner">
-									<?php foreach($products as $p):?>
-									<?php if ($i % 4 == 0):?>
-									    <div class="item<?php if ($is_active) echo ' active'?>">
-									<?php endif?>
-			
-										
-									<?php if (($i+1) % 4 == 0 || $i == count($products)-1):?>
-									    </div>
-									<?php endif?>
-									<?php
 									$i++;
 									if ($is_active) $is_active = false;
-									endforeach;
-									?>
-									</div>
-							  <!-- Left and right controls -->
-							  <a class="left pull-left" href="#productCarasoule" data-slide="prev">
-							    <span class="glyphicon glyphicon-chevron-left"></span>
-							    <span class="sr-only">Previous</span>
-							  </a>
-							  <a class="right pull-right" href="#productCarasoule" data-slide="next">
-							    <span class="glyphicon glyphicon-chevron-right"></span>
-							    <span class="sr-only">Next</span>
-							  </a>
+								endforeach;
+								?>
 							</div>
-						
-						
-
-
+						</div>
 					</div>
 					<!--/staples -->
 					<div class="tab-pane  text-style" id="tab2">
@@ -161,9 +164,9 @@
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
-	</div>
-	</div>
+</div>
 
 <!--content-->
 <div class="content-mid">

@@ -3,7 +3,7 @@ class User extends My_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->helper(['url', 'cookie','form','mail']);
+        $this->load->helper(['url', 'cookie','form','mail','utility']);
         $this->load->model(['UsersModel', 'ProductsModel', 'OrderModel']);
         $this->load->library("pagination");
     }
@@ -13,9 +13,7 @@ class User extends My_Controller {
         if ($this->session->userdata('bg_sys_ss_user_id')) {
             return redirect('user/dashboard');
         } else {
-            $this->session->set_flashdata('bg_sys_msg', '<div class="alert alert-danger" role="alert">
-					<strong>Sorry the session has expired, please re-login below.</strong> 
-				</div>');
+            $this->session->set_flashdata('bg_sys_msg',alert_style('danger','Sorry the session has expired, please re-login below.'));
             return redirect('user/login');
         }
     }
@@ -152,7 +150,7 @@ class User extends My_Controller {
     public function register_user() {
         if ($this->input->post()) {
             if ($this->UsersModel->InsertUserData($this->input->post())) {
-                $this->session->set_flashdata('bg_sys_msg', '<div class="alert alert-success alert-dismissable" style="margin:0px;"><button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>Congatulations! You are successfully registerd. click <a href="login">here</a> to login.</div>');
+                $this->session->set_flashdata('bg_sys_msg', alert_style('success','Congatulations! You are successfully registerd. click <a href="login">here</a> to login.'));
                 return redirect('user/register');
             }
         } else {
