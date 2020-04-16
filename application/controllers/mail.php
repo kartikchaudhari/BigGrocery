@@ -15,16 +15,14 @@ class mail extends MY_Controller {
 		    'protocol' => 'smtp',
 		    'smtp_host' => 'ssl://smtp.googlemail.com',
 		    'smtp_port' => 465,
-		    'smtp_user' => 'myciapps2018@gmail.com',
-		    'smtp_pass' => 'Codeigniter@2018',
+		    'smtp_user' => '#',
+		    'smtp_pass' => '#',
 		    'mailtype'  => 'html', 
 		    'charset'   => 'iso-8859-1'
 		);
 		$this->load->library('email', $config);
 		$this->email->set_newline("\r\n");
-		//ridz791997@gmail.com
-		//kokaniashishkumar@gmail.com
-		$receiver_email = "kartikchaudhari456@gmail.com";
+		$receiver_email = "#";
 		$username = "BigGrocery";
 		$subject = "Receipt";
 		$message = '<!DOCTYPE html>
