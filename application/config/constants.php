@@ -91,8 +91,8 @@ define('SITE_HOST','127.0.0.1');
  */
 
 //PayUMoney Configurations
-define('MERCHANT_KEY', 'gEdmunJx');
-define('SALT', 'D7xcqpaZuV');
+define('MERCHANT_KEY', '#');
+define('SALT', '#');
 define('PAYU_BASE_URL', 'https://sandboxsecure.payu.in');    //Testing url
 //define('PAYU_BASE_URL', ' https://sandboxsecure.payu.in');  //actual URL
 define('SUCCESS_URL', 'http://'.SITE_HOST.'/BigGrocery/order/order_success');  
